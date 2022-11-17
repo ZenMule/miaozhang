@@ -1,29 +1,28 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My research interests include phonetics of tone, vowel sequence, voicing contrast, and their interaction with linguistic prosody.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
-first_name: Alice
+  - course: PhD in Linguistics
+    institution: State University of New York at Buffalo
+    year: 2022
+  - course: MA in Japanese Language Education
+    institution: University of Tsukuba
+    year: 2015
+  - course: BA in Japanese Language and Culture
+    institution: Renmin University of China
+    year: 2011
+email: "miaozhan at buffalo dot edu"
+first_name: Miao
 highlight_name: true
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-last_name: Bighetti
+- The production of vowel sequence
+- Interaction of tone and stress
+- Voicing contrast
+last_name: Zhang
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: University at buffalo, SUNY
+  url: https://www.buffalo.edu/
+# role: Professor of Artificial Intelligence
 social:
 - icon: envelope
   icon_pack: fas
@@ -33,22 +32,20 @@ social:
   icon: twitter
   icon_pack: fab
   label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/Miao_Zhang_dr
 - icon: graduation-cap
   icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://www.researchgate.net/profile/Miao-Zhang-34
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/ZenMule
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/zenmule/
 superuser: true
-title: Alice Bighetti 吳恩達
+title: Miao Zhang 张淼
 ---
 
-Alice Bighetti is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a Ph.D. in Phonetics. My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. I want to understand how people vary their speech production to meet various communicative needs.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my CV {{< staticref "uploads/demo_resume.pdf" "newtab" >}}in English{{< /staticref >}} or {{< staticref "uploads/demo_resume.pdf" "newtab" >}}in Chinese{{< /staticref >}}.
