@@ -40,3 +40,5 @@ rstudioapi::navigateToFile("content/authors/admin/_index.md")
 rstudioapi::navigateToFile("config/_default/params.yaml")
 rstudioapi::navigateToFile("config/_default/menus.yaml")
 blogdown::check_site()
+
+rstudioapi::navigateToFile("config/_default/config.yaml")
