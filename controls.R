@@ -11,6 +11,8 @@ blogdown::new_post(title = "A compact tutorial on GAM in R",
                    ext = '.Rmarkdown', 
                    subdir = "blog/")
 
+blogdown::new_content()
+
 blogdown::config_Rprofile()
 
 file.edit(".gitignore")
