@@ -188,7 +188,7 @@ ggplot(f1_clean, aes(t, F1)) + # x axis: time, y axis: F1
 
 The result looks much better.
 
-However, you can see that R is telling us that it ignored `r sum(is.na(f1_clean$F1))`` rows of data that contain NA values. Also if a token has too many NAs, we probably should drop it from the data (for example, we probably don't need a token of vowel that over 40% of the data points are just NAs). And for data that contains only a few NAs, we want to fill (interpolate) the NAs based on the distribution of the adjacent data points.
+However, you can see that R is telling us that it ignored `r sum(is.na(f1_clean$F1))` rows of data that contain NA values. Also if a token has too many NAs, we probably should drop it from the data (for example, we probably don't need a token of vowel that over 40% of the data points are just NAs). And for data that contains only a few NAs, we want to fill (interpolate) the NAs based on the distribution of the adjacent data points.
 
 Consider that I have a data set with 5 data points: 1, 2, NA, 4, 5. Even though, the third data point is an NA, we can be rather sure that it should be 3 according to the distribution of the overall data set. However, if we had a data set with 5 data points: 1, NA, NA, NA, 7, then we are not sure what the three missing values would be. Therefore, we should keep the first data set and fill the NA value with three but drop the second data set.
 
@@ -202,7 +202,7 @@ f1_no_na <- group_by(f1_clean, File_name) |> # Make sure each group has only one
   mutate(F1 = na_interpolation(F1, option = "stine")) # then use the na_interpolation() function from the package imputeTS to interpolate the NAs. The method is set to Stineman interpolation.
 ```
 
-It looks we lost `r 1406-1238` (`r 1238/1406`) tokens of vowels, which looks acceptable. 
+It looks we lost `r 1406-1238` (`r round(1-1238/1406, 3)*100`%) tokens of vowels, which looks acceptable. 
 
 Let's also check how many NAs there are. There should be no NAs in the filtered data set now.
 
@@ -307,7 +307,7 @@ ggplot(f1_pred, aes(t, ss_f1)) + # x axis: time, y axis: gam_f1
 
 The final result looks much improved than the raw data. Now we can plot the overall smoothing for the vowels.
 
-```{r overall average, echo = F}
+```{r overall average, echo = F, message = F}
 ggplot(f1_pred, aes(t, ss_f1)) + # x axis: time, y axis: gam_f1
   geom_line(aes(group = File_name), alpha = 0.03) + # for each token of vowels, plot the line
   geom_smooth(method = "loess") +

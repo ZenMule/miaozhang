@@ -7,7 +7,7 @@ blogdown::new_post(title = "Cleaning time-series formant data",
                    ext = '.Rmarkdown', 
                    subdir = "blog/")
 
-blogdown::new_post(title = "A compact tutorial on GAM in R", 
+blogdown::new_content(title = "A compact tutorial on GAM in R", 
                    ext = '.Rmarkdown', 
                    subdir = "blog/")
 

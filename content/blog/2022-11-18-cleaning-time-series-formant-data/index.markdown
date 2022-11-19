@@ -233,7 +233,7 @@ ggplot(f1_clean, aes(t, F1)) + # x axis: time, y axis: F1
 
 The result looks much better.
 
-However, you can see that R is telling us that it ignored 3352\` rows of data that contain NA values. Also if a token has too many NAs, we probably should drop it from the data (for example, we probably don’t need a token of vowel that over 40% of the data points are just NAs). And for data that contains only a few NAs, we want to fill (interpolate) the NAs based on the distribution of the adjacent data points.
+However, you can see that R is telling us that it ignored 3352 rows of data that contain NA values. Also if a token has too many NAs, we probably should drop it from the data (for example, we probably don’t need a token of vowel that over 40% of the data points are just NAs). And for data that contains only a few NAs, we want to fill (interpolate) the NAs based on the distribution of the adjacent data points.
 
 Consider that I have a data set with 5 data points: 1, 2, NA, 4, 5. Even though, the third data point is an NA, we can be rather sure that it should be 3 according to the distribution of the overall data set. However, if we had a data set with 5 data points: 1, NA, NA, NA, 7, then we are not sure what the three missing values would be. Therefore, we should keep the first data set and fill the NA value with three but drop the second data set.
 
@@ -247,7 +247,7 @@ f1_no_na <- group_by(f1_clean, File_name) |> # Make sure each group has only one
   mutate(F1 = na_interpolation(F1, option = "stine")) # then use the na_interpolation() function from the package imputeTS to interpolate the NAs. The method is set to Stineman interpolation.
 ```
 
-It looks we lost 168 (0.8805121) tokens of vowels, which looks acceptable.
+It looks we lost 168 (11.9%) tokens of vowels, which looks acceptable.
 
 Let’s also check how many NAs there are. There should be no NAs in the filtered data set now.
 
@@ -315,7 +315,5 @@ Then we can finally see the output of our data cleaning.
 <img src="{{< blogdown/postref >}}index_files/figure-html/final visualization ss-1.png" width="672" />
 
 The final result looks much improved than the raw data. Now we can plot the overall smoothing for the vowels.
-
-    ## `geom_smooth()` using formula = 'y ~ x'
 
 <img src="{{< blogdown/postref >}}index_files/figure-html/overall average-1.png" width="672" />
