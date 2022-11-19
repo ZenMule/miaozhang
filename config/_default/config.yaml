@@ -12,7 +12,7 @@ baseURL: 'https://miaozhang.org/' # Website URL
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: false
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 

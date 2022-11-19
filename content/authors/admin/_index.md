@@ -1,5 +1,5 @@
 ---
-bio: My research interests include phonetics of tone, vowel sequence, voicing contrast, and their interaction with linguistic prosody.
+bio: I am a Ph.D. trained in Phonetics. I am interested in vowel sequence production, laryngeal contrast, tone, and prosody.
 education:
   courses:
   - course: PhD in Linguistics
@@ -13,15 +13,16 @@ education:
     year: 2011
 email: "miaozhan at buffalo dot edu"
 first_name: Miao
+last_name: Zhang
 highlight_name: true
 interests:
-- The production of vowel sequence
-- Interaction of tone and stress
-- Voicing contrast
-last_name: Zhang
-organizations:
-- name: University at buffalo, SUNY
-  url: https://www.buffalo.edu/
+  - Vowel sequence
+  - Tone
+  - Laryngeal contrast
+  - Prosody
+# organizations:
+# - name: University at buffalo, SUNY
+#  url: https://www.buffalo.edu/
 # role: Professor of Artificial Intelligence
 social:
 - icon: envelope
@@ -43,9 +44,11 @@ social:
   icon_pack: fab
   link: https://www.linkedin.com/in/zenmule/
 superuser: true
-title: Miao Zhang 张淼
+title: 张淼 | Miao Zhang
 ---
 
-I am a Ph.D. in Phonetics. My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. I want to understand how people vary their speech production to meet various communicative needs.
+I am a Ph.D. specialized in phonetics. My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. My main focus of research is to explore the relationship between speech production and phonological/prosodic structure. 
 
-{{< icon name="download" pack="fas" >}} Download my CV {{< staticref "uploads/demo_resume.pdf" "newtab" >}}in English{{< /staticref >}} or {{< staticref "uploads/demo_resume.pdf" "newtab" >}}in Chinese{{< /staticref >}}.
+I received my Ph.D. in Linguistics from University at Buffalo, SUNY. My dissertation concerns the prosodic influences on the production of vowel sequences in three languages with quite different prosodic organizations: Chinese, English, and Japanese.
+
+{{< icon name="download" pack="fas" >}} Download my CV {{< staticref "uploads/cv/cv_mz.pdf" "newtab" >}}in English{{< /staticref >}} or {{< staticref "uploads/cv/cv_chn.pdf" "newtab" >}}in Chinese{{< /staticref >}}.

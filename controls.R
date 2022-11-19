@@ -1,10 +1,15 @@
 library(blogdown)
 new_site(theme = "wowchemy/starter-academic")
 blogdown::serve_site()
+blogdown::stop_site()
 
-blogdown::new_post(title = "Hi Hugo", 
+blogdown::new_post(title = "Cleaning time-series formant data", 
                    ext = '.Rmarkdown', 
-                   subdir = "post")
+                   subdir = "blog/")
+
+blogdown::new_post(title = "A compact tutorial on GAM in R", 
+                   ext = '.Rmarkdown', 
+                   subdir = "blog/")
 
 blogdown::config_Rprofile()
 
@@ -42,3 +47,7 @@ rstudioapi::navigateToFile("config/_default/menus.yaml")
 blogdown::check_site()
 
 rstudioapi::navigateToFile("config/_default/config.yaml")
+
+file.create("config/_default/menu.toml")
+dir.create("content/research")
+file.create("content/research/index.md")
