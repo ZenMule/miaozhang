@@ -3,7 +3,7 @@ title: Cleaning time-series formant data
 author: Miao Zhang
 date: '2022-11-18'
 slug: cleaning-time-series-formant-data
-categories: []
+categories: [R, formant, acoustic phonetics]
 tags: []
 subtitle: ''
 summary: ''
@@ -47,16 +47,6 @@ library(tidyverse) # I tend to load tidyverse packages at last since it's used t
 ## 2. Read in the data set
 
 I will use some data of Chinese diphthong formants from my dissertation. The data consist of several Mandarin Chinese native speakers producing monophthongs and diphthongs. Formant extraction was done by using my dynamic seeding script. 30 data points were extracted from each token of vowel. I will only show how to clean F1 data from female speakers in this tutorial.
-
-``` r
-(raw_chn <- read_csv("chn_frmt.csv") |>
-  select(-Seg_num, -Syll, -Word, -F4, -F2, -F3, -COG, -sdev, -kurt, -skew, -t_m) |> # Drop columns that we don't need
-  filter(t >= 2 & t <= 28 & Gender == "F") |> # In the beginning and the end of the vowel segment, the formant extraction tends to be innaccurate, so we drop the 
-  mutate(t = (t-2)/26, # Change the time points to percentage) 
-         Seg = factor(Seg, levels = c("i", "a", "u", "ai", "au", "ou")),
-         Speaker = factor(Speaker),
-         Gender = factor(Gender)))
-```
 
     ## # A tibble: 37,962 × 6
     ##    File_name  Speaker Gender Seg        t    F1
