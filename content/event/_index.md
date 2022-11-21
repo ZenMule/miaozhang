@@ -3,6 +3,6 @@ cms_exclude: true
 header:
   caption: ""
   image: ""
-title: Conferences
+title: Talks
 view: 4
 ---

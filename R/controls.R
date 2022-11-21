@@ -1,15 +1,13 @@
 library(blogdown)
-new_site(theme = "wowchemy/starter-academic")
+#new_site(theme = "wowchemy/starter-academic")
 blogdown::serve_site()
 blogdown::stop_site()
 
 blogdown::new_post(title = "Dynamic seeding praat script bundle", 
-                   ext = '.Rmarkdown', 
+                   kind = '.Rmarkdown', 
                    subdir = "blog/")
 
-blogdown::new_content(title = "A compact tutorial on GAM in R", 
-                   ext = '.Rmarkdown', 
-                   subdir = "blog/")
+blogdown::new_content(path = "publication/this-one", kind = "2")
 
 blogdown::new_content()
 
@@ -46,6 +44,7 @@ rstudioapi::navigateToFile("content/home/about.md")
 rstudioapi::navigateToFile("content/authors/admin/_index.md")
 rstudioapi::navigateToFile("config/_default/params.yaml")
 rstudioapi::navigateToFile("config/_default/menus.yaml")
+
 blogdown::check_site()
 
 rstudioapi::navigateToFile("config/_default/config.yaml")
