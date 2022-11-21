@@ -20,6 +20,8 @@ content:
   count: 5
   # Filter on criteria
   filters:
+    folders:
+      - event
     author: ''
     category: ''
     tag: ''
