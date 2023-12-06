@@ -1,7 +1,7 @@
 library(blogdown)
 #new_site(theme = "wowchemy/starter-academic")
 blogdown::serve_site()
-blogdown::stop_site()
+blogdown::stop_server()
 
 blogdown::new_post(title = "Dynamic seeding praat script bundle", 
                    kind = '.Rmarkdown', 
