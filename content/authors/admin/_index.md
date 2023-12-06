@@ -47,7 +47,7 @@ superuser: true
 title: 张淼 | Miao Zhang
 ---
 
-I am a Ph.D. specialized in phonetics. My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. My main focus of research is to explore the relationship between speech production and phonological/prosodic structure. 
+I am a postdoctoral researcher at the University of Zurich (PI: Eleanor Chodroff). My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. My main focus of research is to explore the relationship between speech production and phonological/prosodic structure. 
 
 I received my Ph.D. in Linguistics from University at Buffalo, SUNY. My dissertation concerns the prosodic influences on the production of vowel sequences in three languages with quite different prosodic organizations: Chinese, English, and Japanese.
 
