@@ -6,10 +6,13 @@
 # Appearance
 
 appearance:
-  theme_day: earth
-  theme_night: earth
-  font: earth
-  font_size: L
+  theme_day: mr robot
+  theme_night: mr robot
+  font: cyberpunk
+  font_size: m
+# Possible color themes: minimal, earth, rose, mr robot, 1950, apogees, coffee, dark, forest, ocean, strawberry
+# Possible font sets: minimal, classic, rose, mr robot, cyberpunk, native
+# Supported font sizes: xs, s, m, l, xl
 
 # SEO
 

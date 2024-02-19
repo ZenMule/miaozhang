@@ -3,7 +3,7 @@
 
 title: "Consonant-induced F0 perturbation in Kansai Japanese"
 subtitle: ""
-summary: ""
+summary: "An invited talk given at UTokyo Linguistics Colloquium, University of Tokyo."
 authors: 
 - admin
 tags: []

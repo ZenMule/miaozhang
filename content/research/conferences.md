@@ -1,5 +1,5 @@
 ---
-active: true
+active: activate
 # An instance of the Pages widget.
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: collection
@@ -10,14 +10,14 @@ headless: true
 # Order that this section appears on the page.
 weight: 10
 
-title: 'Publications'
+title: 'Conferences'
 subtitle: ''
 
 content:
   # Filter on criteria
   filters:
     folders:
-      - publication
+      - conference
     tag: ''
     category: ''
     publication_type: ''
@@ -36,4 +36,3 @@ design:
   view: citation
   columns: '2'
 ---
-

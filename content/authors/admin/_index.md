@@ -1,5 +1,23 @@
 ---
-bio: I am a Ph.D. trained in Phonetics. I am interested in vowel sequence production, laryngeal contrast, tone, and prosody.
+# Display name
+title: 张淼 | Miao Zhang
+
+# Status emoji
+status:
+  icon: 💻
+
+# Short bio
+bio: I am a Ph.D. trained in Phonetics. I currently work as a Post-Doc at the University of Zurich. My research focus on exploring the phonetic-phonology and phonetic-prosody interfaces.
+
+# The current afflication
+organizations:
+  - name: Department of Computational Linguistics, University at Zurich
+    url: https://www.cl.uzh.ch/en.html
+
+# Position
+role: Postdoctoral researcher
+    
+# Education to show in about
 education:
   courses:
   - course: PhD in Linguistics
@@ -16,26 +34,20 @@ first_name: Miao
 last_name: Zhang
 highlight_name: true
 interests:
-  - Vowel sequence
-  - Tone
-  - Laryngeal contrast
-  - Prosody
-organizations:
-  - name: Department of Computational Linguistics, University at Zurich
-    url: https://www.cl.uzh.ch/en.html
-    role: Postdoctoral Researcher
+  - The production of vowel sequence (e.g., diphthongs)
+  - Consonantal laryngeal contrast (e.g., voicing, aspiration)
+  - Stress in tone languages
+  - Linguistic prosody
+
 social:
 #- icon: envelope
 #  icon_pack: fas
 #  link: /#contact
-- display:
-    header: true
-  icon: twitter
+- icon: x
   icon_pack: fab
-  label: Follow me on Twitter
   link: https://twitter.com/Miao_Zhang_dr
-- icon: graduation-cap
-  icon_pack: fas
+- icon: researchgate
+  icon_pack: fab
   link: https://www.researchgate.net/profile/Miao-Zhang-34
 - icon: github
   icon_pack: fab
@@ -43,11 +55,16 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/zenmule/
+- icon: orcid
+  icon_pack: fab
+  link: https://orcid.org/0000-0002-9984-4486
+  
+# Is this the primary user of the website?
 superuser: true
-title: 张淼 | Miao Zhang
+
 ---
 
-I am a postdoctoral researcher at the University of Zurich (PI: Eleanor Chodroff). My research interests include the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. My main focus of research is to explore the phonology-phonetics interface and the prosody-phonetics interface. My research approach is that of Laboratory Phonology. I received my Ph.D. in Linguistics from the University at Buffalo, SUNY.
+I am a postdoctoral researcher at the University of Zurich (PI: Eleanor Chodroff). I am currently working on a project that utilizes a cross-linguistic large scale phonetic corpus ([VoxCommunis Corpus](https://osf.io/t957v/)) to examine phonetic universals and variabilities. My research interests also covers the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. In general, I consider my research approach is that of Laboratory Phonology. I received my Ph.D. degree in Linguistics from the University at Buffalo, SUNY.
 
 {{< icon name="download" pack="fas" >}} Download my CV {{< staticref "uploads/cv/cv_mz.pdf" "newtab" >}}in English{{< /staticref >}} or {{< staticref "uploads/cv/cv_chn.pdf" "newtab" >}}in Chinese{{< /staticref >}}.
 
