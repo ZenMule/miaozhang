@@ -1,6 +1,6 @@
 # SITE SETUP
-# Guide: https://wowchemy.com/docs/getting-started/
-# Documentation: https://wowchemy.com/docs/
+# Guide: https://docs.hugoblox.com/tutorial/
+# Documentation: https://docs.hugoblox.com/
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
@@ -9,10 +9,7 @@ appearance:
   theme_day: mr robot
   theme_night: mr robot
   font: cyberpunk
-  font_size: m
-# Possible color themes: minimal, earth, rose, mr robot, 1950, apogees, coffee, dark, forest, ocean, strawberry
-# Possible font sets: minimal, classic, rose, mr robot, cyberpunk, native
-# Supported font sizes: xs, s, m, l, xl
+  font_size: M
 
 # SEO
 
@@ -21,11 +18,13 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'A highly-customizable Hugo academic resume theme powered by Hugo Blox Builder.'
+    twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
+    google_tag_manager: ''
+    microsoft_clarity: ''
   verification:
     google: ''
     baidu: ''
@@ -56,7 +55,7 @@ footer:
 # Localization
 
 locale:
-  date_format: '01/02/06'
+  date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
   address_format: en-us
 
@@ -97,7 +96,7 @@ features:
       index_name: ''
       show_logo: false
   map:
-    provider: ''
+    provider: 'mapnik'
     api_key: ''
     zoom: 15
 

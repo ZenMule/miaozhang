@@ -43,7 +43,7 @@ social:
 #- icon: envelope
 #  icon_pack: fas
 #  link: /#contact
-- icon: x
+- icon: x-twitter
   icon_pack: fab
   link: https://twitter.com/Miao_Zhang_dr
 - icon: researchgate
@@ -66,6 +66,4 @@ superuser: true
 
 I am a postdoctoral researcher at the University of Zurich (PI: Eleanor Chodroff). I am currently working on a project that utilizes a cross-linguistic large scale phonetic corpus ([VoxCommunis Corpus](https://osf.io/t957v/)) to examine phonetic universals and variabilities. My research interests also covers the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. In general, I consider my research approach is that of Laboratory Phonology. I received my Ph.D. degree in Linguistics from the University at Buffalo, SUNY.
 
-{{< icon name="download" pack="fas" >}} Download my CV {{< staticref "uploads/cv/cv_mz.pdf" "newtab" >}}in English{{< /staticref >}} or {{< staticref "uploads/cv/cv_chn.pdf" "newtab" >}}in Chinese{{< /staticref >}}.
-
-{{< icon name="envelope" pack="fas" >}} Contact me at: miao dot zhang at uzh dot ch
+{{< icon name="envelope" pack="fas" >}}miao dot zhang at uzh dot ch
