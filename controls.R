@@ -3,7 +3,11 @@ library(blogdown)
 
 #### Site ####
 # Check the site
-blogdown::check_site()
+check_site()
+# Create root index
+blogdown:::create_index()
+# Install new hugo
+blogdown::install_hugo("0.123.3")
 
 # Serve the cite in local host
 blogdown::serve_site()
