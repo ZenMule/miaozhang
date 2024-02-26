@@ -21,7 +21,7 @@ file.edit(".gitignore")
 # Create a new blog post
 blogdown::new_post(title = "Dynamic seeding praat script bundle", 
                    kind = '.Rmarkdown', 
-                   subdir = "blog/")
+                   subdir = "post/")
 
 blogdown::new_content(path = "publication/this-one", kind = "2")
 
