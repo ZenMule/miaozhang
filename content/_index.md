@@ -37,7 +37,7 @@ sections:
           company_logo: uzh_logo
           location: Zurich, Switzerland
           date_start: '2023-11-20'
-          date_end: ''
+  #        date_end: ''
           description: |2-
               Project:
 
