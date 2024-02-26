@@ -33,16 +33,13 @@ sections:
       items:
         - title: Post-doc
           company: Department of Computational Linguistics, University of Zurich
-  #        company_url: 'https://www.cl.uzh.ch/en.html'
+          company_url: 'https://www.cl.uzh.ch/en.html'
           company_logo: uzh_logo
-  #        location: Zurich, Switzerland
+          location: Zurich, Switzerland
           date_start: '2023-11-20'
           date_end: ''
-          description: |2-
-              Project:
-  
-              * Universals and variation in speech production
-              * VoxCommunis Corpus
+          description: |-
+              Project: Universals and variation in speech production
     design:
       columns: '2'
   #- block: accomplishments
