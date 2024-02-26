@@ -1,15 +1,15 @@
 library(blogdown)
 #new_site(theme = "wowchemy/starter-academic")
 
-#### Site ####
-# Check the site
-check_site()
-# Create root index
-blogdown:::create_index()
-# Install new hugo
-blogdown::install_hugo("0.123.3")
 
-# Serve the cite in local host
+#### Check the site ####
+blogdown::check_site()
+
+# Install new hugo
+#blogdown::install_hugo("0.123.3")
+
+
+#### Serve the cite ####
 blogdown::serve_site()
 # Stop serving the cite
 blogdown::stop_server()
@@ -21,6 +21,7 @@ blogdown::config_Rprofile()
 file.edit(".gitignore")
 
 blogdown::check_gitignore()
+
 blogdown::check_content()
 
 #### Content ####

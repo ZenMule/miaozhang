@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .R
+.csv
 .Ruserdata
 .DS_Store
 .hugo_build.lock
