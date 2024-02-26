@@ -14,15 +14,8 @@ blogdown::serve_site()
 # Stop serving the cite
 blogdown::stop_server()
 
-blogdown::check_config()
-
-blogdown::config_Rprofile()
 
 file.edit(".gitignore")
-
-blogdown::check_gitignore()
-
-blogdown::check_content()
 
 #### Content ####
 # Create a new blog post
