@@ -19,9 +19,11 @@ file.edit(".gitignore")
 
 #### Content ####
 # Create a new blog post
-blogdown::new_post(title = "Dynamic seeding praat script bundle", 
+blogdown::new_post(title = "Preboundary vowel lengthening in Mandarin Chinese, English, and Japanese", 
                    kind = '.Rmarkdown', 
-                   subdir = "post/")
+                   subdir = "slides/",
+                   author = getOption("blogdown.author"),
+                   slug = "PBVL")
 
 blogdown::new_content(path = "publication/this-one", kind = "2")
 
@@ -47,11 +49,9 @@ rstudioapi::navigateToFile("config/_default/menus.yaml")
 
 rstudioapi::navigateToFile("config/_default/config.yaml")
 
-file.create("config/_default/menu.toml")
-dir.create("content/research")
-file.create("content/research/index.md")
-file.create("content/research/conferences.md")
-file.create("content/conference/_index.md")
+
+file.create("R/build.R")
+file.edit("R/build.R")
 
 file.edit("content/research/conferences.md")
 

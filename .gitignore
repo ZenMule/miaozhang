@@ -3,6 +3,7 @@
 .RData
 .R
 .csv
+.bib
 .Ruserdata
 .DS_Store
 .hugo_build.lock

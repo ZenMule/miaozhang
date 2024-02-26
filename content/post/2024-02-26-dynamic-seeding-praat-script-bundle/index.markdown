@@ -39,7 +39,7 @@ To run the formant extraction script without optimization and the spectral tilt 
 
 1. A `.csv` file containing the `reference values (F1-F3)` for the vowels you will extract formants from in your recordings. The formant reference values should be set differently for both genders (and children, if there are any).
 
-|Vowel | Gender | F1_init | F2_init | F3_init | F1_med | F2_med | F3_med | F1_fin  | F2_fin | F3_fin |
+|Vowel | Gender | F1_1 | F2_1 | F3_1 | F1_2 | F2_2 | F3_2 | F1_3  | F2_3 | F3_3 |
 |------|--------|------------|------------|------------|-----------|-----------|-----------|-----------|----------|----------|
 | a    | m      | 0          | 0          | 0          | 500       | 1000      | 2950      | 0         | 0        | 0        |
 
