@@ -7,7 +7,7 @@ status:
   icon: 💻
 
 # Short bio
-bio: I am a Ph.D. trained in Phonetics. I currently work as a Post-Doc at the University of Zurich. My research focus on exploring the phonetic-phonology and phonetic-prosody interfaces.
+bio: I hold a doctoral degree in Phonetics and presently serve as a Postdoctoral Researcher at the University of Zurich. My research endeavors are dedicated to the in-depth examination of the interfaces between phonetics and phonology, as well as the intricate relationships within the domain of phonetics-prosody.
 
 # The current afflication
 organizations:
@@ -63,7 +63,8 @@ social:
 superuser: true
 
 ---
+I am a Postdoctoral Researcher associated with the University of Zurich under the supervision of Dr. [Eleanor Chodroff](https://www.eleanorchodroff.com/). My ongoing scholarly endeavors are centered on the systematic exploration of phonetic universals and variability through the application of a cross-linguistic large-scale phonetic corpus, specifically the [VoxCommunis Corpus](https://osf.io/t957v/). Adopting the tenets of Laboratory Phonology as my theoretical framework, my research spans a diverse array of topics, encompassing the intricate dynamics of vowel sequences, tone, consonant laryngeal contrast, and their nuanced interactions with linguistic prosody.
 
-I am a postdoctoral researcher at the University of Zurich (PI: Eleanor Chodroff). I am currently working on a project that utilizes a cross-linguistic large scale phonetic corpus ([VoxCommunis Corpus](https://osf.io/t957v/)) to examine phonetic universals and variabilities. My research interests also covers the production of vowel sequence, tone, consonant laryngeal contrast, and their interaction with linguistic prosody. In general, I consider my research approach is that of Laboratory Phonology. I received my Ph.D. degree in Linguistics from the University at Buffalo, SUNY.
+I hold a Ph.D. in Linguistics from the University at Buffalo, SUNY. My doctoral dissertation delved into the effect of linguistic prosody on the production of vowel sequences in Mandarin Chinese, English, and Japanese.
 
 {{< icon name="envelope" pack="fas" >}}miao dot zhang at uzh dot ch
