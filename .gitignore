@@ -1,3 +1,6 @@
+# Ignore R-related files
 controls.R
-.Rproj.user
+.Rproj.user/
+
+# Ignore macOS system files
 .DS_Store
