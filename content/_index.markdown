@@ -4,7 +4,7 @@ title: Home
 
 [<img src="/profile.jpg" style="max-width:35%;min-width:40px;float:right;" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
 
-# Miao Zhang
+# 张淼 Miao ZHANG
 
 ## About me　
 
