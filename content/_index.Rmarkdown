@@ -16,6 +16,8 @@ I also enjoy cooking, playing video games, and going to classical music concerts
 
 Download my CV: [English](/Miao_CV.pdf) / [Chinese](/Miao_CV_chn.pdf).
 
+Email me: miao dot zhang at uzh dot ch
+
 ## Employment
 
 * 2023-, Postdoctoral Researcher, Department of Computational Linguistics, University of Zurich

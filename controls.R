@@ -25,7 +25,7 @@ file.edit(".gitignore")
 #### Content ####
 # Create a new blog post
 blogdown::new_post(title = "Montreal Forced Aligner Tutorial (PAPPS)", 
-                   kind = '.Rmarkdown', 
+                   kind = '.Rmd', 
                    subdir = "event/",
                    author = getOption("blogdown.author"))
 
