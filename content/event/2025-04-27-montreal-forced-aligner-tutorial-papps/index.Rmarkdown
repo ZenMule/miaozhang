@@ -7,6 +7,10 @@ categories: []
 tags: []
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
 ## Why forced alignment?
 
 - Speech corpora usually contain a large amount of data that are hard to hand align the sounds.

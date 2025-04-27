@@ -7,6 +7,8 @@ categories: []
 tags: []
 ---
 
+
+
 ## Why forced alignment?
 
 - Speech corpora usually contain a large amount of data that are hard to hand align the sounds.

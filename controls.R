@@ -40,24 +40,8 @@ blogdown::check_netlify()
 blogdown::check_hugo()
 blogdown::remove_hugo()
 
-#### Personalize color themes and fonts ####
-rstudioapi::navigateToFile("config/_default/params.yaml")
-
 ##### Edit your bio page ####
 rstudioapi::navigateToFile("content/authors/admin/_index.md")
-
-#### Import publications ####
-
-rstudioapi::navigateToFile("config/_default/params.yaml")
-rstudioapi::navigateToFile("config/_default/menus.yaml")
-
-rstudioapi::navigateToFile("config/_default/config.yaml")
-
-
-file.create("R/build.R")
-file.edit("R/build.R")
-
-file.edit("content/research/conferences.md")
 
 #### Import publications ####
 bibtex_2academic("my_publications.bib", "content/pub_2")
