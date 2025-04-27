@@ -33,7 +33,8 @@ blogdown::new_content(path = "publication/this-one", kind = "2")
 
 blogdown::hugo_build(local=TRUE)
 
-rstudioapi::navigateToFile("content/_index.Rmarkdown", line = 3)
+#### Home page ####
+rstudioapi::navigateToFile("content/_index.Rmarkdown")
 blogdown::config_netlify()
 blogdown::check_netlify()
 

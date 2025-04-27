@@ -2,7 +2,7 @@
 title: Home
 ---
 
-[<img src="https://simpleicons.org/icons/researchgate.svg" style="max-width:15%;min-width:40px;float:right;" alt="Github repo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
+[<img src="/profile.jpg" style="max-width:35%;min-width:40px;float:right;" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
 
 # Miao Zhang
 
@@ -13,6 +13,8 @@ I am a linguist specializing in phonetics and phonology. My research explores th
 I hold a Ph.D. in Linguistics from the University at Buffalo, SUNY and an M.A. in Japanese Language Education (日本語教育) from the University of Tsukuba. My expertise extends to computational linguistics, with skills in R, Python, and Praat scripting. I am dedicated to advancing our understanding of the complexities of human speech.
 
 I also enjoy cooking, playing video games, and going to classical music concerts.
+
+Download my CV: [English](/Miao_CV.pdf) / [Chinese](/Miao_CV_chn.pdf).
 
 ## Employment
 
