@@ -2,44 +2,55 @@ library(blogdown)
 new_site(theme = "yihui/hugo-xmin")
 
 #### Check the site ####
-blogdown::check_site()
-
-# Install new hugo
-#blogdown::install_hugo("0.123.3")
-
+check_site()
 
 #### Serve the site ####
 # start serving the site
-blogdown::serve_site()
+serve_site()
 
 # Stop serving
-blogdown::stop_server()
+stop_server()
 
 #### Build the site ####
-blogdown::hugo_version()
-blogdown::build_site()
+hugo_version()
+build_site()
 
 
 file.edit(".gitignore")
 
 #### Content ####
 # Create a new blog post
-blogdown::new_post(title = "Montreal Forced Aligner Tutorial (PAPPS)", 
-                   kind = '.Rmd', 
-                   subdir = "event/",
-                   author = getOption("blogdown.author"))
+new_post(title = "Montreal Forced Aligner Tutorial", 
+         ext = '.md', 
+         date = "2025-4-28",
+         subdir = "event/",
+         author = "Miao Zhang",
+         slug = "MFA-tutorial")
 
-blogdown::new_content(path = "publication/this-one", kind = "2")
+# Create new slides
+new_post(title = "Montreal Forced Aligner Tutorial", 
+         ext = '.Rmd', 
+         date = "2025-04-28",
+         subdir = "static/",
+         author = "Miao Zhang",
+         slug = "MFA-tutorial")
 
-blogdown::hugo_build(local=TRUE)
+# Force render the slides
+rmarkdown::render("content/static/2025-04-28-montreal-forced-aligner-tutorial/index.Rmd")
 
-#### Home page ####
-rstudioapi::navigateToFile("content/_index.Rmarkdown")
-blogdown::config_netlify()
-blogdown::check_netlify()
 
-blogdown::check_hugo()
-blogdown::remove_hugo()
+
+new_content(path = "publication/this-one", kind = "2")
+
+hugo_build(local=TRUE)
+
+#### Content editting ####
+rstudioapi::navigateToFile("~/Documents/GitHub/miaozhang/content/event/2025-04-27-montreal-forced-aligner-tutorial-papps/index.Rmd")
+config_netlify()
+check_netlify()
+
+check_hugo()
+remove_hugo()
 
 ##### Edit your bio page ####
 rstudioapi::navigateToFile("content/authors/admin/_index.md")

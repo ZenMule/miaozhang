@@ -1,6 +1,6 @@
 baseurl: "https://miaozhang.org/"  # please update this to your actual URL
 languageCode: "en-us"
-title: "A minimal Hugo website"
+title: "Miao Zhang's personal website"
 theme: "hugo-xmin"
 googleAnalytics: ""
 disqusShortname: ""
@@ -31,7 +31,7 @@ menu:
     
 
 params:
-  description: "A website built through Hugo and blogdown."
+  description: "Welcome to my website!"
   footer: "&copy; Miao Zhang 2022 -- {Year} | [Github](https://github.com/ZenMule) | [X](https://x.com/Miao_Zhang_dr) | [HuggingFace](https://huggingface.co/zenmule)"
 
 markup:
