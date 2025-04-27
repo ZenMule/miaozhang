@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on A minimal Hugo website</title>
+    <title>Home on Miao Zhang&#39;s personal website</title>
     <link>https://miaozhang.org/</link>
-    <description>Recent content in Home on A minimal Hugo website</description>
+    <description>Recent content in Home on Miao Zhang&#39;s personal website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2024 09:42:58 +0100</lastBuildDate>
     <atom:link href="https://miaozhang.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Montreal Forced Aligner Tutorial (PAPPS)</title>
-      <link>https://miaozhang.org/event/montreal-forced-aligner-tutorial-papps/</link>
-      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://miaozhang.org/event/montreal-forced-aligner-tutorial-papps/</guid>
-      <description>&lt;h2 id=&#34;why-forced-alignment&#34;&gt;Why forced alignment?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Speech corpora usually contain a large amount of data that are hard to hand align the sounds.&lt;/li&gt;&#xA;&lt;li&gt;Manual annotation may not be consistent across different annotators.&lt;/li&gt;&#xA;&lt;li&gt;We simply want to save ourselves from pure labor work and focus on researching and analyzing.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-montreal-forced-alignment&#34;&gt;Why Montreal Forced Alignment?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It uses Kaldi ASR toolkit.&lt;/li&gt;&#xA;&lt;li&gt;You can train your own model for your dataset/corpora.&lt;/li&gt;&#xA;&lt;li&gt;In addition to acoustic models, it can train Grapheme-to-Morpheme models as well.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
     <item>
       <title>Dynamic seeding formant extraction</title>
       <link>https://miaozhang.org/post/2024/02/26/dynamic-seeding-praat-script-bundle/</link>

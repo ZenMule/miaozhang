@@ -197,8 +197,8 @@ Each line in the dictionary consists of two elements: the word and the space-sep
 
 # Running MFA to align
 
-```{bash aligning en}
 
+``` bash
 
 ```
 

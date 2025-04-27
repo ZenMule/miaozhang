@@ -78,11 +78,13 @@ The output:
 
 # Why forced alignment?
 
-- Manual annotation is not scalable to large speech corpora. (Hand-annotate 10 minutes of recordings can easily cost more than 1 hour of work.)
+- Manual annotation is not scalable to large speech corpora. 
+  - Hand-annotate 10 minutes of recordings can easily cost more than 1 hour of work.
 
-- Cross-annotator consistency can be low.
+- Cross-annotator consistency may not be high.
 
-- As scientists, we would like to spend more time and energy thinking about research rather than doing repetitive 'labor work'.
+- As scientists, we would like to spend more time and energy thinking about research rather than doing repetitive 'labor work' that may not be less prone to errors than algorithms.
+  - Human errors are also often less *transparent* than computational errors.
 
 &lt;img src="save_time.jpg" width="55%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"&gt;
 
@@ -100,7 +102,9 @@ Forced alignment reads in the speech data and the transcripts, then uses the pro
 
 ---
 
-# Be cautious!
+# Before we start
+
+## Be cautious!
 
 Forced alignment is NOT a Swiss army knife!
 
@@ -112,7 +116,7 @@ Forced alignment is NOT a Swiss army knife!
 
 ---
 
-# Be cautious
+## Be cautious
 
 Some cases of misuses of alignment tools which may lower the quality of your outcome:
 
@@ -125,7 +129,7 @@ Some cases of misuses of alignment tools which may lower the quality of your out
 
 ---
 
-# Some factors that can influence the quality of the alignment
+# Some other factors that can influence the quality of the alignment
 
 - The quality of the pronunciation dictionary.
 
@@ -167,7 +171,10 @@ But we will focus on using MFA from training your own model for your own dataset
 
 # How does MFA do this?
 
-MFA uses [Kaldi]() ASR toolkit
+&gt; "The Montreal Forced Aligner by default goes through four primary stages of training. The first pass of alignment uses monophone models, where each phone is modelled the same regardless of phonological context. The second pass uses triphone models, where context on either side of a phone is taken into account for acoustic models. The third pass performs LDA+MLLT to learn a transform of the features that makes each phone’s features maximally different. The final pass enhances the triphone model by taking into account speaker differences, and calculates a transformation of the mel frequency cepstrum coefficients (MFCC) features for each speaker. See the Kaldi page on feature transformations for more detail on these final passes."
+
+&lt;p style="text-align: right;"&gt;From MFA Official website.)]&lt;/p&gt;
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
