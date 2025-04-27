@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dynamic seeding formant extraction | A minimal Hugo website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/publication/">Publications</a></li>
+      
+      <li><a href="/post/">Posts</a></li>
+      
+      <li><a href="/event/">Talks/tutorials</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Dynamic seeding formant extraction</span></h1>
+<h2 class="author">Miao Zhang</h2>
+<h2 class="date">2024/02/26</h2>
+</div>
+
+<main>
+<h1 id="1-dynamic-seeding-formant-extracting-script-bundle">1. Dynamic seeding formant extracting script bundle</h1>
+<p>This script bundle incorporated the seeding method (Chen et al. 2019)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and dynamic formant reference value settings to extract more accurate formants from vocalic segments. Three scripts are found in this bundle:</p>
+<ol>
+<li>The formant extraction script that uses dynamic seeding to extract formants without step-wise optimization</li>
+<li>The formant extraction script that uses dynamic seeding to extract formants and does step-wise optimization, iterating over a range of ceiling frequencies (manually set by the user).</li>
+<li>The script that extracts spectral tilt measures such as H1-H2, H2-H4, etc.</li>
+</ol>
+<p>Since my study investigates the formant transition in complex vocalic segments (e.g., diphthongs/triphthongs), the usual method of setting only one set of reference formant values and ignoring the formant excursions in vocalic segments is not ideal. Also, because there are different vocalic segments in my recordings (both monophthongs and diphthongs), manually setting formant reference values for each vowel and each speaker each time when doing the analysis is meticulous and arduous. Therefore, I decided to combine the seeding method and dynamic formant reference setting into one single Praat script that loops through all files in all subdirectories in a root folder, making formant extraction much faster and more accurate.</p>
+<h1 id="2-prerequisite">2. Prerequisite</h1>
+<p>All your recordings must be annotated with <code>.TextGrid</code> files.</p>
+<p>To run any of the scripts, at least two reference files must be prepared.</p>
+<h2 id="21-reference-files">2.1. Reference files</h2>
+<p>To run the formant extraction script without optimization and the spectral tilt scripts, you must prepare the three reference <code>.csv</code> files as illustrated below.</p>
+<ol>
+<li>A <code>.csv</code> file containing the <code>reference values (F1-F3)</code> for the vowels you will extract formants from in your recordings. The formant reference values should be set differently for both genders (and children, if there are any).</li>
+</ol>
+<table>
+  <thead>
+      <tr>
+          <th>Vowel</th>
+          <th>Gender</th>
+          <th>F1_1</th>
+          <th>F2_1</th>
+          <th>F3_1</th>
+          <th>F1_2</th>
+          <th>F2_2</th>
+          <th>F3_2</th>
+          <th>F1_3</th>
+          <th>F2_3</th>
+          <th>F3_3</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>a</td>
+          <td>m</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>500</td>
+          <td>1000</td>
+          <td>2950</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+  </tbody>
+</table>
+<p>This file should have exactly <code>2+9=11</code> columns: <code>Vowel</code>, <code>Gender</code>, and 9 other columns of <code>formant reference values</code>. Your formant reference file should specify reference F1-F3 values separately for the <strong>initial, medial, and final 33%</strong> of the vowel (3 formants for each tertile and 9 reference values for each vowel in total). For monophthongs, set the reference values of the initial and final reference values to 0. My script will find monophthongs in your labels and locate the medial reference values automatically, ignoring the initial and final sets of reference values.</p>
+<p>Ensure you have set reference values for all the vowel segments you want to extract formants from in your <code>.TextGrid</code> annotation. The scripts will read the formant reference file, find all vowels you listed therein, and only extract formants from segments with the same labels.</p>
+<ol start="2">
+<li>A <code>.csv</code> file that lists the <code>speaker_id</code> and their <code>gender</code>.</li>
+</ol>
+<p>This file should have exactly 2 columns: <code>speaker_id</code> and <code>gender</code>. The <code>speaker_id</code> should use the same strings you use for the names of the folders to save recordings of different speakers. This means if your first speaker&rsquo;s recordings are in a folder called &lsquo;<strong>sp_1</strong>&rsquo;, then in the speaker log <code>.csv</code> file, its id should also be &lsquo;<strong>sp_1</strong>&rsquo;.</p>
+<p>Example:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Speaker</th>
+          <th>Gender</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>sp_1</td>
+          <td>m</td>
+      </tr>
+  </tbody>
+</table>
+<ol start="3">
+<li>Finally, A <code>.csv</code> file that has <code>formant_ceiling</code> values and <code>number of formants</code> for different <code>genders</code> (usually F(emale) and M(ale), C(hildren) can be added by the user too if necessary) of speakers. The order of the columns has to be the same as shown in the example:</li>
+</ol>
+<table>
+  <thead>
+      <tr>
+          <th>Gender</th>
+          <th>Formant_ceiling</th>
+          <th>Number_of_formants</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>m</td>
+          <td>5000 (Praat default)</td>
+          <td>5 (Praat default)</td>
+      </tr>
+  </tbody>
+</table>
+<p>This file should contain exactly 3 columns: <code>gender</code>, <code>formant_ceiling</code> and <code>number_of_formants</code>. The formant ceiling and number of formants to track should differ according to gender. Usually, I set the ceiling to 4600Hz for females and 4000Hz for males (another option is 5500Hz for females and 4600 for males). The number of formants to track should also be different by gender as well. I usually set 5 for female speakers and 4 for male speakers.</p>
+<p>If you use the script that does step-wise optimization, you don&rsquo;t need to prepare this file since iterates a range of ceiling frequencies to get the optimal formant values for each time point.</p>
+<p>Note that <strong>the strings used to code genders must be consistent in all three files</strong>. For example, If you used capital letters <strong>M</strong>/<strong>F</strong> in one file, you should also use capital letters <strong>M</strong>/<strong>F</strong> in the other two.</p>
+<p>However, the specific names of the columns in the three files only matter if the order is correct. The script will automatically locate the columns by order instead of the column names. Therefore, the order of the columns has to be exactly the same as I have illustrated above.</p>
+<h1 id="3-how-to-use">3. How to use</h1>
+<p>The script allows you to specify another one or two tiers (shown as <code>Syllable tier number</code> and <code>Word tier number</code> in the form window) that may contain syllable and word information or other sort. If you don&rsquo;t want to extract additional information from the other tiers, simply set them to <code>0</code>.</p>
+<p>Upon running the script, it will first ask you to choose the <code>speaker log</code> file, the <code>formant reference</code> file, and the <code>formant ceiling</code> file (the <code>formant ceiling</code> file is not needed for the formant optimization script). Then, it will ask you to choose <code>the folder</code> where you saved your recordings. Note that since the script loops through subdirectories in the folder and looks for the subfolder names as speaker ID, your recordings of each speaker should be saved in separate folders, and within such folders, there should be no other subfolders.</p>
+<p>For example, if you have two speakers, the two speakers&rsquo; recordings should be saved separately in two folders, <code>speaker_1</code> and <code>speaker_2</code>. The two folders should be put together in another folder, for example, <code>speaker</code>. When asked to choose the SOUND FILE folder, choose <code>speaker</code> instead of <code>speaker_1</code> or <code>speaker_2</code>.</p>
+<h1 id="4-the-logic-of-the-scripts">4. The logic of the scripts</h1>
+<p>The script first reads in the three (or two) reference files as tables and then loops through all the sound and textgrid files in all the subdirectories.</p>
+<p>The script will first identify the speaker by getting the name of the folder and then find the speaker&rsquo;s gender from the speaker log file. Then, it will use the gender information to locate (the formant ceiling) the number of formants to track and formant reference values.</p>
+<p>During formant extraction, the script divides each labeled interval into several time points (shown in the form as <code>Number of chunks</code>). Then, it divides all the time points into three slices: the initial, medial, and final 33% of the vowel. Then, it will use different formant reference values in the three slices to track formants.</p>
+<p>After up to 3 or 4 formants and the spectral moments are obtained, the results will be output to two log files.</p>
+<h2 id="41-the-logic-of-step-wise-formant-optimization">4.1. The logic of step-wise formant optimization</h2>
+<p>The idea of step-wise optimization is inspired by Christopher Caringan&rsquo;s praat script: <a href="https://github.com/ChristopherCarignan/formant-optimization.git">ChristopherCarignan/formant-optimization</a>.</p>
+<p>It first iterate from the lowest value of the ceiling frequency to the highest value with a step frequency (e.g., 50Hz or 100Hz) that can be set by the user, to track the formants. Then for each time point, it filters out undefined values and outliers that are 2 standard deviations away from the mean first. Then it takes the median value for each time point of each segment to be the final extracted formant values at the time point.</p>
+<p>For example, if you set your ceiling frequency from 4500 to 5000 with a step of 100Hz, the scripts will iterate across 4500, 4600, 4700, 4800, 4900, and 5000 to get the formant values for the time point.</p>
+<p>This process can take a rather long time to finish, depending on your range of iteration of ceiling frequencies (the wider the range, the longer the time), your step frequency (the smaller the step, the longer the time), and how many segments you have in your <code>.TextGrid</code> file. It could possibly take hours to run when you have lots of data.</p>
+<h1 id="5-what-do-you-get">5. What do you get</h1>
+<p>All scripts output two log files: <code>*_time.csv</code> and <code>*_context.csv</code>. One file logs the contextual information, the previous and subsequent segments around the target vowel, the label of the current syllable/word, and the syllable/word duration.</p>
+<p>The other file will log in values for each data-extracting time point, such as F0-4, spectral tilt measures, and spectral moment measures.</p>
+<p>The outputs of the contextual log file are the same: the current segment, the preceding and following segments in the <code>.TextGrid</code> file, the current label on the syllable/word tier, and the duration of the syllable/word labels.</p>
+<p><strong>The outputs in the time-sensitive log file differ for the three scripts</strong>.</p>
+<h2 id="51-formant-dynamic-seeding-script">5.1. Formant dynamic seeding script</h2>
+<p>It contains <code>F1-F4</code> values (If script was unable to obtain any formant values, the result is logged as <code>0</code>) from several equidistant intervals of each vowel as specified by the user in the form before running the script. This file will also log four spectral moments: <code>center of gravity</code>, <code>standard deviation</code>, <code>skewness</code> and <code>kurtosis</code>, in the final <code>*_time.csv</code> file.</p>
+<p>The data will be saved in the long format in the second log file, that is, all data from each individual value tracking interval are saved in one row in the file.</p>
+<h2 id="52-formant-optimization-script">5.2. Formant optimization script</h2>
+<p>This script only outputs <code>F1-3</code> without spectral moment measures in the <code>*_time.csv</code> file.</p>
+<h2 id="53-spectral-measure-script">5.3. Spectral measure script</h2>
+<p>It logs corrected and uncorrected spectral tilt measures: H1-H2, H2-H4, H4-H2k, H2k-H5k, H1-A1, H1-A2, H1-A3, and F0-4. The user can specify when using this script whether they also want the individual amplitude values (H1, H2, etc.) to be logged.</p>
+<h1 id="6-advantages">6. Advantages</h1>
+<ol>
+<li>It&rsquo;s accurate. With the seeding method that sets reference values for different segments, the formant estimation is more accurate than using the default tracking references. The Praat default is F1: 550, F2: 1650, F3: 2750, F4: 3850, F5: 4950, which is only ideal for schwa-like central vowels. It is also accurate for getting formants from vowel sequences by setting different reference values across the course of a segment, as there are usually formant excursions during the production of vowel sequences. This is something that most scripts and applications (E.g., VoiceSauce) fail to do, as they do not allow you to specify reference values for different vowel segments altogether.</li>
+<li>It&rsquo;s fast. With the reference files, and iteration through subfolders, the amount of time is much reduced than running scripts for each vowel and each speaker.</li>
+<li>The spectral tilt measures are more accurate with more accurate formant values. Spectral tilt measures are only useful when the tracked formant values are accurate. Getting the accurate formant is also crucial to getting the accurate spectral tilt measures. Especially if you also do spectral tilt measure correction based on the frequency and bandwidth of individual formants.</li>
+</ol>
+<hr>
+<h1 id="7-reference">7. Reference</h1>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Chen, W. R., Whalen, D. H., &amp; Shadle, C. H. (2019). F 0-induced formant measurement errors result in biased variabilities. The Journal of the Acoustical Society of America, 145(5), EL360-EL366.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © Miao Zhang 2022 &ndash; 2025 | <a href="https://github.com/ZenMule">Github</a> | <a href="https://x.com/Miao_Zhang_dr">X</a> | <a href="https://huggingface.co/zenmule">HuggingFace</a>
+  
+  </footer>
+  </body>
+</html>
+

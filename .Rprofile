@@ -14,13 +14,10 @@ options(
   # to automatically serve the site on RStudio startup, set this option to TRUE
   blogdown.serve_site.startup = FALSE,
   # to disable knitting Rmd files on save, set this option to FALSE
-  blogdown.knit.on_save = FALSE,
-  blogdown.author = "Miao Zhang",
-  blogdown.ext = ".Rmarkdown",
-  # blogdown.subdir = "post",
+  blogdown.knit.on_save = TRUE,
   # build .Rmd to .md; to build to .html (via Pandoc), set this option to 'html'
   blogdown.method = 'markdown'
 )
 
 # fix Hugo version
-options(blogdown.hugo.version = "0.123.3")
+options(blogdown.hugo.version = "0.147.0")

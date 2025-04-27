@@ -1,0 +1,54 @@
+baseurl: "https://miaozhang.org/"  # please update this to your actual URL
+languageCode: "en-us"
+title: "A minimal Hugo website"
+theme: "hugo-xmin"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: Publications
+      url: "publication/"
+      weight: 2
+    - name: About
+      url: "about/"
+      weight: 5
+    - name: Posts
+      url: "post/"
+      weight: 3
+    - name: Talks/tutorials
+      url: "event/"
+      weight: 4
+    
+
+params:
+  description: "A website built through Hugo and blogdown."
+  footer: "&copy; Miao Zhang 2022 -- {Year} | [Github](https://github.com/ZenMule) | [X](https://x.com/Miao_Zhang_dr) | [HuggingFace](https://huggingface.co/zenmule)"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)

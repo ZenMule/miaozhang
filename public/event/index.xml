@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Events on A minimal Hugo website</title>
+    <link>https://miaozhang.org/event/</link>
+    <description>Recent content in Events on A minimal Hugo website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://miaozhang.org/event/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Montreal Forced Aligner Tutorial (PAPPS)</title>
+      <link>https://miaozhang.org/event/montreal-forced-aligner-tutorial-papps/</link>
+      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/event/montreal-forced-aligner-tutorial-papps/</guid>
+      <description>&lt;h2 id=&#34;why-forced-alignment&#34;&gt;Why forced alignment?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Speech corpora usually contain a large amount of data that are hard to hand align the sounds.&lt;/li&gt;&#xA;&lt;li&gt;Manual annotation may not be consistent across different annotators.&lt;/li&gt;&#xA;&lt;li&gt;We simply want to save ourselves from pure labor work and focus on researching and analyzing.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;why-montreal-forced-alignment&#34;&gt;Why Montreal Forced Alignment?&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It uses Kaldi ASR toolkit.&lt;/li&gt;&#xA;&lt;li&gt;You can train your own model for your dataset/corpora.&lt;/li&gt;&#xA;&lt;li&gt;In addition to acoustic models, it can train Grapheme-to-Morpheme models as well.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Consonant-induced F0 perturbation in Kansai Japanese</title>
+      <link>https://miaozhang.org/event/consonant-induced-f0-perturbation-in-kansai-japanese/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/event/consonant-induced-f0-perturbation-in-kansai-japanese/</guid>
+      <description>&lt;p&gt;This is an invited talk given at UTokyo Linguistics Colloquium.&lt;/p&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract:&lt;/h2&gt;&#xA;&lt;p&gt;This study investigates the effect of voicing on onset F0 in Kansai Japanese. In tone languages, the effect of initial consonants on F0 tends to be smaller and shorter, hypothetically to maximize the tonal contrast preserved for lexical items. A recent study (Gao and Arai, 2019) found that despite Tokyo Japanese being a pitch-accent language, the consonant effect on F0 was not necessarily inhibited. However, this might be due to decreased laryngeal control in Tokyo Japanese because of its simple tonal contrast. Since the pitch accent system of Kansai Japanese is more complex than that of Tokyo Japanese, Kansai Japanese should show less F0 perturbation. In the experiment, five native speakers (4 females, 1 male) produced the target words /CVma/ (C: /n, b, p/, V: /i, a/) in different pitch accent types (HH, HL, LH) and focus conditions (broad, narrow, contrast focus). My data show that overall, F0 following /p/ is significantly higher. The more complex pitch-accent system did not lessen the F0 perturbation. Consistent across focus, the effect is slightly larger in words with a high pitch accent and in the high vowel /i/ context. This may be due to the congruence in laryngeal settings for high F0 production.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

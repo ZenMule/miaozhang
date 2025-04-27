@@ -1,6 +1,5 @@
 library(blogdown)
-#new_site(theme = "wowchemy/starter-academic")
-
+new_site(theme = "yihui/hugo-xmin")
 
 #### Check the site ####
 blogdown::check_site()
@@ -9,27 +8,32 @@ blogdown::check_site()
 #blogdown::install_hugo("0.123.3")
 
 
-#### Serve the cite ####
+#### Serve the site ####
+# start serving the site
 blogdown::serve_site()
-# Stop serving the cite
+
+# Stop serving
 blogdown::stop_server()
+
+#### Build the site ####
+blogdown::hugo_version()
+blogdown::build_site()
 
 
 file.edit(".gitignore")
 
 #### Content ####
 # Create a new blog post
-blogdown::new_post(title = "Preboundary vowel lengthening in Mandarin Chinese, English, and Japanese", 
+blogdown::new_post(title = "Montreal Forced Aligner Tutorial (PAPPS)", 
                    kind = '.Rmarkdown', 
-                   subdir = "slides/",
-                   author = getOption("blogdown.author"),
-                   slug = "PBVL")
+                   subdir = "event/",
+                   author = getOption("blogdown.author"))
 
 blogdown::new_content(path = "publication/this-one", kind = "2")
 
 blogdown::hugo_build(local=TRUE)
 
-rstudioapi::navigateToFile("config/_default/config.yaml", line = 3)
+rstudioapi::navigateToFile("content/_index.Rmarkdown", line = 3)
 blogdown::config_netlify()
 blogdown::check_netlify()
 

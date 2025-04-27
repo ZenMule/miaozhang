@@ -1,12 +1,2 @@
+controls.R
 .Rproj.user
-.Rhistory
-.RData
-.R
-.csv
-.bib
-.Ruserdata
-.DS_Store
-.hugo_build.lock
-/public/
-/resources/
-Thumbs.db
