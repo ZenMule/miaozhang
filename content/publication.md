@@ -27,3 +27,7 @@ _Journal of International Phonetic Association_
 - 2019, The role of information structure and foot structure on the kinematics of unstressed syllables. (Oral, **peer-reviewed**) *Hanyang International Symposium on Phonetics and Cognitive Sciences of Language (HISPhonCog) 2019*, May 24-25, Seoul, South Korea.
 - 2015, Japanese Lexical V-V compounds Revisited (Poster), *The Symposium of Challenging Japanese Language Teaching: Introducing the Efforts of University of Tsukuba*, March, Tsukuba, Japan.
 - 2013, On the Collocation of the Adverb ‘Zenzen’: An Investigation via Tsukuba Web Corpus (Poster), *The Annual Meeting of Association of Japanese Language and Japanese Language Pedagogy 2013, Tokyo, Japan*
+
+## Dissertation
+
+- 2022, Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics, New York State University at Buffalo. [pdf](/mz_dissertation.pdf)
