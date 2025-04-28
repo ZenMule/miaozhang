@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>Montreal Forced Aligner Tutorial</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Miao Zhang Department of Computational Linguistics, University of Zurich" />
-    <meta name="date" content="2025-04-28" />
-    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-.title[
-# Montreal Forced Aligner Tutorial
-]
-.author[
-### Miao Zhang
-Department of Computational Linguistics, University of Zurich
-]
-.date[
-### 2025-04-28
-]
-
 ---
-
+title: Montreal Forced Aligner Tutorial
+author: "Miao Zhang\nDepartment of Computational Linguistics, University of Zurich"
+date: '2025-04-28'
+slug: MFA-tutorial
+categories: []
+tags: []
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
 
 
 # About me
@@ -34,7 +20,7 @@ I am a linguist specializing in phonetics and phonology. I am primarily interest
 
 ---
 
-&lt;!---class: center---&gt;
+<!---class: center--->
 
 # A workflow of acoustic phonetic research
 
@@ -63,18 +49,33 @@ Forced alignment is especially useful for step 2!
 
 - Given recordings of utterances, we would like to know where each individual sound starts and ends to perform further phonetic analysis.
 
-&lt;img src="annotation.jpg" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"&gt;
+<img src="annotation.jpg" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
 
 ---
 
 The input:
 
 ![Sound](snd_only.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
 ---
 
 The output:
 
 ![Sound](snd_aligned.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 ---
 
@@ -88,7 +89,7 @@ The output:
 - As scientists, we would like to spend more time and energy thinking about research rather than doing repetitive 'labor work' that may not be less prone to errors than algorithms.
   - Human errors are also often less *transparent* than computational errors.
 
-&lt;img src="save_time.jpg" width="45%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"&gt;
+<img src="save_time.jpg" width="45%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
 
 ---
 
@@ -164,9 +165,9 @@ But we will focus on using MFA from training your own model for your own dataset
 
 # How does MFA do this?
 
-&gt; "The Montreal Forced Aligner by default goes through four primary stages of training. The first pass of alignment uses &lt;span style="color:red;"&gt;**monophone models**&lt;/span&gt;, where each phone is modelled the same regardless of phonological context. The second pass uses &lt;span style="color:red;"&gt;**triphone models**&lt;/span&gt;, where context on either side of a phone is taken into account for acoustic models. The third pass performs &lt;span style="color:red;"&gt;**LDA+MLLT**&lt;/span&gt; to learn a transform of the features that makes each phone’s features maximally different. The final pass enhances the triphone model by taking into account &lt;span style="color:red;"&gt;**speaker differences**&lt;/span&gt;, and calculates a transformation of the mel frequency cepstrum coefficients (MFCC) features for each speaker."
+> "The Montreal Forced Aligner by default goes through four primary stages of training. The first pass of alignment uses <span style="color:red;">**monophone models**</span>, where each phone is modelled the same regardless of phonological context. The second pass uses <span style="color:red;">**triphone models**</span>, where context on either side of a phone is taken into account for acoustic models. The third pass performs <span style="color:red;">**LDA+MLLT**</span> to learn a transform of the features that makes each phone’s features maximally different. The final pass enhances the triphone model by taking into account <span style="color:red;">**speaker differences**</span>, and calculates a transformation of the mel frequency cepstrum coefficients (MFCC) features for each speaker."
 
-&lt;p style="text-align: right;"&gt;---From MFA Official website.&lt;/p&gt;
+<p style="text-align: right;">---From MFA Official website.</p>
 
 ---
 
@@ -177,7 +178,7 @@ MFA is installed through `conda-forge`. We will need to install [Anaconda](https
 Go to the website of Anaconda and download the one suitable to your OS (Windows, macOS, linux, etc). Installing instructions can be found [here](https://www.anaconda.com/docs/getting-started/anaconda/install#windows-installation). 
 
 
-![Anaconda3](Anaconda_Logo.png)
+.center[![Anaconda3](Anaconda_Logo.png)]
 
 ---
 
@@ -221,13 +222,13 @@ There are several things you need to prepare:
 
 # Use case 1 (the most simple case)
 
-1. Recordings &amp;#10004;
+1. Recordings &#10004;
 
-2. Transcripts &amp;#10004;
+2. Transcripts &#10004;
 
-3. Dictionary &amp;#10004;
+3. Dictionary &#10004;
 
-4. Acoustic model &amp;#10004;
+4. Acoustic model &#10004;
 
 You have all preparations ready. Time to align!
 
@@ -283,12 +284,12 @@ MFA dictionaries have a slightly different form that contains the probability di
 Before we actually start aligning, we need to do some sanity check first.
 
 1. Make sure that every recording has an accompanying `.TextGrid` file.
-2. Make sure that there aren't too many unknown words (&lt;span style="color:red;"&gt;OOV words&lt;/span&gt;, _Out-Of-Vocabulary_).
+2. Make sure that there aren't too many unknown words (<span style="color:red;">OOV words</span>, _Out-Of-Vocabulary_).
 
 
 ``` bash
 # Corpus validation
-mfa validate --ignore_acoustics CORPUS_DIRECTORY english_us_mfa
+mfa validate --ignore_acoustics --no_final_clean --clean CORPUS_DIRECTORY english_us_mfa
 ```
 
 ---
@@ -297,7 +298,7 @@ mfa validate --ignore_acoustics CORPUS_DIRECTORY english_us_mfa
 
 You should see something like this: 
 
-&lt;img src="validation.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"&gt;
+<img src="validation.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
 
 ---
 
@@ -315,129 +316,205 @@ Usually I just put the `OUTPUT_DIRECTORY` as an "output" folder in the `CORPUS_D
 
 For example, if my `CORPUS_DIRECTORY` is `path/to/my/corpus`, then the `OUTPUT_DIRECTORY` should just be `path/to/my/corpus/output`.
 
+To make sure that there is no path errors, it is recommended to use full path on your computer. A full path on macOS should start with <span style="color:red;">`~/`</span>, or <span style="color:red;">`C:\\`</span> (Or any other disks on your computer, such as <span style="color:red;">`D:\\`</span>).
+
 ---
 
 ## If the previous code ran successfully
 
 You should now be able to see a new `output` folder in your corpus folder like this:
 
-&lt;img src="corpus_aligned.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"&gt;
+<img src="corpus_aligned.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
 
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-  "highlightStyle": "github",
-  "countIncrementalSlides": false
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
+---
 
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();</script>
+## The result
 
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+Now you should see the result I showed in the beginning: 
+
+![Sound](snd_aligned.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+---
+
+# Use case 2:
+
+1. Recordings &#10004;
+
+2. Transcripts
+
+3. Dictionary &#10004;
+
+4. Acoustic model &#10004;
+
+I don't have transcripts ready.
+
+---
+
+## Create your transcripts
+
+It is easy to create `.TextGrid` files in PRAAT.
+
+<img src="open_from_praat.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+<img src="to_tg.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+<img src="create_tier.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+You can use [PRAAT scripting](https://www.fon.hum.uva.nl/praat/manual/Scripting.html) to bulk create `.TextGrid` files if you have a list of the transcript and the correspondence between the transcripts and the recordings.
+
+We will not have time to cover PRAAT scripting in this tutorial, which is another big topic that requires some time to get familiar with.
+
+Once your `.TextGrid` files are ready, the rest is the same as in <span style="color: red">Use Case 1</span>.
+
+---
+
+# Use case 3
+
+1. Recordings &#10004;
+
+2. Transcripts &#10004;
+
+3. Dictionary 
+
+4. Acoustic model 
+
+I don't have a dictionary yet.
+
+---
+
+## Create dictionary
+
+If you obtained all the unique words in your corpus, you can create your own dictionary.
+
+A CMU pronunciation dictionary usually look like this:
+
+hello	h ə l oʊ  
+world	w ɜːr l d  
+computer	k ə m p j uː t ər  
+science	s aɪ ə n s  
+example	ɪ ɡ z æ m p ə l  
+dictionary	d ɪ k ʃ ə n ɛ r i  
+pronunciation	p r ə n ə n s i eɪ ʃ ə n  
+generator	dʒ ɛ n ə r eɪ t ər  
+switzerland	s w ɪ t s ər l æ n d  
+zurich	z ʊ r ɪ k  
+
+---
+
+## Use G2P to generate pronunciation
+
+If the word list is huge, use Grapheme-to-Morpheme (G2P) tools to generate pronunciations.
+
+Some easy-to-use G2P tools:
+
+- [Epitran](https://github.com/dmort27/epitran)
+- [XPF](https://cohenpr-xpf.github.io/XPF/)
+- [CharsiuG2P](https://github.com/lingjzhu/CharsiuG2P)
+
+(We won't have time to cover how to use G2P in detail here.)
+
+---
+
+# Use Case 3
+
+1. Recordings &#10004;
+
+2. Transcripts &#10004;
+
+3. Dictionary &#10004;
+
+4. Acoustic model 
+
+---
+
+## The most important use
+
+Train your custom acoustic model using MFA. 
+
+If recordings, transcripts, and the dictionary are all ready, training your own model can be done in just <span style="color: red">one line</span> in MFA.
+
+
+``` bash
+mfa train [OPTIONS] CORPUS_DIRECTORY DICTIONARY_PATH OUTPUT_MODEL_PATH 
+```
+
+---
+
+## An example: Upper Sorbian from Mozilla Common Voice
+
+[Mozilla Common Voice](https://commonvoice.mozilla.org/) is an online crowd-sourced multilingual dataset for automatic speech recognition.
+
+I downloaded the Upper Sorbian dataset for demonstration, since it is relatively small with 3 hours of validated recordings.
+
+The time it takes to train a model depends on the total length of your recordings and the power of your computer.
+
+Training a model on a dataset with approximately 2800 hours of recordings on my Mac (A3 chip with 36GB memory) takes more than 36 hours.
+
+---
+
+## Training
+
+
+``` bash
+mfa train --clean --final_clean /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/validated /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/hsb_xpf_lexicon21.txt /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/hsb_v21_mfa_model.zip
+```
+
+Just replace the `/Users/miaozhang/Downloads/MFATutorial2021/` with a directory on your own computer.
+
+### If it ran successfully
+
+You should see this in your terminal/shell window: 
+
+<img src="start_training.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## When training is finished
+
+You will find a `.zip` file: `hsb_v21_mfa_model.zip` in the folder.
+
+Now you can run codes we already tried in Use Case 1 to align the data.
+
+---
+
+# The next step: acoustic analysis
+
+We would like to use the corpus to perform more phonetic analysis, such extracting the F0, formants, duration, etc.
+
+I created a very simple formant extraction script that you can use: `formant_simple.praat`
+
+The script requires the directories of the <span style="color: red>recordings</span>, and the aligning <span style="color: red>output</span>. 
+
+---
+
+# When you have obtained the acoustic measures
+
+You can do all sorts of analysis in R or Python...
+
+---
+
+class: center, middle
+
+# Thanks for coming to the tutorial
+
+
+

@@ -56,11 +56,26 @@ Forced alignment is especially useful for step 2!
 The input:
 
 ![Sound](snd_only.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
 ---
 
 The output:
 
 ![Sound](snd_aligned.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
 ---
 
@@ -163,7 +178,7 @@ MFA is installed through `conda-forge`. We will need to install [Anaconda](https
 Go to the website of Anaconda and download the one suitable to your OS (Windows, macOS, linux, etc). Installing instructions can be found [here](https://www.anaconda.com/docs/getting-started/anaconda/install#windows-installation). 
 
 
-![Anaconda3](Anaconda_Logo.png)
+.center[![Anaconda3](Anaconda_Logo.png)]
 
 ---
 
@@ -171,7 +186,8 @@ Go to the website of Anaconda and download the one suitable to your OS (Windows,
 
 When Anaconda installation is successful, open your terminal (on macOS), or power shell (on Windows).
 
-```{bash create env, eval=F}
+
+``` bash
 conda create -n aligner -c conda-forge montreal-forced-aligner
 ```
 
@@ -179,7 +195,8 @@ The `aligner` flowing `-n` will be the name of the environment you create for yo
 
 When the installation succeeded, use the following code to activate the environment you just created.
 
-```{bash activate, eval = F}
+
+``` bash
 conda activate aligner
 ```
 
@@ -233,7 +250,8 @@ It is recommended that each recording contains one utterance.
 
 Since MFA already contains acoustic model and dictionary for English data, we will just download them and use directly.
 
-```{bash download from MFA, eval = F}
+
+``` bash
 # Download the dictionary
 mfa model download dictionary english_us_mfa
 
@@ -268,9 +286,10 @@ Before we actually start aligning, we need to do some sanity check first.
 1. Make sure that every recording has an accompanying `.TextGrid` file.
 2. Make sure that there aren't too many unknown words (<span style="color:red;">OOV words</span>, _Out-Of-Vocabulary_).
 
-```{bash aligning en, eval = F}
+
+``` bash
 # Corpus validation
-mfa validate --ignore_acoustics CORPUS_DIRECTORY english_us_mfa
+mfa validate --ignore_acoustics --no_final_clean --clean CORPUS_DIRECTORY english_us_mfa
 ```
 
 ---
@@ -287,7 +306,8 @@ You should see something like this:
 
 OK, since it says "There were no sound files missing transcriptions," we can proceed to align.
 
-```{bash align, eval = F}
+
+``` bash
 mfa align --clean --final_clean CORPUS_DIRECTORY english_us_mfa english_mfa
           OUTPUT_DIRECTORY
 ```
@@ -296,6 +316,8 @@ Usually I just put the `OUTPUT_DIRECTORY` as an "output" folder in the `CORPUS_D
 
 For example, if my `CORPUS_DIRECTORY` is `path/to/my/corpus`, then the `OUTPUT_DIRECTORY` should just be `path/to/my/corpus/output`.
 
+To make sure that there is no path errors, it is recommended to use full path on your computer. A full path on macOS should start with <span style="color:red;">`~/`</span>, or <span style="color:red;">`C:\\`</span> (Or any other disks on your computer, such as <span style="color:red;">`D:\\`</span>).
+
 ---
 
 ## If the previous code ran successfully
@@ -303,4 +325,196 @@ For example, if my `CORPUS_DIRECTORY` is `path/to/my/corpus`, then the `OUTPUT_D
 You should now be able to see a new `output` folder in your corpus folder like this:
 
 <img src="corpus_aligned.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## The result
+
+Now you should see the result I showed in the beginning: 
+
+![Sound](snd_aligned.png)
+
+<div style="text-align: center;">
+  <audio controls>
+    <source src="ex_en.wav" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+---
+
+# Use case 2:
+
+1. Recordings &#10004;
+
+2. Transcripts
+
+3. Dictionary &#10004;
+
+4. Acoustic model &#10004;
+
+I don't have transcripts ready.
+
+---
+
+## Create your transcripts
+
+It is easy to create `.TextGrid` files in PRAAT.
+
+<img src="open_from_praat.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+<img src="to_tg.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+<img src="create_tier.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Create your transcripts
+
+You can use [PRAAT scripting](https://www.fon.hum.uva.nl/praat/manual/Scripting.html) to bulk create `.TextGrid` files if you have a list of the transcript and the correspondence between the transcripts and the recordings.
+
+We will not have time to cover PRAAT scripting in this tutorial, which is another big topic that requires some time to get familiar with.
+
+Once your `.TextGrid` files are ready, the rest is the same as in <span style="color: red">Use Case 1</span>.
+
+---
+
+# Use case 3
+
+1. Recordings &#10004;
+
+2. Transcripts &#10004;
+
+3. Dictionary 
+
+4. Acoustic model 
+
+I don't have a dictionary yet.
+
+---
+
+## Create dictionary
+
+If you obtained all the unique words in your corpus, you can create your own dictionary.
+
+A CMU pronunciation dictionary usually look like this:
+
+hello	h ə l oʊ  
+world	w ɜːr l d  
+computer	k ə m p j uː t ər  
+science	s aɪ ə n s  
+example	ɪ ɡ z æ m p ə l  
+dictionary	d ɪ k ʃ ə n ɛ r i  
+pronunciation	p r ə n ə n s i eɪ ʃ ə n  
+generator	dʒ ɛ n ə r eɪ t ər  
+switzerland	s w ɪ t s ər l æ n d  
+zurich	z ʊ r ɪ k  
+
+---
+
+## Use G2P to generate pronunciation
+
+If the word list is huge, use Grapheme-to-Morpheme (G2P) tools to generate pronunciations.
+
+Some easy-to-use G2P tools:
+
+- [Epitran](https://github.com/dmort27/epitran)
+- [XPF](https://cohenpr-xpf.github.io/XPF/)
+- [CharsiuG2P](https://github.com/lingjzhu/CharsiuG2P)
+
+(We won't have time to cover how to use G2P in detail here.)
+
+---
+
+# Use Case 3
+
+1. Recordings &#10004;
+
+2. Transcripts &#10004;
+
+3. Dictionary &#10004;
+
+4. Acoustic model 
+
+---
+
+## The most important use
+
+Train your custom acoustic model using MFA. 
+
+If recordings, transcripts, and the dictionary are all ready, training your own model can be done in just <span style="color: red">one line</span> in MFA.
+
+
+``` bash
+mfa train [OPTIONS] CORPUS_DIRECTORY DICTIONARY_PATH OUTPUT_MODEL_PATH 
+```
+
+---
+
+## An example: Upper Sorbian from Mozilla Common Voice
+
+[Mozilla Common Voice](https://commonvoice.mozilla.org/) is an online crowd-sourced multilingual dataset for automatic speech recognition.
+
+I downloaded the Upper Sorbian dataset for demonstration, since it is relatively small with 3 hours of validated recordings.
+
+The time it takes to train a model depends on the total length of your recordings and the power of your computer.
+
+Training a model on a dataset with approximately 2800 hours of recordings on my Mac (A3 chip with 36GB memory) takes more than 36 hours.
+
+---
+
+## Training
+
+
+``` bash
+mfa train --clean --final_clean /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/validated /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/hsb_xpf_lexicon21.txt /Users/miaozhang/Downloads/MFATutorial2021/hsb_v21/hsb_v21_mfa_model.zip
+```
+
+Just replace the `/Users/miaozhang/Downloads/MFATutorial2021/` with a directory on your own computer.
+
+### If it ran successfully
+
+You should see this in your terminal/shell window: 
+
+<img src="start_training.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## When training is finished
+
+You will find a `.zip` file: `hsb_v21_mfa_model.zip` in the folder.
+
+Now you can run codes we already tried in Use Case 1 to align the data.
+
+---
+
+# The next step: acoustic analysis
+
+We would like to use the corpus to perform more phonetic analysis, such extracting the F0, formants, duration, etc.
+
+I created a very simple formant extraction script that you can use: `formant_simple.praat`
+
+The script requires the directories of the <span style="color: red>recordings</span>, and the aligning <span style="color: red>output</span>. 
+
+---
+
+# When you have obtained the acoustic measures
+
+You can do all sorts of analysis in R or Python...
+
+---
+
+class: center, middle
+
+# Thanks for coming to the tutorial
+
+
 
