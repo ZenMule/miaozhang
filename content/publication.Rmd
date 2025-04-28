@@ -31,4 +31,4 @@ _Journal of International Phonetic Association_
 
 ## Dissertation
 
-- 2022, Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics, New York State University at Buffalo. [pdf](/mz_dissertation.pdf)
+- 2022, Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics, New York State University at Buffalo. Advisor: [Christian DiCanio](https://www.acsu.buffalo.edu/~cdicanio/). [pdf](/mz_dissertation.pdf)
