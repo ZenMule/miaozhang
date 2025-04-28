@@ -49,6 +49,8 @@ Forced alignment is especially useful for step 2!
 
 - Given recordings of utterances, we would like to know where each individual sound starts and ends to perform further phonetic analysis.
 
+<img src="annotation.jpg" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
 ---
 
 The input:
@@ -113,6 +115,8 @@ Some cases of misuses of alignment tools which may lower the quality of your out
 
 , etc.
 
+_Know what your model is for and what kind of data you have!_
+
 ---
 
 # There are many forced aligners
@@ -132,6 +136,7 @@ Some cases of misuses of alignment tools which may lower the quality of your out
 # Why Montreal Forced Alignment (MFA)?
 
 - MFA allows you to train your own acoustic model with your own data.
+
 - MFA contains grapheme-to-morpheme models as well.
  - Grapheme-to-morpheme (G2P) models are models that take the orthography as the input and output the pronunciation automatically.
 
@@ -147,7 +152,7 @@ But we will focus on using MFA from training your own model for your own dataset
 
 > "The Montreal Forced Aligner by default goes through four primary stages of training. The first pass of alignment uses <span style="color:red;">**monophone models**</span>, where each phone is modelled the same regardless of phonological context. The second pass uses <span style="color:red;">**triphone models**</span>, where context on either side of a phone is taken into account for acoustic models. The third pass performs <span style="color:red;">**LDA+MLLT**</span> to learn a transform of the features that makes each phone’s features maximally different. The final pass enhances the triphone model by taking into account <span style="color:red;">**speaker differences**</span>, and calculates a transformation of the mel frequency cepstrum coefficients (MFCC) features for each speaker."
 
-<p style="text-align: right;">---From MFA Official website.)</p>
+<p style="text-align: right;">---From MFA Official website.</p>
 
 ---
 
@@ -157,11 +162,28 @@ MFA is installed through `conda-forge`. We will need to install [Anaconda](https
 
 Go to the website of Anaconda and download the one suitable to your OS (Windows, macOS, linux, etc). Installing instructions can be found [here](https://www.anaconda.com/docs/getting-started/anaconda/install#windows-installation). 
 
+
+![Anaconda3](Anaconda_Logo.png)
+
 ---
 
 # Installing MFA
 
-When Anaconda installation is successful, open your terminal 
+When Anaconda installation is successful, open your terminal (on macOS), or power shell (on Windows).
+
+```{bash create env, eval=F}
+conda create -n aligner -c conda-forge montreal-forced-aligner
+```
+
+The `aligner` flowing `-n` will be the name of the environment you create for your MFA. It can be any strings: mfa, aligner3, etc.
+
+When the installation succeeded, use the following code to activate the environment you just created.
+
+```{bash activate, eval = F}
+conda activate aligner
+```
+
+Again, the strings following `activate` here should be the environment name you specified in previous installing command.
 
 ---
 
@@ -170,37 +192,115 @@ When Anaconda installation is successful, open your terminal
 There are several things you need to prepare:
 
 - Speech **recordings** (`.wav`, `.mp3`, etc.) with corresponding sentence-level **transcripts** (`.TextGrid`).
+
+--
+
 - A **pronunciation dictionary** (that shows how words are pronounced in terms of IPA or other transcription systems, e.g., X-SAMPA, ARPABET, etc.)
+
+--
+
 - An **acoustic model** (that represents how audio signals relate to linguistic units like phonemes or words).
 
 ---
 
-class: title-page
+# Use case 1 (the most simple case)
 
-# Use case 1 
+1. Recordings &#10004;
 
-## recordings, transcripts, dictionary, acoustic models all ready
+2. Transcripts &#10004;
+
+3. Dictionary &#10004;
+
+4. Acoustic model &#10004;
+
+You have all preparations ready. Time to align!
 
 ---
 
 ## Recordings and the transcripts
 
+Each recording should have a corresponding `.TextGrid` file that logs down the transcript of each utterances.
+
 ![File preparation](prep_files.png)
 
----
+The recordings should not be too long. It is not recommended that a single recording is more than 10 minute long. 
 
-# The pronunciation dictionary
-
-Each line in the dictionary consists of two elements: the word and the space-separated phones.
+It is recommended that each recording contains one utterance.
 
 ---
 
-# Running MFA to align
+## Download from MFA database
 
-```{bash aligning en}
+Since MFA already contains acoustic model and dictionary for English data, we will just download them and use directly.
 
+```{bash download from MFA, eval = F}
+# Download the dictionary
+mfa model download dictionary english_us_mfa
 
+# Download the pretrained acoustic model
+mfa model download acoustic english_mfa
 ```
 
+---
 
+## Format of the dictionary
+
+The dictionary, in its simplest form, should be formatted as: 
+
+`word w ɝ d`
+
+on each line.
+
+--
+
+This format is called [CMU pronunciation dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict). The strings of the orthography (text-normalized) and the pronunciation of the word (phones separated by white spaces) should be tab-separated.
+
+--
+
+MFA dictionaries have a slightly different form that contains the probability distribution of different pronunciations of the same word.
+
+---
+
+## Running MFA to align
+
+Before we actually start aligning, we need to do some sanity check first.
+
+1. Make sure that every recording has an accompanying `.TextGrid` file.
+2. Make sure that there aren't too many unknown words (<span style="color:red;">OOV words</span>, _Out-Of-Vocabulary_).
+
+```{bash aligning en, eval = F}
+# Corpus validation
+mfa validate --ignore_acoustics CORPUS_DIRECTORY english_us_mfa
+```
+
+---
+
+## If the previous step ran successfully
+
+You should see something like this: 
+
+<img src="validation.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## MFA align
+
+OK, since it says "There were no sound files missing transcriptions," we can proceed to align.
+
+```{bash align, eval = F}
+mfa align --clean --final_clean CORPUS_DIRECTORY english_us_mfa english_mfa
+          OUTPUT_DIRECTORY
+```
+
+Usually I just put the `OUTPUT_DIRECTORY` as an "output" folder in the `CORPUS_DIRECTORY`.
+
+For example, if my `CORPUS_DIRECTORY` is `path/to/my/corpus`, then the `OUTPUT_DIRECTORY` should just be `path/to/my/corpus/output`.
+
+---
+
+## If the previous code ran successfully
+
+You should now be able to see a new `output` folder in your corpus folder like this:
+
+<img src="corpus_aligned.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
 

@@ -5,21 +5,22 @@ output: html_document
 
 ## Journal articles
 
-- (In preparation) \_ and Chodroff E. (2025). A crosslinguistic analysis of vowel-intrinsic F0
-- (In preparation) Chodroff, E. and \_. (2025). A crosslinguistic analysis of vowel-intrinsic duration
-- (In preparation) \_. The preboundary lengthening of monophthongs and vowel sequences in Chinese, English and Japanese
-- (In preparation) \_ and Kiyono Fujinaga-Gordon. The production of voiceless nasals and information structure in Ikema
-- (Under review) \_, Fahardi-Pour, A., Baker, A., Ma J., Pricop, B. and Chodroff, E. (2025). Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis, *Interspeech 2025*
-- (Under review) Chodroff, E., Fahardi-Pour, A., Baker, A., Ma J., \_, Pricop, B. and Pellegrino, E. (2025). An Audit of the Crowdsourced Validation Procedure in the Common Voice Corpus, *Interspeech 2025*
-- (Under review) Han, J.C, Wang, T., Cao, Y.F. and \_. (2025). Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Spanish-L2 English learners, *International Journal of Multilingualism*
-- (Under review) \_ and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
+- (In preparation) \_\_\_\_ and Chodroff E. (2025). A crosslinguistic analysis of vowel-intrinsic F0
+- (In preparation) Chodroff, E. and \_\_\_\_. (2025). A crosslinguistic analysis of vowel-intrinsic duration
+- (In preparation) \_\_\_\_. The preboundary lengthening of monophthongs and vowel sequences in Chinese, English and Japanese
+- (In preparation) \_\_\_\_ and Kiyono Fujinaga-Gordon. The production of voiceless nasals and information structure in Ikema
+- (In preparation) Han, J-Y., Wang, T. and \_\_\_\_, (2025), Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Thai-L2 English learners
+- (Under review) \_\_\_\_, Fahardi-Pour, A., Baker, A., Ma J., Pricop, B. and Chodroff, E. (2025). Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis, *Interspeech 2025*
+- (Under review) Chodroff, E., Fahardi-Pour, A., Baker, A., Ma J., \_\_\_\_, Pricop, B. and Pellegrino, E. (2025). An Audit of the Crowdsourced Validation Procedure in the Common Voice Corpus, *Interspeech 2025*
+- (Under review) Han, J-Y., Wang, T., Cao, Y-F. and \_\_\_\_. (2025). Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Spanish-L2 English learners, *International Journal of Multilingualism*
+- (Under review) \_\_\_\_ and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
 _Journal of International Phonetic Association_
-- (Resubmitted) \_, Gong, S.X. and Guo, C.Y. (2025) Tone sandhi and tonal articulation in disyllabic sequences in Changsha Xiang, *Journal of Phonetics*
+- (Resubmitted) \_\_\_\_, Gong, S-X. and Guo, C-Y. (2025) Tone sandhi and tonal articulation in disyllabic sequences in Changsha Xiang, *Journal of Phonetics*
 
 ## Conferences
 
-- 2025, A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral, **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25-27, Palma, Spain.
-- 2024, A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster, **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon19)*, June 27-29, Seoul, South Korea
+- 2025, with Chodroff E., A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral, **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25-27, Palma, Spain.
+- 2024, with Chodroff E., A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster, **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon19)*, June 27-29, Seoul, South Korea
 - 2023, A Cross-linguistic Study on Pre-boundary Vowel Lengthening (PBVL): Comparing monophthongs and diphthongs in Chinese, English, and Japanese. (Oral) *The 15th Phonetic Conference of China (PCC2023)*, July 7-10, Shenzhen, Guangdong
 - 2022, Prosodic modulations on the formant excursions of diphthongs. (Poster) *The 183rd Meeting of the Acoustical Society of America (ASA183)*, Dec 5-9, Nashville, TN
 - 2021, Positional tone sandhi in Changsha Xiang: A production study. (Poster, **peer-reviewed**) *The 1st International Conference on Tone and Intonation (TAI2021)*, Dec 6-9, Sonderborg, Denmark and online
