@@ -13,7 +13,7 @@
       <link>https://miaozhang.org/event/mfa-tutorial/</link>
       <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://miaozhang.org/event/mfa-tutorial/</guid>
-      <description>&lt;p&gt;This tutorial of Montreal Forced Alignment was given at the Pakistan Association of Phonetics and Phonology Scholars (PAPPS).&#xA;You can download the slides &lt;a href=&#34;https://miaozhang.org/2025-04-28-montreal-forced-aligner-tutorial/index.html&#34;&gt;here&lt;/a&gt;, and the materials &lt;a href=&#34;https://drive.google.com/file/d/12BP5A565TJYsyiMoRrMRA4LC78NMU79O/view?usp=sharing&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Part of the tutorial is built upon the MFA tutorial given by Eleanor Chodroff &lt;a href=&#34;https://eleanorchodroff.com/mfa_tutorial.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This tutorial of Montreal Forced Alignment was given at the Pakistan Association of Phonetics and Phonology Scholars (PAPPS).&#xA;You can download the slides &lt;a href=&#34;https://miaozhang.org/2025-04-28-montreal-forced-aligner-tutorial/index.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;, and the materials &lt;a href=&#34;https://huggingface.co/datasets/zenmule/MFA_tutorial_2025-04-28_PAPPS&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Part of the tutorial is built upon the MFA tutorial given by Eleanor Chodroff &lt;a href=&#34;https://eleanorchodroff.com/mfa_tutorial.html&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dynamic seeding formant extraction</title>
