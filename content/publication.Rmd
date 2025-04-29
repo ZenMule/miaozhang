@@ -13,7 +13,7 @@ output: html_document
 - (Under review) \_\_\_\_, Fahardi-Pour, A., Baker, A., Ma J., Pricop, B. and Chodroff, E. (2025). Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis, *Interspeech 2025*
 - (Under review) Chodroff, E., Fahardi-Pour, A., Baker, A., Ma J., \_\_\_\_, Pricop, B. and Pellegrino, E. (2025). An Audit of the Crowdsourced Validation Procedure in the Common Voice Corpus, *Interspeech 2025*
 - (Under review) Han, J-Y., Wang, T., Cao, Y-F. and \_\_\_\_. (2025). Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Spanish-L2 English learners, *International Journal of Multilingualism*
-- (Under review) \_\_\_\_ and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
+- (Under revision) \_\_\_\_ and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
 _Journal of International Phonetic Association_
 - (Resubmitted) \_\_\_\_, Gong, S-X. and Guo, C-Y. (2025) Tone sandhi and tonal articulation in disyllabic sequences in Changsha Xiang, *Journal of Phonetics*
 
