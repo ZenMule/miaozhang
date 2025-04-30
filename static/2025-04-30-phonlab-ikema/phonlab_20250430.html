@@ -98,7 +98,7 @@ Kagoshima has only two types (possible pitch locations in a word) of word accent
 
 # Word prosody in Miyakoan languages
 
-The noun accent patterns in most Ryukyuan languages have 3 word accent types (Uwano 1997).
+The noun accent patterns in most Ryukyuan languages have three word accent types (Uwano 1997).
 
 In most Miyakoan Ryukyuan languages, either there is no word prosodic distinctions or there are only two (Hirayama et al. 1967, Hirayama 1983).
 
@@ -111,18 +111,18 @@ Ikema was originally believed to have two as well (Hayashi et al. 2008).
 - Type A: (pitch fall at the stem boundary, -nudu is a topic/nominative particle)
 
   - ha.NA 'flower' 
-    - haNA-nudu saKi ui. 'The flower is blooming.'
+      - haNA-nudu saKi ui. 'The flower is blooming.'
     
   - a.FU.zi 'yawn' 
-    - aFUZI-nudu idi yui. 'Make a yawn.'
+      - aFUZI-nudu idi yui. 'Make a yawn.'
   
 - Type B: (NO pitch fall at the stem boundary)
 
   - u.si 'mortar' 
-    - USI-NUDU ari ui. 'There is a mortar.'
+      - USI-NUDU ari ui. 'There is a mortar.'
     
   - ga.ra.sa 'crow'
-    - GARASA-NUDU uRI ui. 'There is a crow.'
+      - GARASA-NUDU uRI ui. 'There is a crow.'
     
 ---
 
@@ -130,7 +130,7 @@ Ikema was originally believed to have two as well (Hayashi et al. 2008).
 
 Ikema has three accent types but two of them neutralize into one in isolation.
 
-It is only distinguished when the word is embedded in a larger prosodic consistituent.
+It is only fully distinguishable when the word is embedded in a larger prosodic constituent.
 
 ---
 
@@ -176,9 +176,9 @@ Two types (A and B) neutralize to one in isolation.
 
 The full contrast emerges when the word is embedded in a large prosodic constituent.
 
-Pitch contour on the word stem *itself* is neutralized when words are *embedded*.
+Pitch contours of the word stem *itself* is neutralized when words are *embedded*.
 
-IF the observation holds, Ikema posit a rather interesting word-prosodic system where the lexical meaning is distinguished on constituents that are &lt;span style="color:red"&gt;OUTSIDE&lt;/span&gt; the word itself, while the pitch contours of the words are neutralized.
+If this observation holds, Ikema posits a typologically rare word-prosodic system where the lexical meaning is distinguished on constituents that are &lt;span style="color:red"&gt;OUTSIDE&lt;/span&gt; the word itself.
 
 --
 
@@ -198,18 +198,24 @@ They tested 121 words from the three accent types both in isolation and in sente
   &lt;img src="tai2025_figs/igarashi_ex.png"&gt;
 &lt;/center&gt;
 
-The middle points: 
+The measures: 
 - **Pt1**: the highest F0 in the stem. **Pt2**: the F0 at the 80% of the particle _mai_. **Pt3**: the 50% in the predicate _nyaan_.
 
 ---
 
 # Problems remain
 
-So it seems it is the case, however, 
+So it seems like the case. 
 
-- There was only three speakers in Igarashi et al. (2012).
+--
 
-- Only F0 values from three specific points in an utterance is not enough to capture the contour as a whole.
+However, 
+
+--
+
+- There were only three speakers in Igarashi et al. (2012).
+
+- Only F0 values from three specific points in an relatively long utterance are not enough to capture the contour as a whole.
 
 - The contour may be what really matters for the accent distinction.
 
@@ -219,9 +225,9 @@ So it seems it is the case, however,
 
 A data-driven approach of intonational patterns suitable for initial stages of prosodic research and language descriptions.
 
-Check the out website [here](https://constantijnkaland.github.io/contourclustering/).
+Check out the website for more infomation [here](https://constantijnkaland.github.io/contourclustering/).
 
-(Kaland, Constantijn. 2023. Contour clustering: A field-data-driven approach for documenting and analysing prototypical f0 contours. Journal of the International Phonetic Association 53(1), 159-188. doi:10.1017/S0025100321000049)
+(Kaland, Constantijn. 2023. Contour clustering: A field-data-driven approach for documenting and analysing prototypical f0 contours. Journal of the International Phonetic Association 53(1), 159-188.)
 
 ---
 
@@ -237,7 +243,7 @@ Check the out website [here](https://constantijnkaland.github.io/contourclusteri
 
 &gt; Field researchers, often non-native speakers of the language being studied, rely heavily on their perceptual impressions and their understanding of the language. Crucially, perceptual impressions by non-native speakers are not a reliable source of information because they can be biased towards mapping form and function in ways that reflect the researcher’s native language.
 
-it becomes a challenge to reproduce the analyses.
+It becomes a challenge to reproduce some analyses.
 
 (Kaland, 2023)
 
@@ -320,13 +326,11 @@ To remove possible outliers, I first cut the data into 20 clusters and removed a
 
 # Evaluation of clusters
 
-To evaluate the number of clusters that reached the best separation of the contours, I performed within and between cluster variation.
+To evaluate the number of clusters that reached the best separation of the contours, I performed **within and between cluster variation**.
 
-&gt; It is expected that within cluster variance of the f0 contours decreases with more clusters, because with more clusters the individual contour within a certain cluster are more alike than with less clusters.
+It is expected that within cluster variance of the f0 contours decreases, while between cluster variance increases with more clusters.
 
-(Contour Clustering manual by Kaland)
-
-The optimal cluster number is where &lt;span style="color:red"&gt;the within and between variation crosses&lt;/span&gt;.
+The optimal cluster number is where &lt;span style="color:red"&gt;the within and between variation crosses over&lt;/span&gt;.
 
 
 ---
