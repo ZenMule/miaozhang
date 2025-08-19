@@ -4,7 +4,7 @@
     <title>Ikema word prosody revisited: using contour clustering and GAMM</title>
     <meta charset="utf-8" />
     <meta name="author" content="Miao Zhang" />
-    <meta name="date" content="2025-04-30" />
+    <meta name="date" content="2025-08-19" />
     <script src="libs/header-attrs-2.29/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
@@ -20,7 +20,7 @@ class: center, middle, inverse, title-slide
 ### Miao Zhang
 ]
 .date[
-### 2025-04-30
+### 2025-08-19
 ]
 
 ---
@@ -43,7 +43,7 @@ Ikema is one of the varieties of Miyako Ryukyuan. Ryukyuan is a group of languag
 class: center, middle
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/miyako.png" width="60%"&gt;
+  &lt;img src="R/figs/miyako.png" width="60%"&gt;
 &lt;/center&gt;
 
 ---
@@ -51,7 +51,7 @@ class: center, middle
 class: center, middle
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/ikema.png" width="60%"&gt;
+  &lt;img src="R/figs/ikema.png" width="60%"&gt;
 &lt;/center&gt;
 
 ---
@@ -176,9 +176,11 @@ Two types (A and B) neutralize to one in isolation.
 
 The full contrast emerges when the word is embedded in a large prosodic constituent.
 
-Pitch contours of the word stem *itself* is neutralized when words are *embedded*.
+Pitch contours on the word stem *itself* is neutralized when the (nominal) words are *embedded*.
 
 If this observation holds, Ikema posits a typologically rare word-prosodic system where the lexical meaning is distinguished on constituents that are &lt;span style="color:red"&gt;OUTSIDE&lt;/span&gt; the word itself.
+
+According to Igarashi et al. (2012), the contrast is realized as phrase tones and boundary tones.
 
 --
 
@@ -186,7 +188,7 @@ But!
 
 --
 
-&lt;span style="color: red"&gt;Does it?&lt;/span&gt;
+&lt;span style="color: red"&gt;Is this empirically true?&lt;/span&gt;
 
 ---
 
@@ -195,23 +197,15 @@ But!
 They tested 121 words from the three accent types both in isolation and in sentences on three speakers.
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/igarashi_ex.png"&gt;
+  &lt;img src="R/figs/igarashi_ex.png"&gt;
 &lt;/center&gt;
 
 The measures: 
-- **Pt1**: the highest F0 in the stem. **Pt2**: the F0 at the 80% of the particle _mai_. **Pt3**: the 50% in the predicate _nyaan_.
+- **Pt1**: the highest F0 in the target word. **Pt2**: the F0 at the 80% of the particle _mai_. **Pt3**: the 50% in the predicate _nyaan_.
 
 ---
 
 # Problems remain
-
-So it seems like the case. 
-
---
-
-However, 
-
---
 
 - There were only three speakers in Igarashi et al. (2012).
 
@@ -221,11 +215,19 @@ However,
 
 ---
 
+# Our study
+
+- GAMM (Generalized Additive Mixed-effect Model)
+
+- Contour clustering
+
+---
+
 # Contour clustering
 
 A data-driven approach of intonational patterns suitable for initial stages of prosodic research and language descriptions.
 
-Check out the website for more infomation [here](https://constantijnkaland.github.io/contourclustering/).
+Check out the website for more information [here](https://constantijnkaland.github.io/contourclustering/).
 
 (Kaland, Constantijn. 2023. Contour clustering: A field-data-driven approach for documenting and analysing prototypical f0 contours. Journal of the International Phonetic Association 53(1), 159-188.)
 
@@ -234,7 +236,7 @@ Check out the website for more infomation [here](https://constantijnkaland.githu
 # Contour clustering: an example
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/cc_ex.png"&gt;
+  &lt;img src="R/figs/cc_ex.png"&gt;
 &lt;/center&gt;
 
 ---
@@ -259,21 +261,22 @@ Data points are highly influenced by the neighboring ones (autocorrelation).
 
 Contour clustering instead performs clustering analysis on contours as a whole, treating each contour as an individual observation.
 
+
 ---
 
 # Our study
 
 A collaborative work with Kiyono Fujinaga-Gordon.
 
-If Igarashi et al. (2012)'s findings were true, we should be able to detect three rather well-separated clusters even if we look into the contour data.
+If Igarashi et al. (2012)'s findings were true, we should be able to detect three rather well-separated clusters if we look into the contour data.
 
 ---
 
 # Our study
 
-- We found six informants.
+- Six informants.
 
-- We tested nine bimoraic words, three from each accent types posed by Igarashi et al. (2012), both in isolation and in two carrier phrase _X-mai nyaan_ 'there is no X either.' and _X-mai ariduui_ 'there is also X.'
+- Nine bimoraic words, three from each accent types posed by Igarashi et al. (2012), both in isolation and in two carrier phrase _X-mai nyaan_ 'there is no X either.' and _X-mai ariduui_ 'there is also X.'
 
 - We employed contour clustering analysis and GAMM to analyze the non-linear F0 contours.
 
@@ -335,19 +338,27 @@ The optimal cluster number is where &lt;span style="color:red"&gt;the within and
 
 ---
 
+class: center, middle, inverse
 
-# The clusering results: isolation analysis
+# Contour clustering results
+
+
+---
+
+
+
+# The clusering results: isolation
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/word_cluster_class.png" width="60%"&gt;
+  &lt;img src="R/figs/word_cluster_class.png" width="60%"&gt;
 &lt;/center&gt;
 
 ---
 
-# The clusering results: isolation analysis
+# The clusering results: isolation
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/word_smooth.png" width="90%"&gt;
+  &lt;img src="R/figs/word_smooth.png" width="90%"&gt;
 &lt;/center&gt;
 
 ---
@@ -361,7 +372,7 @@ class: center, middle, inverse
 # The clustering results: embedded analysis
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/sent_cluster_class.png" width="60%"&gt;
+  &lt;img src="R/figs/sent_cluster_class.png" width="60%"&gt;
 &lt;/center&gt;
 
 ---
@@ -369,27 +380,35 @@ class: center, middle, inverse
 # The clustering results: embedded analysis
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/sent_smooth.png" width="100%"&gt;
+  &lt;img src="R/figs/sent_smooth.png" width="100%"&gt;
 &lt;/center&gt;
 
 ---
 
 class: center, middle, inverse
 
-# The result is even messier than that in isolation
+# Similar to the word-in-isolation result: gradient rather than categorical
 
 ---
 
 class: center, middle, inverse
 
-# How about we just perform GAMM based on the word accent types?
+# Results: GAMM analysis
 
 ---
 
 # GAMM result: isolation
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/word_smooth_class-1.png" width="100%"&gt;
+  &lt;img src="R/figs/word_smooth_gam.png" width="100%"&gt;
+&lt;/center&gt;
+
+---
+
+# GAMM result: isolation
+
+&lt;center&gt;
+  &lt;img src="R/figs/word_diff_gam.png" width="100%"&gt;
 &lt;/center&gt;
 
 ---
@@ -397,22 +416,42 @@ class: center, middle, inverse
 # GAMM result: carrier
 
 &lt;center&gt;
-  &lt;img src="tai2025_figs/sent_smooth_class-1.png" width="100%"&gt;
+  &lt;img src="R/figs/sent_smooth_gam.png" width="100%"&gt;
 &lt;/center&gt;
+
+---
+
+# GAMM result: carrier
+
+&lt;center&gt;
+  &lt;img src="R/figs/sent_diff_gam.png" width="100%"&gt;
+&lt;/center&gt;
+
+---
+
+# Discussion
+
+Igarashi et al. (2012)'s claim is not supported at both word and sentence level.
+
+- The three accent types are not neutralized into two in isolation, but rather exhibits a gradient contrast.
+
+- What differ in the sentence melody is the pitch in both the target word and the particle. The pitch difference in the predicate did not reach statistical significance.
 
 ---
 
 # Take-aways
 
-Well, at least it does not seem like that the three types of words are neutralized to just two contours in isolation.
+It does not seem like the three types of word accents are completely neutralized to just two contours in isolation.
 
-But the sentence contour is very messy.
+Both the differences in the word and sentence melodies are gradient rather than categorical.
 
-- The GAMM results showed that the three types are distinguishable both in the stem and the particle
+- The GAMM results showed that the three types are distinguishable both in the stem and the particle.
 
-- The cluster analysis does not support that the three are fully distinctive from each other. A
+- The cluster analysis does not support that the three are fully distinctive from each other.
 
--Additionally, the clustering based on DTW and complete linkage suggests that there are more than 3 clusters, both in isolation and in carrier sentences.
+- Additionally, the clustering results (based on DTW and complete linkage) suggest that there might be more than 3 clusters, both in isolation and in carrier sentences.
+
+The language ceases to be used in daily life, which may have created some phonological uncertainty among speakers in the prosody domain as well.
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
