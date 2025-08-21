@@ -5,18 +5,18 @@ output: html_document
 
 ## Journal articles
 
-- (In preparation) \_\_\_\_ and Chodroff E. (2025). A crosslinguistic analysis of vowel-intrinsic F0.
-- (In preparation) Chodroff, E. and \_\_\_\_. (2025). A crosslinguistic analysis of vowel-intrinsic duration.
-- (In preparation) \_\_\_\_. The preboundary lengthening of monophthongs and vowel sequences in Chinese, English and Japanese.
-- (In preparation) \_\_\_\_ and Kiyono Fujinaga-Gordon. The production of voiceless nasals and information structure in Ikema.
-- (In preparation) Han, J-Y., Wang, T. and \_\_\_\_, (2025), Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Thai-L2 English learners.
-- (Under review) Han, J-Y., Wang, T., Cao, Y-F. and \_\_\_\_. (2025). Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Spanish-L2 English learners, *International Journal of Multilingualism*.
-- (Under revision) \_\_\_\_ and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
+- (In preparation) **Zhang, M.** and Chodroff E. (2025). A crosslinguistic analysis of vowel-intrinsic F0.
+- (In preparation) Chodroff, E. and **Zhang, M.**. (2025). A crosslinguistic analysis of vowel-intrinsic duration.
+- (In preparation) **Zhang, M.**. The preboundary lengthening of monophthongs and vowel sequences in Chinese, English and Japanese.
+- (In preparation) **Zhang, M.** and Kiyono Fujinaga-Gordon. The production of voiceless nasals and information structure in Ikema.
+- (In preparation) Han, J-Y., Wang, T. and **Zhang, M.**, (2025), Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Thai-L2 English learners.
+- (Under review) Han, J-Y., Wang, T., Cao, Y-F. and **Zhang, M.**. (2025). Cross-linguistic influence in the acquisition of L3 stop consonants: A case study on the third language acquisition of Chinese by L1 Spanish-L2 English learners, *International Journal of Multilingualism*.
+- (Revision submitted) **Zhang, M.** and Fujinaga-Gordon, F. (2025). An illustration of IPA: Ikema,
 _Journal of International Phonetic Association_.
-- (Under review) \_\_\_\_, Gong, S-X. and Guo, C-Y. (2025) Tone sandhi and tonal articulation in disyllabic sequences in Changsha Xiang, *Journal of Phonetics*.
+- (Under revision) **Zhang, M.**, Gong, S-X. and Guo, C-Y. (2025) Tone sandhi and tonal articulation in disyllabic sequences in Changsha Xiang, *Journal of Phonetics*.
 
 ## Conference preceedings
-- 2025, \_\_\_\_, Fahardi-Pour, A., Baker, A., Ma J., Pricop, B. and Chodroff, E. (2025). Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis, *Interspeech 2025*, 17-21 August, Rotterdam, Netherlands. 
+- 2025, **Zhang, M.**, Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027
 
 ## Conferences
 
