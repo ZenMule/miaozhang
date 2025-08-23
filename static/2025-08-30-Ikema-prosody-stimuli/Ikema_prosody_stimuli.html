@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosody Stimuli Presentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .presentation-container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .slide {
+            display: none;
+            padding: 80px 60px;
+            text-align: center;
+            min-height: 500px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #888;
+            font-size: 16px;
+        }
+        
+        .word {
+            font-size: 72px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .japanese {
+            font-size: 48px;
+            color: #666;
+            font-weight: normal;
+            line-height: 1.4;
+        }
+        
+        .controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+        
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: #667eea;
+            transition: width 0.3s ease;
+            z-index: 100;
+        }
+        
+        .title-slide {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .title-slide .word {
+            color: white;
+            font-size: 54px;
+        }
+        
+        .title-slide .japanese {
+            color: rgba(255,255,255,0.8);
+            font-size: 36px;
+        }
+        
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 30px;
+            }
+            .word {
+                font-size: 48px;
+                margin-bottom: 40px;
+            }
+            .japanese {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Title Slide -->
+        <div class="slide active title-slide">
+            <div class="slide-number">1 / 130</div>
+            <div class="word">池間韻律調査</div>
+            <div class="japanese">第一部分：単語</div>
+        </div>
+        
+        <!-- Data Slides -->
+        <div class="slide">
+            <div class="slide-number">2 / 130</div>
+            <div class="word">ンス</div>
+            <div class="japanese">右</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">3 / 130</div>
+            <div class="word">マイ</div>
+            <div class="japanese">米</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">4 / 130</div>
+            <div class="word">マグ</div>
+            <div class="japanese">かご</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">5 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">海</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">6 / 130</div>
+            <div class="word">ブトゥ</div>
+            <div class="japanese">夫</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">7 / 130</div>
+            <div class="word">カー</div>
+            <div class="japanese">井戸</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">8 / 130</div>
+            <div class="word">マイ</div>
+            <div class="japanese">米</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">9 / 130</div>
+            <div class="word">ブトゥ</div>
+            <div class="japanese">夫</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">10 / 130</div>
+            <div class="word">ウル</div>
+            <div class="japanese">つのまた</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">11 / 130</div>
+            <div class="word">マグ</div>
+            <div class="japanese">かご</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">12 / 130</div>
+            <div class="word">ティビ</div>
+            <div class="japanese">後ろ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">13 / 130</div>
+            <div class="word">アグ</div>
+            <div class="japanese">友達</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">14 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">海</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">15 / 130</div>
+            <div class="word">トゥズ</div>
+            <div class="japanese">妻</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">16 / 130</div>
+            <div class="word">クー</div>
+            <div class="japanese">昆布</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">17 / 130</div>
+            <div class="word">トゥズ</div>
+            <div class="japanese">妻</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">18 / 130</div>
+            <div class="word">トゥズ</div>
+            <div class="japanese">妻</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">19 / 130</div>
+            <div class="word">ティビ</div>
+            <div class="japanese">後ろ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">20 / 130</div>
+            <div class="word">ンス</div>
+            <div class="japanese">右</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">21 / 130</div>
+            <div class="word">アグ</div>
+            <div class="japanese">友達</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">22 / 130</div>
+            <div class="word">ティビ</div>
+            <div class="japanese">後ろ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">23 / 130</div>
+            <div class="word">ンス</div>
+            <div class="japanese">右</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">24 / 130</div>
+            <div class="word">ウル</div>
+            <div class="japanese">つのまた</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">25 / 130</div>
+            <div class="word">ワー</div>
+            <div class="japanese">豚</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">26 / 130</div>
+            <div class="word">サバ</div>
+            <div class="japanese">サメ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">27 / 130</div>
+            <div class="word">ナイ</div>
+            <div class="japanese">地震</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">28 / 130</div>
+            <div class="word">サバ</div>
+            <div class="japanese">サメ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">29 / 130</div>
+            <div class="word">サバ</div>
+            <div class="japanese">サメ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">30 / 130</div>
+            <div class="word">ブトゥ</div>
+            <div class="japanese">夫</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">31 / 130</div>
+            <div class="word">アラ</div>
+            <div class="japanese">外</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">32 / 130</div>
+            <div class="word">サバ</div>
+            <div class="japanese">サメ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">33 / 130</div>
+            <div class="word">クー</div>
+            <div class="japanese">昆布</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">34 / 130</div>
+            <div class="word">ブトゥ</div>
+            <div class="japanese">夫</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">35 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">海</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">36 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">犬</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">37 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">犬</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">38 / 130</div>
+            <div class="word">マイ</div>
+            <div class="japanese">米</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">39 / 130</div>
+            <div class="word">ナイ</div>
+            <div class="japanese">地震</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">40 / 130</div>
+            <div class="word">マグ</div>
+            <div class="japanese">かご</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">41 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">犬</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">42 / 130</div>
+            <div class="word">クー</div>
+            <div class="japanese">昆布</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">43 / 130</div>
+            <div class="word">アラ</div>
+            <div class="japanese">外</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">44 / 130</div>
+            <div class="word">ワー</div>
+            <div class="japanese">豚</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">45 / 130</div>
+            <div class="word">アグ</div>
+            <div class="japanese">友達</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">46 / 130</div>
+            <div class="word">ナイ</div>
+            <div class="japanese">地震</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">47 / 130</div>
+            <div class="word">ンス</div>
+            <div class="japanese">右</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">48 / 130</div>
+            <div class="word">ウル</div>
+            <div class="japanese">つのまた</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">49 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">犬</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">50 / 130</div>
+            <div class="word">ティビ</div>
+            <div class="japanese">後ろ</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">51 / 130</div>
+            <div class="word">ワー</div>
+            <div class="japanese">豚</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">52 / 130</div>
+            <div class="word">アラ</div>
+            <div class="japanese">外</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">53 / 130</div>
+            <div class="word">カー</div>
+            <div class="japanese">井戸</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">54 / 130</div>
+            <div class="word">イン</div>
+            <div class="japanese">海</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">55 / 130</div>
+            <div class="word">アグ</div>
+            <div class="japanese">友達</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">56 / 130</div>
+            <div class="word">ウル</div>
+            <div class="japanese">つのまた</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">57 / 130</div>
+            <div class="word">トゥズ</div>
+            <div class="japanese">妻</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">58 / 130</div>
+            <div class="word">マグ</div>
+            <div class="japanese">かご</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">59 / 130</div>
+            <div class="word">クー</div>
+            <div class="japanese">昆布</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">60 / 130</div>
+            <div class="word">ナイ</div>
+            <div class="japanese">地震</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">61 / 130</div>
+            <div class="word">カー</div>
+            <div class="japanese">井戸</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">62 / 130</div>
+            <div class="word">アラ</div>
+            <div class="japanese">外</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">63 / 130</div>
+            <div class="word">カー</div>
+            <div class="japanese">井戸</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">64 / 130</div>
+            <div class="word">マイ</div>
+            <div class="japanese">米</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">65 / 130</div>
+            <div class="word">ワー</div>
+            <div class="japanese">豚</div>
+        </div>
+        
+        <!-- Transition Slide -->
+        <div class="slide title-slide">
+            <div class="slide-number">66 / 130</div>
+            <div class="word">池間韻律調査</div>
+            <div class="japanese">第二部分：文</div>
+        </div>
+        
+        <!-- Sentence Slides -->
+        <div class="slide">
+            <div class="slide-number">67 / 130</div>
+            <div class="word">ンスマイ アリードゥー</div>
+            <div class="japanese">右もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">68 / 130</div>
+            <div class="word">マイマイ ニャーン ナ？</div>
+            <div class="japanese">米もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">69 / 130</div>
+            <div class="word">マグマイ ニャーン</div>
+            <div class="japanese">かごもない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">70 / 130</div>
+            <div class="word">インマイ アリードゥー</div>
+            <div class="japanese">海もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">71 / 130</div>
+            <div class="word">ブトゥマイ アリードゥー ナ？</div>
+            <div class="japanese">夫もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">72 / 130</div>
+            <div class="word">カーマイ アリードゥー ナ？</div>
+            <div class="japanese">井戸もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">73 / 130</div>
+            <div class="word">マイマイ ニャーン</div>
+            <div class="japanese">米もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">74 / 130</div>
+            <div class="word">ブトゥマイ アリードゥー</div>
+            <div class="japanese">夫もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">75 / 130</div>
+            <div class="word">ウルマイ アリードゥー ナ？</div>
+            <div class="japanese">つのまたもあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">76 / 130</div>
+            <div class="word">マグマイ アリードゥー</div>
+            <div class="japanese">かごもある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">77 / 130</div>
+            <div class="word">ティビマイ アリードゥー ナ？</div>
+            <div class="japanese">後ろもあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">78 / 130</div>
+            <div class="word">アグマイ アリードゥー ナ？</div>
+            <div class="japanese">友達もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">79 / 130</div>
+            <div class="word">インマイ ニャーン</div>
+            <div class="japanese">海もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">80 / 130</div>
+            <div class="word">トゥズマイ ニャーン ナ？</div>
+            <div class="japanese">妻もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">81 / 130</div>
+            <div class="word">クーマイ ニャーン ナ？</div>
+            <div class="japanese">昆布もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">82 / 130</div>
+            <div class="word">トゥズマイ アリードゥー</div>
+            <div class="japanese">妻もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">83 / 130</div>
+            <div class="word">トゥズマイ ニャーン</div>
+            <div class="japanese">妻もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">84 / 130</div>
+            <div class="word">ティビマイ ニャーン ナ？</div>
+            <div class="japanese">後ろもないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">85 / 130</div>
+            <div class="word">ンスマイ アリードゥー ナ？</div>
+            <div class="japanese">右もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">86 / 130</div>
+            <div class="word">アグマイ ニャーン ナ？</div>
+            <div class="japanese">友達もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">87 / 130</div>
+            <div class="word">ティビマイ アリードゥー</div>
+            <div class="japanese">後ろもある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">88 / 130</div>
+            <div class="word">ンスマイ ニャーン</div>
+            <div class="japanese">右もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">89 / 130</div>
+            <div class="word">ウルマイ ニャーン</div>
+            <div class="japanese">つのまたもない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">90 / 130</div>
+            <div class="word">ワーマイ ニャーン ナ？</div>
+            <div class="japanese">豚もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">91 / 130</div>
+            <div class="word">サバマイ アリードゥー ナ？</div>
+            <div class="japanese">サメもあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">92 / 130</div>
+            <div class="word">ナイマイ ニャーン ナ？</div>
+            <div class="japanese">地震もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">93 / 130</div>
+            <div class="word">サバマイ ニャーン</div>
+            <div class="japanese">サメもない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">94 / 130</div>
+            <div class="word">サバマイ アリードゥー</div>
+            <div class="japanese">サメもある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">95 / 130</div>
+            <div class="word">ブトゥマイ ニャーン ナ？</div>
+            <div class="japanese">夫もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">96 / 130</div>
+            <div class="word">アラマイ アリードゥー ナ？</div>
+            <div class="japanese">外もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">97 / 130</div>
+            <div class="word">サバマイ ニャーン ナ？</div>
+            <div class="japanese">サメもないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">98 / 130</div>
+            <div class="word">クーマイ アリードゥー ナ？</div>
+            <div class="japanese">昆布もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">99 / 130</div>
+            <div class="word">ブトゥマイ ニャーン</div>
+            <div class="japanese">夫もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">100 / 130</div>
+            <div class="word">インマイ アリードゥー ナ？</div>
+            <div class="japanese">海もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">101 / 130</div>
+            <div class="word">インマイ ニャーン</div>
+            <div class="japanese">犬もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">102 / 130</div>
+            <div class="word">インマイ アリードゥー</div>
+            <div class="japanese">犬もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">103 / 130</div>
+            <div class="word">マイマイ アリードゥー</div>
+            <div class="japanese">米もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">104 / 130</div>
+            <div class="word">ナイマイ アリードゥー ナ？</div>
+            <div class="japanese">地震もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">105 / 130</div>
+            <div class="word">マグマイ アリードゥー ナ？</div>
+            <div class="japanese">かごもあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">106 / 130</div>
+            <div class="word">インマイ ニャーン ナ？</div>
+            <div class="japanese">犬もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">107 / 130</div>
+            <div class="word">クーマイ アリードゥー</div>
+            <div class="japanese">昆布もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">108 / 130</div>
+            <div class="word">アラマイ アリードゥー</div>
+            <div class="japanese">外もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">109 / 130</div>
+            <div class="word">ワーマイ アリードゥー ナ？</div>
+            <div class="japanese">豚もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">110 / 130</div>
+            <div class="word">アグマイ ニャーン</div>
+            <div class="japanese">友達もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">111 / 130</div>
+            <div class="word">ナイマイ ニャーン</div>
+            <div class="japanese">地震もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">112 / 130</div>
+            <div class="word">ンスマイ ニャーン ナ？</div>
+            <div class="japanese">右もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">113 / 130</div>
+            <div class="word">ウルマイ ニャーン ナ？</div>
+            <div class="japanese">つのまたもないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">114 / 130</div>
+            <div class="word">インマイ アリードゥー ナ？</div>
+            <div class="japanese">犬もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">115 / 130</div>
+            <div class="word">ティビマイ ニャーン</div>
+            <div class="japanese">後ろもない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">116 / 130</div>
+            <div class="word">ワーマイ アリードゥー</div>
+            <div class="japanese">豚もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">117 / 130</div>
+            <div class="word">アラマイ ニャーン</div>
+            <div class="japanese">外もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">118 / 130</div>
+            <div class="word">カーマイ ニャーン</div>
+            <div class="japanese">井戸もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">119 / 130</div>
+            <div class="word">インマイ ニャーン ナ？</div>
+            <div class="japanese">海もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">120 / 130</div>
+            <div class="word">アグマイ アリードゥー</div>
+            <div class="japanese">友達もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">121 / 130</div>
+            <div class="word">ウルマイ アリードゥー</div>
+            <div class="japanese">つのまたもある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">122 / 130</div>
+            <div class="word">トゥズマイ アリードゥー ナ？</div>
+            <div class="japanese">妻もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">123 / 130</div>
+            <div class="word">マグマイ ニャーン ナ？</div>
+            <div class="japanese">かごもないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">124 / 130</div>
+            <div class="word">クーマイ ニャーン</div>
+            <div class="japanese">昆布もない</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">125 / 130</div>
+            <div class="word">ナイマイ アリードゥー</div>
+            <div class="japanese">地震もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">126 / 130</div>
+            <div class="word">カーマイ ニャーン ナ？</div>
+            <div class="japanese">井戸もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">127 / 130</div>
+            <div class="word">アラマイ ニャーン ナ？</div>
+            <div class="japanese">外もないか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">128 / 130</div>
+            <div class="word">カーマイ アリードゥー</div>
+            <div class="japanese">井戸もある</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">129 / 130</div>
+            <div class="word">マイマイ アリードゥー ナ？</div>
+            <div class="japanese">米もあるか？</div>
+        </div>
+        
+        <div class="slide">
+            <div class="slide-number">130 / 130</div>
+            <div class="word">ワーマイ ニャーン</div>
+            <div class="japanese">豚もない</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button class="btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+        <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        <button class="btn" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+    
+    <div class="progress-bar" id="progressBar"></div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            // Update progress bar
+            const progress = (currentSlide / (totalSlides - 1)) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentSlide === 0;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+        }
+
+        function changeSlide(direction) {
+            const newSlide = currentSlide + direction;
+            if (newSlide >= 0 && newSlide < totalSlides) {
+                showSlide(newSlide);
+            }
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log('Error attempting to enable fullscreen:', err.message);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            e.preventDefault(); // Prevent default scrolling behavior
+            switch(e.key) {
+                case 'ArrowLeft':
+                case 'ArrowUp':
+                    changeSlide(-1);
+                    break;
+                case 'ArrowRight':
+                case 'ArrowDown':
+                case ' ':
+                    changeSlide(1);
+                    break;
+                case 'Home':
+                    showSlide(0);
+                    break;
+                case 'End':
+                    showSlide(totalSlides - 1);
+                    break;
+                case 'F11':
+                    e.preventDefault();
+                    toggleFullscreen();
+                    break;
+            }
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
