@@ -1,18 +1,12 @@
 ---
 title: "Supplementary materials for Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis (Interspeech 2025)"
-author:
-  - name: Miao Zhang
-  - name: Aref Farhadipour
-  - name: Annie Baker
-  - name: Jiachen Ma
-  - name: Bogdan Pricop
-  - name: Eleanor Chodroff
+author: "Miao Zhang, Aref Farhadipour, Annie Baker, Jiachen Ma, Bogdan Pricop, Eleanor Chodroff"
 format: html
 ---
 
 ## Introduction
 
-This .qmd file is intended to reproduce the results and visualizations from the paper [Zhang, M., Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. (2025) Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027](https://www.isca-archive.org/interspeech_2025/zhang25s_interspeech.pdf).
+This page is intended to reproduce the results and visualizations from the paper [Zhang, M., Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. (2025) Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027](https://www.isca-archive.org/interspeech_2025/zhang25s_interspeech.pdf).
 
 This paper addresses the problem of speaker heterogeneity in the Mozilla Common Voice corpus, where a single “client ID” may include recordings from multiple speakers, complicating phonetic analysis and speech technology development. We use ResNet-293-based speaker embeddings to compute similarity scores between utterances within the same client ID and then design a speaker discrimination task to determine an optimal similarity threshold. Through large-scale evaluation across 76 languages, we identify a threshold of 0.354 that effectively reduces speaker heterogeneity while minimizing data loss (averaging 3.5% per language). 
 
@@ -25,10 +19,7 @@ There are several data files you need to download from the repo to run this scri
 3. [First round audit results](https://github.com/pacscilab/CV_clientID_cleaning/blob/main/audit_r1.csv)
 4. [Second round audit results](https://github.com/pacscilab/CV_clientID_cleaning/blob/main/audit_r2.csv)
 
-```{r load packages}
-#| echo: FALSE
-#| message: FALSE
-#| warning: FALSE
+```{r load packages, echo=FALSE, message=FALSE, warning=FALSE}
 # Set up the packages and functions needed to perform the analysis.
 # List of required packages
 required_packages <- c(
@@ -108,12 +99,7 @@ summary(scores_by_lang$q3)
 
 Plot the distribution of the similarity scores.
 
-```{r histogram of scores}
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
+```{r histogram of scores, fig.width=6, fig.height=3.5, fig.align='center'}
 scores |> 
   ggplot(aes(score)) +
   geom_histogram(aes(fill = after_stat(density)), bins = 40,
@@ -227,12 +213,7 @@ summary(affected_ids$prop)
 
 Plot the the degree to which client IDs and languages are affected.
 
-```{r plot the heterogeneity results}
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
+```{r plot the heterogeneity results, fig.width=6, fig.height=3.5, fig.align='center'}
 # The proportion of files in each language with a score under the threshold
 prop_under_threshold_by_lang |> 
   ggplot(aes(reorder(lang_code, -prop_threshold), prop_threshold, fill = prop_threshold)) +
@@ -250,7 +231,6 @@ prop_under_threshold_by_lang |>
         axis.ticks.x = element_blank(),
         panel.grid.major.y = element_line(linetype = 3),
         legend.title = element_blank())
-#ggsave("~/Desktop/dist_scores.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
 
 # The proportion of client IDs that have more than 10% of the associated recordings with a score lower than the threshold
 ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc)) +
@@ -267,7 +247,6 @@ ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc
         axis.ticks.x = element_blank(),
         legend.title = element_blank(),
         panel.grid.major.y = element_line(linetype = 3))
-#ggsave("~/Desktop/under_threshold_perc.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
 ```
 
 
@@ -291,13 +270,7 @@ glimpse(audit_r1)
 
 Plot the round 1 results.
 
-```{r r1 results plotting}
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
-
+```{r r1 results plotting, fig.width=6, fig.height=3.5, fig.align='center'}
 ggplot(audit_r1, aes(x = score_bin, fill = validation)) + 
   stat_count(position = "dodge") +
   scale_fill_manual(values = c("#5a2b75", "#3d9e96", "#f3e740", "#4a6b99", "#6bcd72")) +
@@ -312,7 +285,6 @@ ggplot(audit_r1, aes(x = score_bin, fill = validation)) +
         legend.text = element_text(size = 15),
         legend.position = "bottom",
         legend.title = element_blank()) 
-#ggsave("~/Desktop/vxc-spkr-val.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
 ```
 
 ## Auditing result: round 1
@@ -363,13 +335,7 @@ print(paste0("The threshold is ", round(threshold, 3)))
 
 Plot the model result.
 
-```{r plot the threshold}
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
-
+```{r plot the threshold, fig.width=6, fig.height=3.5, fig.align='center'}
 samediff_all$predicted <- predict(mod, type = "response", re.form = NA)
 samediff_all$predicted_person <- predict(mod, type = "response")
 preds <- ggpredict(mod, terms = "score[all]", interval = "confidence")
@@ -381,7 +347,7 @@ ggplot(samediff_all, aes(x = score, y = nVal)) +
               fill = "deepskyblue3", alpha = 0.2, inherit.aes = FALSE) +
   # Model prediction line
   geom_line(data = preds, aes(x = x, y = predicted), 
-            color = "deepskyblue3", size = 1.2, inherit.aes = FALSE) +
+            color = "deepskyblue3", linewidth = 1.2, inherit.aes = FALSE) +
   scale_x_continuous(limits = c(-0.2, 1)) +
   labs(x = "Similarity score", y = "Probability") +
   geom_vline(xintercept = threshold, linetype = "dashed", color = "red") +
@@ -390,8 +356,6 @@ ggplot(samediff_all, aes(x = score, y = nVal)) +
         axis.title.y = element_text(size = 16),
         axis.text.x = element_text(size = 16),
         axis.title.x = element_text(size = 16)) 
-#ggsave("~/Desktop/turning_point.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
-
 ```
 
 

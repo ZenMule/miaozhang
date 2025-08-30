@@ -1,18 +1,15 @@
 ---
 title: "Supplementary materials for Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis (Interspeech 2025)"
-author:
-  - name: Miao Zhang
-  - name: Aref Farhadipour
-  - name: Annie Baker
-  - name: Jiachen Ma
-  - name: Bogdan Pricop
-  - name: Eleanor Chodroff
+author: "Miao Zhang, Aref Farhadipour, Annie Baker, Jiachen Ma, Bogdan Pricop, Eleanor Chodroff"
+date: 2025-08-20
 format: html
 ---
 
+
+
 ## Introduction
 
-This .qmd file is intended to reproduce the results and visualizations from the paper [Zhang, M., Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. (2025) Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027](https://www.isca-archive.org/interspeech_2025/zhang25s_interspeech.pdf).
+This page is intended to reproduce the results and visualizations from the paper [Zhang, M., Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. (2025) Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027](https://www.isca-archive.org/interspeech_2025/zhang25s_interspeech.pdf).
 
 This paper addresses the problem of speaker heterogeneity in the Mozilla Common Voice corpus, where a single “client ID” may include recordings from multiple speakers, complicating phonetic analysis and speech technology development. We use ResNet-293-based speaker embeddings to compute similarity scores between utterances within the same client ID and then design a speaker discrimination task to determine an optimal similarity threshold. Through large-scale evaluation across 76 languages, we identify a threshold of 0.354 that effectively reduces speaker heterogeneity while minimizing data loss (averaging 3.5% per language). 
 
@@ -27,9 +24,15 @@ There are several data files you need to download from the repo to run this scri
 
 
 
+
+
+
+
 ## Similarity scores
 
 Load the similarity score file into R and obtain some descriptive stats.
+
+
 
 
 ``` r
@@ -92,15 +95,14 @@ summary(scores_by_lang$q3)
 ##  0.5964  0.7501  0.7849  0.7766  0.8071  0.8691
 ```
 
+
+
 Plot the distribution of the similarity scores.
 
 
-``` r
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
 
+
+``` r
 scores |> 
   ggplot(aes(score)) +
   geom_histogram(aes(fill = after_stat(density)), bins = 40,
@@ -120,8 +122,12 @@ scores |>
         axis.title.y = element_text(size=16)) 
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/histogram of scores-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/histogram of scores-1.png" width="576" style="display: block; margin: auto;" />
+
+
 Then load the speaker files.
+
+
 
 
 ``` r
@@ -160,7 +166,11 @@ prop_under_threshold_by_lang <- scores |>
   summarize(prop_threshold = sum(under_threshold)/n(), .by = lang_code)
 ```
 
+
+
 Evaluate to what extent the client IDs are affected by speaker heterogeneity by looking into the number of client IDs that contain recordings from multiple speakers.
+
+
 
 
 ``` r
@@ -280,15 +290,14 @@ summary(affected_ids$prop)
 ## 0.00000 0.01891 0.04356 0.08414 0.09144 0.60000
 ```
 
+
+
 Plot the the degree to which client IDs and languages are affected.
 
 
-``` r
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
 
+
+``` r
 # The proportion of files in each language with a score under the threshold
 prop_under_threshold_by_lang |> 
   ggplot(aes(reorder(lang_code, -prop_threshold), prop_threshold, fill = prop_threshold)) +
@@ -308,11 +317,9 @@ prop_under_threshold_by_lang |>
         legend.title = element_blank())
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/plot the heterogeneity results-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/plot the heterogeneity results-1.png" width="576" style="display: block; margin: auto;" />
 
 ``` r
-#ggsave("~/Desktop/dist_scores.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
-
 # The proportion of client IDs that have more than 10% of the associated recordings with a score lower than the threshold
 ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc)) +
   geom_col() +
@@ -330,16 +337,16 @@ ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc
         panel.grid.major.y = element_line(linetype = 3))
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/plot the heterogeneity results-2.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/plot the heterogeneity results-2.png" width="576" style="display: block; margin: auto;" />
 
-``` r
-#ggsave("~/Desktop/under_threshold_perc.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
-```
+
 
 
 ## Auditing result: round 1
 
 Read in the auditing result from round 1.
+
+
 
 
 ``` r
@@ -384,16 +391,14 @@ glimpse(audit_r1)
 ## $ score_bin  <fct> < 0.2, < 0.3, < 0.3, < 0.5, < 0.5, < 0.2, < 0.1, < 0.2, < 0…
 ```
 
+
+
 Plot the round 1 results.
 
 
+
+
 ``` r
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
-
 ggplot(audit_r1, aes(x = score_bin, fill = validation)) + 
   stat_count(position = "dodge") +
   scale_fill_manual(values = c("#5a2b75", "#3d9e96", "#f3e740", "#4a6b99", "#6bcd72")) +
@@ -410,15 +415,15 @@ ggplot(audit_r1, aes(x = score_bin, fill = validation)) +
         legend.title = element_blank()) 
 ```
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/r1 results plotting-1.png" width="672" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/r1 results plotting-1.png" width="576" style="display: block; margin: auto;" />
 
-``` r
-#ggsave("~/Desktop/vxc-spkr-val.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
-```
+
 
 ## Auditing result: round 1
 
 Get the round 2 data.
+
+
 
 
 ``` r
@@ -463,7 +468,11 @@ glimpse(audit_r2)
 ## $ score_bin   <fct> < 0.3, < 0.4, < 0.5, < 0.3, < 0.5, < 0.2, < 0.5, < 0.5, < …
 ```
 
+
+
 Calculate the Fleiss' Kappa.
+
+
 
 
 ``` r
@@ -476,7 +485,11 @@ print(paste0("The Fleiss' Kappa = ", round(kappa_result$value, 2)))
 ## [1] "The Fleiss' Kappa = 0.45"
 ```
 
+
+
 Fit a GLMM model to evaluate a threshold for rejecting same-speaker hypothesis.
+
+
 
 
 ``` r
@@ -552,7 +565,11 @@ summary(mod)
 ## score -0.436
 ```
 
+
+
 Get the threshold.
+
+
 
 
 ``` r
@@ -564,16 +581,14 @@ print(paste0("The threshold is ", round(threshold, 3)))
 ## [1] "The threshold is 0.354"
 ```
 
+
+
 Plot the model result.
 
 
+
+
 ``` r
-# Adjust the figure plotting setting
-#| fig-width: 6
-#| fig-height: 3.5
-#| fig-align: center
-
-
 samediff_all$predicted <- predict(mod, type = "response", re.form = NA)
 samediff_all$predicted_person <- predict(mod, type = "response")
 preds <- ggpredict(mod, terms = "score[all]", interval = "confidence")
@@ -595,7 +610,7 @@ ggplot(samediff_all, aes(x = score, y = nVal)) +
               fill = "deepskyblue3", alpha = 0.2, inherit.aes = FALSE) +
   # Model prediction line
   geom_line(data = preds, aes(x = x, y = predicted), 
-            color = "deepskyblue3", size = 1.2, inherit.aes = FALSE) +
+            color = "deepskyblue3", linewidth = 1.2, inherit.aes = FALSE) +
   scale_x_continuous(limits = c(-0.2, 1)) +
   labs(x = "Similarity score", y = "Probability") +
   geom_vline(xintercept = threshold, linetype = "dashed", color = "red") +
@@ -606,18 +621,5 @@ ggplot(samediff_all, aes(x = score, y = nVal)) +
         axis.title.x = element_text(size = 16)) 
 ```
 
-```
-## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-## ℹ Please use `linewidth` instead.
-## This warning is displayed once every 8 hours.
-## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-## generated.
-```
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/plot the threshold-1.png" width="672" />
-
-``` r
-#ggsave("~/Desktop/turning_point.pdf", plot=last_plot(), dpi = 300, height = 3, width = 7)
-```
-
+<img src="{{< blogdown/postref >}}index_files/figure-html/plot the threshold-1.png" width="576" style="display: block; margin: auto;" />
 
