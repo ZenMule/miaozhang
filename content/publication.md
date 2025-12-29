@@ -1,3 +1,23 @@
+<style>
+/* Remove borders from all tables */
+table, th, td {
+  border: none !important;
+  border-collapse: collapse;
+}
+
+/* Hide the table header row completely */
+thead {
+  display: none;
+}
+
+/* Add some spacing between the year and the content */
+td:first-child {
+  padding-right: 20px;
+  white-space: nowrap; /* Keeps year/status on same width */
+  vertical-align: top; /* Aligns year to top of cell */
+}
+</style>
+
 ## Journal articles
 
 | Year / Status | Citation |
