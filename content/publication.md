@@ -5,11 +5,6 @@ table, th, td {
   border-collapse: collapse;
 }
 
-/* Hide the table header row completely */
-thead {
-  display: none;
-}
-
 /* Add some spacing between the year and the content */
 td:first-child {
   padding-right: 20px;
