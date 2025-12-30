@@ -5,6 +5,11 @@ table, th, td {
   border-collapse: collapse;
 }
 
+/* Hide the table header row completely */
+thead {
+  display: none;
+}
+
 /* Add some spacing between the year and the content */
 td:first-child {
   padding-right: 20px;
@@ -15,7 +20,7 @@ td:first-child {
 
 ## Journal articles
 
-| | |
+|Year |Publication |
 | :--- | :--- |
 | **(Accepted)** | **Zhang, M.**, Gong, S-X. and Guo, C-Y. (2025). Tone sandhi and tonal coarticulation in disyllabic sequences in Changsha Xiang. *Journal of Phonetics*. |
 | **(Rev. under review)** | **Zhang, M.** and Fujinaga-Gordon, K. (2025). An illustration of IPA: Ikema, *Journal of International Phonetic Association*. |
@@ -26,13 +31,13 @@ td:first-child {
 
 ## Conference Proceedings
 
-| | |
+|Year |Publication |
 | :--- | :--- |
 | **2025** | **Zhang, M.**, Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. *Proc. Interspeech 2025*, 3933-3937, doi: 10.21437/Interspeech.2025-2027 |
 
 ## Conferences
 
-| | |
+|Year |Publication |
 | :--- | :--- |
 | **2025** | with Chodroff E., A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral, **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25-27, Palma, Spain. |
 | **2024** | with Chodroff E., A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster, **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon19)*, June 27-29, Seoul, South Korea |
@@ -46,6 +51,6 @@ td:first-child {
 
 ## Dissertation
 
-| | |
+|Year |Publication |
 | :--- | :--- |
 | **2022** | Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics, New York State University at Buffalo. Advisor: [Christian DiCanio](https://www.acsu.buffalo.edu/~cdicanio/). [pdf](/mz_dissertation.pdf) |
