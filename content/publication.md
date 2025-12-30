@@ -10,6 +10,11 @@ thead {
   display: none;
 }
 
+/* Remove alternating background colors (zebra striping) */
+tr:nth-child(even), tr:nth-child(odd), tr {
+  background-color: white !important;
+}
+
 /* Add some spacing between the year and the content */
 td:first-child {
   padding-right: 20px;
