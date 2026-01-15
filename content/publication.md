@@ -31,8 +31,7 @@ td:first-child {
 | **(Rev. under review)** | **Zhang, M.** and Fujinaga-Gordon, K. An illustration of IPA: Ikema, *Journal of International Phonetic Association*. |
 | **(Under revision)** | Chodroff, E. and **Zhang, M**. A crosslinguistic corpus phonetic analysis of intrinsic vowel duration. *Journal of Phonetics*. |
 | **(Under review)** | **Zhang, M.** and Chodroff E. The universality of vowel intrinsic F0: A corpus study of cross-linguistic and inter-speaker variability in 75 languages. *PNAS*. |
-| **(In Prep.)** | Han, J-Y., **Zhang, M.**, Wang, T., and Xu, Y. L3 acquisition of Mandarin Chinese stop consonants by learners with L1 Spanish/Thai and L2 English. *Journal of Multilingual and Multicultural Development*.|
-| **(In Prep.)** | **Zhang, M**. Preboundary lengthening of monophthongs and diphthongs in Chinese, English and Japanese. |
+| **(Submitted.)** | Han, J-Y., Wang, T., and **Zhang, M**. L3 acquisition of Mandarin Chinese stop consonants by learners with L1 Spanish/Thai and L2 English. *Journal of Multilingual and Multicultural Development*.|
 
 ## Conference Proceedings
 
