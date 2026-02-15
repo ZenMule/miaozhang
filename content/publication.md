@@ -30,8 +30,8 @@ td:first-child {
 | **2026** | **Zhang, M.**, Gong, S-X. and Guo, C-Y. Tone sandhi and tonal coarticulation in disyllabic sequences in Changsha Xiang. *Journal of Phonetics, 114, 101472*. [10.1016/j.wocn.2025.101472](https://doi.org/10.1016/j.wocn.2025.101472) |
 | **(Rev. under review)** | **Zhang, M.** and Fujinaga-Gordon, K. An illustration of IPA: Ikema, *Journal of International Phonetic Association*. |
 | **(Under revision)** | Chodroff, E. and **Zhang, M**. A crosslinguistic corpus phonetic analysis of intrinsic vowel duration. *Journal of Phonetics*. [preprint](https://doi.org/10.31234/osf.io/xchav_v1)|
-| **(Under review)** | **Zhang, M.** and Chodroff E. The universality of vowel intrinsic F0: A corpus study of cross-linguistic and inter-speaker variability in 75 languages. *PNAS*. [preprint](https://doi.org/10.31234/osf.io/5ykqs_v1)|
-| **(Submitted)** | Han, J-Y., Wang, T., and **Zhang, M**. L3 acquisition of Mandarin Chinese stop consonants by learners with L1 Spanish/Thai and L2 English. *Journal of Multilingual and Multicultural Development*. [preprint](https://doi.org/10.31234/osf.io/dbx8s_v1)|
+| **(In prep.)** | **Zhang, M.** and Chodroff E. The universality of vowel intrinsic F0: A corpus study of cross-linguistic and inter-speaker variability in 75 languages. [preprint](https://doi.org/10.31234/osf.io/5ykqs_v1)|
+| **(Submitted)** | Han, J-Y., Wang, T., and **Zhang, M**. L3 acquisition of Mandarin Chinese stop consonants by learners with L1 Spanish/Thai and L2 English. *Journal of the Acoustical Society of America*. [preprint](https://doi.org/10.31234/osf.io/dbx8s_v1)|
 
 ## Conference Proceedings
 
