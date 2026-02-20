@@ -43,6 +43,8 @@ td:first-child {
 
 |Year |Publication |
 | :--- | :--- |
+| **2026** | with Chodroff E., A crosslinguistic analysis of vowel inventory size influence on vowel dispersion. (Oral, **peer-reviewed**) *Laboratory Phonology 20*, June 26-28, Montreal, Canada. |
+| **2026** | with Pricop, B. and Chodroff E., A corpus study of consonant intrinsic effects in true voicing languages. (Poster, **peer-reviewed**) *Laboratory Phonology 20*, June 26-28, Montreal, Canada. |
 | **2025** | with Chodroff E., A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral, **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25-27, Palma, Spain. |
 | **2024** | with Chodroff E., A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster, **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon19)*, June 27-29, Seoul, South Korea |
 | **2023** | A Cross-linguistic Study on Pre-boundary Vowel Lengthening (PBVL): Comparing monophthongs and diphthongs in Chinese, English, and Japanese. (Oral) *The 15th Phonetic Conference of China (PCC2023)*, July 7-10, Shenzhen, Guangdong |
