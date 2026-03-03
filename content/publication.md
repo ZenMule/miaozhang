@@ -21,6 +21,11 @@ td:first-child {
   white-space: nowrap; /* Keeps year/status on same width */
   vertical-align: top; /* Aligns year to top of cell */
 }
+
+/* Hide the empty title block (grey bar) */
+.article-meta {
+  display: none;
+}
 </style>
 
 ## Journal articles
