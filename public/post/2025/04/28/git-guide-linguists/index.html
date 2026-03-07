@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Version Control for Linguists: A Practical Guide to Git | Miao Zhang&#39;s personal website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/publication/">Publications</a></li>
+      
+      <li><a href="/post/">Posts</a></li>
+      
+      <li><a href="/event/">Talks/tutorials</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Version Control for Linguists: A Practical Guide to Git</span></h1>
+<h2 class="author">Miao Zhang</h2>
+<h2 class="date">2025/04/28</h2>
+</div>
+
+<main>
+<h2 id="part-1-why-git">Part 1: Why Git?</h2>
+<h3 id="introduction">Introduction</h3>
+<p>Version control is a system that records changes to a file or set of
+files over time, allowing you to recall specific versions later. Git is
+a popular and powerful version control system, and it&rsquo;s essential for
+academic research, especially in collaborative and data-intensive fields
+like linguistics.</p>
+<h2 id="pain-points-in-linguistic-research-and-how-git-helps">Pain Points in Linguistic Research (and how Git helps)</h2>
+<p>Linguistics PhD students often face challenges that Git can help solve:</p>
+<ul>
+<li><strong>Managing multiple versions</strong> of papers, theses, and data files:
+Git helps you avoid the &ldquo;final_final_really_final.docx&rdquo; problem by
+tracking every change.</li>
+<li><strong>Collaborating</strong> with supervisors or other researchers: Git
+facilitates seamless collaboration on shared documents or
+code.Tracking changes: Git provides a clear history of how your work
+has evolved.</li>
+<li><strong>Experimenting</strong> with different analyses: Create branches to
+explore new ideas without affecting your main work.Reverting to
+previous versions: Easily undo mistakes or return to an earlier
+state of your project.</li>
+<li><strong>Backing up</strong> your work: Remote repositories (like GitHub,
+BitBucket) provide secure backups.</li>
+<li><strong>Managing</strong> code: Git is crucial for managing scripts for corpus
+analysis, statistical modeling, or other computational tasks.</li>
+</ul>
+<p>Analogy: Think of Git as a way to track the evolution of a linguistic
+theory. You can see how the theory developed over time, which changes
+were made at each stage, and who made them. Or, consider the stages of
+corpus annotation; Git can track each layer of annotation and who
+contributed it.</p>
+<h2 id="part-2-getting-started-with-git">Part 2: Getting Started with Git</h2>
+<h3 id="installation">Installation</h3>
+<p>Git has a comprehensive user guide
+<a href="https://git-scm.com/" target="_blank">here</a>. You can
+download Git from the official website: <a href="https://git-scm.com/">https://git-scm.com/</a>. Follow
+the instructions for your operating system (Windows, macOS, or Linux).</p>
+<h3 id="basic-concepts">Basic Concepts</h3>
+<ul>
+<li>
+<p><strong>Repository (Repo)</strong>: A directory that Git tracks. You initialize a
+repo with git init. (The product that you are going to make)</p>
+</li>
+<li>
+<p><strong>Working Directory</strong>: The files you are currently working on. (Your factory where the product is manufactured)</p>
+</li>
+<li>
+<p><strong>Staging Area (Index)</strong>: A place to prepare changes for a commit. You
+add files to the staging area with <code>git add</code>. (Take your products to the port)</p>
+</li>
+<li>
+<p><strong>Commit</strong>: A snapshot of your changes. You create a commit with
+<code>git commit -m &lt;Your descriptive commit message&gt;</code>. (Ship your products out)</p>
+</li>
+</ul>
+<h3 id="your-first-commit">Your First Commit</h3>
+<ol>
+<li>Create a new directory for your project:</li>
+</ol>
+<pre><code class="language-bash">mkdir &lt;path/to/my_project&gt;
+cd &lt;path/to/my_project&gt;
+</code></pre>
+<ol start="2">
+<li>Initialize a Git repository in that directory</li>
+</ol>
+<pre><code class="language-bash">git init
+</code></pre>
+<p>The output will look something like this:</p>
+<pre><code class="language-bash">Initialized empty Git repository in /path/to/your/my_project/.git/
+</code></pre>
+<ol start="3">
+<li>Create a file (e.g., <code>README.md</code>):</li>
+</ol>
+<pre><code class="language-bash">echo &quot;\# My Linguistics Project&quot; \&gt; README.md
+</code></pre>
+<ol start="4">
+<li>Add the file to the staging area:</li>
+</ol>
+<pre><code class="language-bash">git add README.md
+</code></pre>
+<ol start="5">
+<li>Commit the changes:</li>
+</ol>
+<pre><code class="language-bash">git commit -m &quot;Initial commit: Added README&quot;
+</code></pre>
+<p>The output will look something like this:</p>
+<pre><code class="language-bash">[main (root-commit) 8f42b21] Initial commit: Added README 1 file changed, 1 insertion(+) create mode 100644 README.md
+</code></pre>
+<h2 id="part-3-essential-git-operations">Part 3: Essential Git Operations</h2>
+<h3 id="checking-the-status">Checking the Status</h3>
+<p>Use git status to see the state of your working directory and staging area:</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<p>If you&rsquo;ve just created the repo and added the README, the output will look something like:</p>
+<pre><code class="language-bash">On branch main
+No commits yet
+Changes to be committed:
+  (use &quot;git rm --cached &lt;file&gt;...&quot; to unstage)
+        new file:   README.md
+</code></pre>
+<h3 id="viewing-history">Viewing History</h3>
+<p>Use <code>git log</code> to see the commit history</p>
+<h3 id="useful-options">Useful options:</h3>
+<ul>
+<li><code>git log --oneline</code>: Displays each commit in a single line.</li>
+<li><code>git log --graph</code>: Shows the commit history as a graph, which is helpful for visualizing branches</li>
+<li><code>git log --author=&quot;Your Name&quot;</code>: Filters the log to show commits by a specific author.git log &ndash;author=&ldquo;Your Name&rdquo;</li>
+</ul>
+<h3 id="ignoring-files">Ignoring Files</h3>
+<p>Create a <code>.gitignore</code> file to tell Git which files to ignore. This is useful for temporary files, build outputs, and large data files.</p>
+<p>Example <code>.gitignore</code> (for a LaTeX project):</p>
+<pre><code class="language-bash">*.aux
+*.log 
+*.pdf
+*.blg
+*.bbl
+</code></pre>
+<h3 id="making-changes-and-committing-again">Making Changes and Committing Again</h3>
+<ol>
+<li>Modify a file (e.g., edit <code>README.md</code> - add a line).</li>
+<li>Add the changes to the staging area: <code>git add README.md</code></li>
+<li>Commit the changes: <code>git commit -m</code>&ldquo;Update README with more details&rdquo;</li>
+</ol>
+<h3 id="comparing-changes">Comparing changes</h3>
+<ul>
+<li><code>git diff</code>: Shows the differences between the working directory and the staging area.</li>
+<li><code>git diff --cached</code>: Shows the differences between the staging area and the last commit.</li>
+</ul>
+<h2 id="part-4-branching-and-merging-collaboration-and-experimentation">Part 4: Branching and Merging (Collaboration and Experimentation)</h2>
+<h3 id="branches">Branches</h3>
+<p>Branches are independent lines of development. They are useful for:</p>
+<ul>
+<li>Working on new features without affecting the main
+work.</li>
+<li>Collaborating on different aspects of a project.</li>
+<li>Experimenting with different versions of a paper.</li>
+</ul>
+<h3 id="basic-branch-operations">Basic Branch Operations</h3>
+<ul>
+<li>List branches:</li>
+</ul>
+<pre><code class="language-bash">git branch
+</code></pre>
+<ul>
+<li>Switch to a branch:</li>
+</ul>
+<pre><code class="language-bash">git checkout main \# or master
+</code></pre>
+<ul>
+<li>Create and switch to a new branch:</li>
+</ul>
+<pre><code class="language-bash">git checkout -b new_branch_name
+</code></pre>
+<ul>
+<li>Merging</li>
+</ul>
+<p>Combine changes from one branch into another:</p>
+<pre><code class="language-bash">git checkout main
+git merge new_branch_name
+</code></pre>
+<ul>
+<li>Merge Conflicts</li>
+</ul>
+<p>Merge conflicts occur when Git cannot automatically combine changes. You&rsquo;ll need to manually resolve these conflicts.</p>
+<h2 id="part-5-remote-repositories-collaboration-and-backup">Part 5: Remote Repositories (Collaboration and Backup)</h2>
+<h3 id="introduction-to-remote-repositories">Introduction to Remote Repositories</h3>
+<p>Platforms like <a href="https://github.com/" target="_blank">GitHub</a>
+, <a href="https://gitlab.com/" target="_blank">GitLab</a>, and <a href="https://bitbucket.org/" target="_blank">Bitbucket</a> provide remote repositories for collaboration and backup.</p>
+<h3 id="creating-a-remote-repository">Creating a Remote Repository</h3>
+<ol>
+<li>Create an account on a platform like GitHub.</li>
+<li>Create a new repository on the platform.</li>
+</ol>
+<h3 id="connecting-local-and-remote-repositories">Connecting Local and Remote Repositories</h3>
+<ol>
+<li>Add the remote repository as an origin:</li>
+</ol>
+<pre><code class="language-bash">git remote add origin &lt;repository_url&gt;
+</code></pre>
+<ol start="2">
+<li>Push your changes to the remote repository:</li>
+</ol>
+<pre><code class="language-bash">git push -u origin main \# or master. The -u sets up tracking.
+</code></pre>
+<ol start="3">
+<li>Pull changes from the remote repository (that are missing on your local machine):</li>
+</ol>
+<pre><code class="language-bash">git pull origin main
+</code></pre>
+<ol start="4">
+<li>Clone an existing repository:</li>
+</ol>
+<pre><code class="language-bash">git clone &lt;repository_url&gt;
+</code></pre>
+<h2 id="part-6-git-for-linguistics-specific-tasks">Part 6: Git for Linguistics-Specific Tasks</h2>
+<p>###Managing Linguistic Data</p>
+<ul>
+<li>Use <code>.gitignore</code> to exclude large data files from version control (if necessary).</li>
+<li>Consider Git LFS (Large File Storage) for managing large binary files.
+<ul>
+<li>Example: Tracking changes in a corpus of annotated speech recordings.</li>
+</ul>
+</li>
+</ul>
+<h3 id="collaborating-on-papers-and-theses">Collaborating on Papers and Theses</h3>
+<ul>
+<li>Use branches for different sections or versions of a document.</li>
+<li>Use pull requests to review changes before merging them into
+the main branch.
+<ul>
+<li>Example: Multiple authors working on a LaTeX document.</li>
+</ul>
+</li>
+</ul>
+<h3 id="tracking-code-for-analysis">Tracking Code for Analysis</h3>
+<ul>
+<li>Store your R, Python, PRAAT, or other scripts in a Git repository.</li>
+<li>Use commits to track changes to your analysis code.
+<ul>
+<li>Example: Managing scripts for statistical analysis of linguistic data.</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-control-for-linguistic-resources">Version Control for Linguistic Resources</h3>
+<ul>
+<li>Manage grammars, dictionaries, or other linguistic resources with Git.
+<ul>
+<li>Example: Tracking changes to a set of fieldwork notes in FLEx.</li>
+</ul>
+</li>
+</ul>
+<h3 id="using-git-with-latex">Using Git with LaTeX</h3>
+<ul>
+<li>Ignore auxiliary files (e.g., .aux, .log, .pdf) using <code>.gitignore</code> as demonstrated above .</li>
+<li>Keep your LaTeX source files (e.g., .tex) under version control.</li>
+</ul>
+<h2 id="part-7-best-practices-and-further-learning">Part 7: Best Practices and Further Learning</h2>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>Write meaningful commit messages: Explain why you made the changes, not just what you
+changed.</li>
+<li>Commit frequently: Make small, logical commits.</li>
+<li>Keep branches focused: Each branch should have a specific purpose.</li>
+<li>Communicate with collaborators: Coordinate your work with others.</li>
+</ul>
+<h2 id="further-resources">Further Resources</h2>
+<ul>
+<li>Official Git Documentation: <a href="https://git-scm.com/docGitHub">https://git-scm.com/docGitHub</a></li>
+<li>Learning Resources on Github: <a href="https://docs.github.com/en/github/getting-started-with-githubGitLab">https://docs.github.com/en/github/getting-started-with-githubGitLab</a></li>
+<li>Documentation of Gitlab: <a href="https://docs.gitlab.com/Atlassian">https://docs.gitlab.com/Atlassian</a></li>
+<li>Git Tutorials on W3schools: <a href="https://www.w3schools.com/git/">https://www.w3schools.com/git/</a></li>
+</ul>
+<p>Git is a powerful managing tool when your project grows bigger, involves many collaborators, and carries on for a long time.</p>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © Miao Zhang 2022 &ndash; 2026 | <a href="https://github.com/ZenMule">Github</a> | <a href="https://x.com/Miao_Zhang_dr">X</a> | <a href="https://huggingface.co/zenmule">HuggingFace</a>
+  
+  </footer>
+  </body>
+</html>
+

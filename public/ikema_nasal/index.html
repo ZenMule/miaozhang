@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Ikema nasals</title>
+    <style>
+        body {
+            background-color: #3d3846;
+            color: white;
+            font-family: "Yu Gothic Medium", "chinese-japanese-korean", sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            user-select: none;
+        }
+
+        #presentation-area {
+            width: 1440px;
+            height: 900px;
+            position: relative;
+            background-color: #3d3846; /* To match background */
+            transform-origin: center center;
+        }
+        
+        .screen {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .form-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 18px; /* Form size */
+            line-height: 1.8;
+            background-color: #555555; /* Approximate theme gray for form */
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            min-width: 600px;
+        }
+        
+        .form-text h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .form-button {
+            margin-top: 40px;
+            padding: 10px 40px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #eeeeee;
+            border: 1px solid #aaa;
+            color: black;
+            border-radius: 4px;
+        }
+
+        .form-button:hover {
+            background-color: #ffffff;
+        }
+
+        /* Trial screen specific */
+        .trial-element {
+            position: absolute;
+            transform: translate(-50%, -50%); /* Centers the element on its coordinate */
+            white-space: nowrap;
+        }
+
+        #te-ikemap { font-size: 50px; font-weight: normal; }
+        #te-prompt { font-size: 42px; font-weight: normal; }
+        #te-ikemas { font-size: 50px; font-weight: bold; }
+        #te-sentence { font-size: 42px; font-weight: normal; }
+        #te-progress { font-size: 22px; font-weight: normal; }
+
+        /* Disable image dragging to feel more like an app */
+        img {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="presentation-area">
+    <!-- Welcome Screen -->
+    <div id="screen-welcome" class="screen">
+        <div class="form-text">
+            <h1>こんにちは</h1>
+            <p>これから実験を始めます。</p>
+            <p>画面上に問題、図と答えが出てきます。<br>
+            私は問題文をお読みいたします。</p>
+            <p>その問題に対して、図の下の答えを方言で答えてください。</p>
+            <p>準備ができましたら、「Ok」ボタンを押して、実験を始めていただきます。</p>
+            <button class="form-button" onclick="nextScreen()">Ok</button>
+        </div>
+    </div>
+
+    <!-- Trial Screen -->
+    <div id="screen-trial" class="screen">
+        <!-- Coordinates mapped exactly from OpenSesame -->
+        <!-- Center origin is 50%, 50% -->
+        <div id="te-ikemap" class="trial-element" style="left: calc(50% + 6px); top: calc(50% - 321px);"></div>
+        <div id="te-prompt" class="trial-element" style="left: calc(50% + 0px); top: calc(50% - 256px);"></div>
+        
+        <img id="te-image" class="trial-element" style="left: 50%; top: 50%; max-width: 450px; max-height: 450px; object-fit: contain;" src="" alt="">
+
+        <div id="te-ikemas" class="trial-element" style="left: calc(50% + 0px); top: calc(50% + 256px);"></div>
+        <div id="te-sentence" class="trial-element" style="left: calc(50% + 0px); top: calc(50% + 320px);"></div>
+        
+        <div id="te-progress" class="trial-element" style="font-family: 'chinese-japanese-korean', sans-serif; left: calc(50% - 672px); top: calc(50% - 416px); transform: none;"></div>
+    </div>
+
+    <!-- End of Practice Screen -->
+    <div id="screen-end-practice" class="screen">
+        <div class="form-text">
+            <h1>練習終わり</h1>
+            <p>練習は終わりました。</p>
+            <p>ここから本番を始めます。</p>
+            <button class="form-button" onclick="nextScreen()">Ok</button>
+        </div>
+    </div>
+
+    <!-- End of Experiment Screen -->
+    <div id="screen-end" class="screen">
+        <div class="form-text">
+            <h1>実験終わり</h1>
+            <p>実験が全部終わりました。</p>
+            <p>ご協力ありがとうございます。</p>
+            <button class="form-button" onclick="closeExperiment()">Ok</button>
+        </div>
+    </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

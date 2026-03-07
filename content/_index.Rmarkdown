@@ -2,7 +2,7 @@
 title: Home
 ---
 
-[<img src="/profile.jpg" style="max-width:35%;min-width:40px;float:right;" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
+[<img src="/profile.jpg" style="max-width:35%;min-width:40px;float:right;border-radius:50%;-webkit-mask-image:-webkit-radial-gradient(ellipse, black 70%, transparent 100%);mask-image:radial-gradient(ellipse, black 70%, transparent 100%);" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
 
 # 张淼 Miao ZHANG
 

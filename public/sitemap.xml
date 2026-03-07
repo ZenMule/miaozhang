@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://miaozhang.org/event/</loc>
-    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://miaozhang.org/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/post/2026/03/01/ikema-nasal-stim/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/post/</loc>
+    <lastmod>2026-03-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/post/2025/08/23/ikema-prosody-stim/</loc>
+    <lastmod>2025-08-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/</loc>
+    <lastmod>2025-08-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/post/2025/04/30/ikema-word-prosody-prelim/</loc>
+    <lastmod>2025-04-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://miaozhang.org/event/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://miaozhang.org/event/mfa-tutorial/</loc>
     <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://miaozhang.org/post/2024/02/26/dynamic-seeding-praat-script-bundle/</loc>
-    <lastmod>2024-02-26T09:42:58+01:00</lastmod>
+    <loc>https://miaozhang.org/post/2025/04/28/git-guide-linguists/</loc>
+    <lastmod>2025-04-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://miaozhang.org/post/</loc>
+    <loc>https://miaozhang.org/post/2024/02/26/dynamic-seeding-praat-script-bundle/</loc>
     <lastmod>2024-02-26T09:42:58+01:00</lastmod>
   </url><url>
     <loc>https://miaozhang.org/event/consonant-induced-f0-perturbation-in-kansai-japanese/</loc>
     <lastmod>2022-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://miaozhang.org/categories/</loc>
-  </url><url>
     <loc>https://miaozhang.org/publication/</loc>
+  </url><url>
+    <loc>https://miaozhang.org/categories/</loc>
   </url><url>
     <loc>https://miaozhang.org/tags/</loc>
   </url>

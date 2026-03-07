@@ -6,8 +6,43 @@
     <description>Recent content in Posts on Miao Zhang&#39;s personal website</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Feb 2024 09:42:58 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://miaozhang.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ikema nasal stimuli</title>
+      <link>https://miaozhang.org/post/2026/03/01/ikema-nasal-stim/</link>
+      <pubDate>Sun, 01 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/post/2026/03/01/ikema-nasal-stim/</guid>
+      <description>&lt;p&gt;This is the &lt;a href=&#34;https://miaozhang.org/ikema_nasal/index.html&#34;&gt;slides&lt;/a&gt; used for our investigation of Ikema voiceless nasal sounds, an endangered language spoken in Miyako, Okinawa, Japan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ikema prosody stimuli</title>
+      <link>https://miaozhang.org/post/2025/08/23/ikema-prosody-stim/</link>
+      <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/post/2025/08/23/ikema-prosody-stim/</guid>
+      <description>&lt;p&gt;This is the &lt;a href=&#34;https://miaozhang.org/2025-08-30-Ikema-prosody-stimuli/Ikema_prosody_stimuli.html&#34;&gt;slides&lt;/a&gt; used for our investigation into the interplay of word and sentence prosody in Ikema, an endangered language spoken in Miyako, Okinawa, Japan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Supplementary materials for Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis (Interspeech 2025)</title>
+      <link>https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/</link>
+      <pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This page is intended to reproduce the results and visualizations from the paper &lt;a href=&#34;https://www.isca-archive.org/interspeech_2025/zhang25s_interspeech.pdf&#34;&gt;Zhang, M., Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E. (2025) Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis. Proc. Interspeech 2025, 3933-3937, doi: 10.21437/Interspeech.2025-2027&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This paper addresses the problem of speaker heterogeneity in the Mozilla Common Voice corpus, where a single “client ID” may include recordings from multiple speakers, complicating phonetic analysis and speech technology development. We use ResNet-293-based speaker embeddings to compute similarity scores between utterances within the same client ID and then design a speaker discrimination task to determine an optimal similarity threshold. Through large-scale evaluation across 76 languages, we identify a threshold of 0.354 that effectively reduces speaker heterogeneity while minimizing data loss (averaging 3.5% per language).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ikema word prosody revisited: a preliminary contour clustering and GAMM analysis</title>
+      <link>https://miaozhang.org/post/2025/04/30/ikema-word-prosody-prelim/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/post/2025/04/30/ikema-word-prosody-prelim/</guid>
+      <description>&lt;p&gt;This is a preliminary report on a small study on Ikema word prosody. You can find the slides &lt;a href=&#34;https://miaozhang.org/2025-04-30-phonlab-ikema/phonlab_20250430.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Version Control for Linguists: A Practical Guide to Git</title>
+      <link>https://miaozhang.org/post/2025/04/28/git-guide-linguists/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://miaozhang.org/post/2025/04/28/git-guide-linguists/</guid>
+      <description>&lt;h2 id=&#34;part-1-why-git&#34;&gt;Part 1: Why Git?&lt;/h2&gt;&#xA;&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;&#xA;&lt;p&gt;Version control is a system that records changes to a file or set of&#xA;files over time, allowing you to recall specific versions later. Git is&#xA;a popular and powerful version control system, and it&amp;rsquo;s essential for&#xA;academic research, especially in collaborative and data-intensive fields&#xA;like linguistics.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pain-points-in-linguistic-research-and-how-git-helps&#34;&gt;Pain Points in Linguistic Research (and how Git helps)&lt;/h2&gt;&#xA;&lt;p&gt;Linguistics PhD students often face challenges that Git can help solve:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dynamic seeding formant extraction</title>
       <link>https://miaozhang.org/post/2024/02/26/dynamic-seeding-praat-script-bundle/</link>
