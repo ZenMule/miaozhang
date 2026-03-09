@@ -2,7 +2,7 @@
 title: Home
 ---
 
-[<img src="/profile.jpg" style="max-width:35%;min-width:40px;float:right;border-radius:50%;-webkit-mask-image:-webkit-radial-gradient(ellipse, black 70%, transparent 100%);mask-image:radial-gradient(ellipse, black 70%, transparent 100%);" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
+[<img src="/profile.jpg" style="max-width:35%;min-width:120px;float:right;margin-left:20px;margin-bottom:20px;border-radius:50%;aspect-ratio:1/1;object-fit:cover;border:4px solid #ffffff;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);" alt="profile photo" />](https://www.researchgate.net/profile/Miao-Zhang-34)
 
 # 张淼 Miao ZHANG
 
