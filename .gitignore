@@ -1,8 +1,13 @@
 # Ignore R-related files
 controls.R
 .Rproj.user/
+.Rhistory
 
 # Ignore macOS system files
-.DS_Store
-.Rhistory
-content/post/.DS_Store
+**/.DS_Store
+
+# Hugo build output — Netlify rebuilds this from source on every deploy
+public/
+
+# Blogdown temporary lock files
+*.lock~
