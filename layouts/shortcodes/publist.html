@@ -1,0 +1,56 @@
+{{ $pubs := .Site.Data.publications }}
+
+{{- with $pubs.journal_articles }}
+<h2>Journal Articles</h2>
+<div class="pub-list">
+  {{- range . }}
+  <div class="pub-row">
+    <div class="pub-label">
+      {{- if eq .status "published" }}<strong>{{ .year }}</strong>
+      {{- else if eq .status "under_review" }}<span class="pub-status pub-status-review">Under review</span>
+      {{- else if eq .status "rev_under_review" }}<span class="pub-status pub-status-review">Rev. under review</span>
+      {{- else if eq .status "under_revision" }}<span class="pub-status pub-status-revision">Under revision</span>
+      {{- else if eq .status "in_prep" }}<span class="pub-status pub-status-prep">In prep.</span>
+      {{- end }}
+    </div>
+    <div class="pub-citation">{{ .citation | markdownify }}</div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- with $pubs.conference_proceedings }}
+<h2>Conference Proceedings</h2>
+<div class="pub-list">
+  {{- range . }}
+  <div class="pub-row">
+    <div class="pub-label"><strong>{{ .year }}</strong></div>
+    <div class="pub-citation">{{ .citation | markdownify }}</div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- with $pubs.conferences }}
+<h2>Conferences</h2>
+<div class="pub-list">
+  {{- range . }}
+  <div class="pub-row">
+    <div class="pub-label"><strong>{{ .year }}</strong></div>
+    <div class="pub-citation">{{ .citation | markdownify }}</div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- with $pubs.dissertation }}
+<h2>Dissertation</h2>
+<div class="pub-list">
+  {{- range . }}
+  <div class="pub-row">
+    <div class="pub-label"><strong>{{ .year }}</strong></div>
+    <div class="pub-citation">{{ .citation | markdownify }}</div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}

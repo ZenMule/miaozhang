@@ -28,8 +28,8 @@ menu:
     
 
 params:
-  description: "Welcome to my website!"
-  footer: "&copy; Miao Zhang 2022 -- {Year} | [Github](https://github.com/ZenMule) | [X](https://x.com/Miao_Zhang_dr) | [HuggingFace](https://huggingface.co/zenmule)"
+  description: "Phonetician at the University of Zürich researching prosody, tone systems, and cross-linguistic speech patterns."
+  footer: "&copy; Miao Zhang 2022 -- {Year} | [Github](https://github.com/ZenMule) | [X](https://x.com/Miao_Zhang_dr) | [HuggingFace](https://huggingface.co/zenmule) | [ORCiD](https://orcid.org/0000-0002-9984-4486)"
 
 markup:
   highlight:

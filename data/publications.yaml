@@ -1,0 +1,140 @@
+# =============================================================================
+# publications.yaml — your complete publication list
+# =============================================================================
+# To add a paper, copy an existing block and paste it in the right section.
+#
+# Fields
+#   citation : full citation in Markdown (bold = **text**, italic = *text*,
+#              link = [label](URL)) — bold your name: **Zhang, M.**
+#   year     : publication year as a string, e.g. "2026"
+#   status   : one of the values below (controls the coloured badge)
+#
+# Status values
+#   published        → shows the year, no badge
+#   under_review     → yellow badge "Under review"
+#   rev_under_review → yellow badge "Rev. under review"
+#   under_revision   → red badge   "Under revision"
+#   in_prep          → gray badge  "In prep."
+# =============================================================================
+
+journal_articles:
+
+  - year: "2026"
+    status: published
+    citation: >-
+      **Zhang, M.**, Gong, S-X. and Guo, C-Y. Tone sandhi and tonal coarticulation in
+      disyllabic sequences in Changsha Xiang. *Journal of Phonetics, 114, 101472*.
+      [doi](https://doi.org/10.1016/j.wocn.2025.101472)
+
+  - status: rev_under_review
+    citation: >-
+      **Zhang, M.** and Fujinaga-Gordon, K. An illustration of IPA: Ikema.
+      *Journal of International Phonetic Association*.
+
+  - status: under_revision
+    citation: >-
+      Chodroff, E. and **Zhang, M**. A crosslinguistic corpus phonetic analysis of intrinsic
+      vowel duration. *Journal of Phonetics*.
+      [preprint](https://doi.org/10.31234/osf.io/xchav_v1)
+
+  - status: in_prep
+    citation: >-
+      **Zhang, M.** and Chodroff, E. The universality of vowel intrinsic F0: A corpus study of
+      cross-linguistic and inter-speaker variability in 75 languages.
+      [preprint](https://doi.org/10.31234/osf.io/5ykqs_v1)
+
+  - status: under_review
+    citation: >-
+      Han, J-Y., Wang, T., and **Zhang, M**. L3 acquisition of Mandarin Chinese stop consonants
+      by learners with L1 Spanish/Thai and L2 English.
+      *Journal of the Acoustical Society of America*.
+      [preprint](https://doi.org/10.31234/osf.io/dbx8s_v1)
+
+
+conference_proceedings:
+
+  - year: "2025"
+    status: published
+    citation: >-
+      **Zhang, M.**, Farhadipour, A., Baker, A., Ma, J., Pricop, B., Chodroff, E.
+      Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for
+      Phonetic Analysis. *Proc. Interspeech 2025*, 3933–3937.
+      [doi](https://doi.org/10.21437/Interspeech.2025-2027)
+
+
+conferences:
+
+  - year: "2026"
+    citation: >-
+      with Chodroff, E. A crosslinguistic analysis of vowel inventory size influence on vowel
+      dispersion. (Oral, **peer-reviewed**) *Laboratory Phonology 20*, June 26–28, Montreal,
+      Canada.
+
+  - year: "2026"
+    citation: >-
+      with Pricop, B. and Chodroff, E. A corpus study of consonant intrinsic effects in true
+      voicing languages. (Poster, **peer-reviewed**) *Laboratory Phonology 20*, June 26–28,
+      Montreal, Canada.
+
+  - year: "2025"
+    citation: >-
+      with Chodroff, E. A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral,
+      **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25–27, Palma, Spain.
+
+  - year: "2024"
+    citation: >-
+      with Chodroff, E. A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster,
+      **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon 19)*,
+      June 27–29, Seoul, South Korea.
+
+  - year: "2023"
+    citation: >-
+      A Cross-linguistic Study on Pre-boundary Vowel Lengthening (PBVL): Comparing
+      monophthongs and diphthongs in Chinese, English, and Japanese. (Oral)
+      *The 15th Phonetic Conference of China (PCC2023)*, July 7–10, Shenzhen, Guangdong.
+
+  - year: "2022"
+    citation: >-
+      Prosodic modulations on the formant excursions of diphthongs. (Poster)
+      *The 183rd Meeting of the Acoustical Society of America (ASA183)*,
+      Dec 5–9, Nashville, TN.
+
+  - year: "2021"
+    citation: >-
+      Positional tone sandhi in Changsha Xiang: A production study. (Poster,
+      **peer-reviewed**) *The 1st International Conference on Tone and Intonation (TAI2021)*,
+      Dec 6–9, Sonderborg, Denmark and online.
+
+  - year: "2020"
+    citation: >-
+      Effect of consonants on onset F0: Evidence from Kansai Japanese. (Poster)
+      *Acoustics Virtually Everywhere (The 179th Meeting of the Acoustical Society of America)*,
+      online.
+
+  - year: "2019"
+    citation: >-
+      The role of information structure and foot structure on the kinematics of unstressed
+      syllables. (Oral, **peer-reviewed**) *Hanyang International Symposium on Phonetics and
+      Cognitive Sciences of Language (HISPhonCog) 2019*, May 24–25, Seoul, South Korea.
+
+  - year: "2015"
+    citation: >-
+      Japanese Lexical V-V Compounds Revisited. (Poster) *The Symposium of Challenging
+      Japanese Language Teaching: Introducing the Efforts of University of Tsukuba*,
+      March, Tsukuba, Japan.
+
+  - year: "2013"
+    citation: >-
+      On the Collocation of the Adverb 'Zenzen': An Investigation via Tsukuba Web Corpus.
+      (Poster) *The Annual Meeting of Association of Japanese Language and Japanese Language
+      Pedagogy 2013*, Tokyo, Japan.
+
+
+dissertation:
+
+  - year: "2022"
+    citation: >-
+      Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics,
+      State University of New York at Buffalo. Advisor:
+      [Christian DiCanio](https://www.acsu.buffalo.edu/~cdicanio/).
+      [pdf](/mz_dissertation.pdf)

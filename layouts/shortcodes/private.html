@@ -1,0 +1,39 @@
+{{ $hash := .Get 0 }}
+<div class="private-gate" id="private-gate">
+  <div class="private-lock">🔒</div>
+  <p>This page is private. Enter the passcode to continue.</p>
+  <div class="private-input-row">
+    <input type="password" id="private-input" placeholder="Passcode" autocomplete="off" />
+    <button id="private-btn">Enter</button>
+  </div>
+  <p class="private-error" id="private-error" style="display:none">Incorrect passcode. Please try again.</p>
+</div>
+
+<div class="private-content" id="private-content" style="display:none">
+  {{ .Inner | markdownify }}
+</div>
+
+<script>
+(function () {
+  var STORED_HASH = "{{ $hash }}";
+
+  async function check() {
+    var val = document.getElementById("private-input").value;
+    var buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(val));
+    var hex = Array.from(new Uint8Array(buf))
+      .map(function (b) { return b.toString(16).padStart(2, "0"); })
+      .join("");
+    if (hex === STORED_HASH) {
+      document.getElementById("private-content").style.display = "block";
+      document.getElementById("private-gate").style.display = "none";
+    } else {
+      document.getElementById("private-error").style.display = "block";
+    }
+  }
+
+  document.getElementById("private-btn").addEventListener("click", check);
+  document.getElementById("private-input").addEventListener("keydown", function (e) {
+    if (e.key === "Enter") check();
+  });
+})();
+</script>

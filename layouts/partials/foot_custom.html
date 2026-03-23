@@ -5,3 +5,13 @@
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
 
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+<script>
+/* Open links to HTML slide/presentation files in a new tab */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('main a[href$=".html"]').forEach(function (a) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+});
+</script>

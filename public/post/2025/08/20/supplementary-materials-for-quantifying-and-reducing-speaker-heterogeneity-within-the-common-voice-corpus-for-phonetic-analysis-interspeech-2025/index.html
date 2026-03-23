@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Supplementary materials for Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis (Interspeech 2025) | Miao Zhang&#39;s personal website</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="/css/custom.css" />
+
+
+
+<meta property="og:title" content="Supplementary materials for Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis (Interspeech 2025) | Miao Zhang&#39;s personal website" />
+<meta property="og:description" content="Phonetician at the University of Zürich researching prosody, tone systems, and cross-linguistic speech patterns." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/" />
+
   </head>
 
   <body>
@@ -108,7 +122,7 @@ summary(scores_by_lang$q1)
         axis.title.x = element_text(size=16),
         axis.title.y = element_text(size=16)) 
 </code></pre>
-<img src="https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/histogram of scores-1.png" width="576" style="display: block; margin: auto;" />
+<img src="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/histogram of scores-1.png" width="576" style="display: block; margin: auto;" />
 <p>Then load the speaker files.</p>
 <pre><code class="language-r"># Replace the path below with the one on your own computer
 spkr_dir &lt;- &quot;/Users/miaozhang/Research/VoxCommunis/VoxCommunis_Huggingface/speaker_files&quot;
@@ -245,7 +259,7 @@ prop_under_threshold_by_lang |&gt;
         panel.grid.major.y = element_line(linetype = 3),
         legend.title = element_blank())
 </code></pre>
-<img src="https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the heterogeneity results-1.png" width="576" style="display: block; margin: auto;" />
+<img src="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the heterogeneity results-1.png" width="576" style="display: block; margin: auto;" />
 <pre><code class="language-r"># The proportion of client IDs that have more than 10% of the associated recordings with a score lower than the threshold
 ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc)) +
   geom_col() +
@@ -262,7 +276,7 @@ ggplot(n_affected_more_than_10, aes(reorder(lang, desc(perc)), perc, fill = perc
         legend.title = element_blank(),
         panel.grid.major.y = element_line(linetype = 3))
 </code></pre>
-<img src="https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the heterogeneity results-2.png" width="576" style="display: block; margin: auto;" />
+<img src="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the heterogeneity results-2.png" width="576" style="display: block; margin: auto;" />
 <h2 id="auditing-result-round-1">Auditing result: round 1</h2>
 <p>Read in the auditing result from round 1.</p>
 <pre><code class="language-r"># load the first round audit result
@@ -315,7 +329,7 @@ audit_r1 &lt;- read_csv(&quot;~/Documents/GitHub/miaozhang/static/papers_slides/
         legend.position = &quot;bottom&quot;,
         legend.title = element_blank()) 
 </code></pre>
-<img src="https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/r1 results plotting-1.png" width="576" style="display: block; margin: auto;" />
+<img src="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/r1 results plotting-1.png" width="576" style="display: block; margin: auto;" />
 <h2 id="auditing-result-round-1-1">Auditing result: round 1</h2>
 <p>Get the round 2 data.</p>
 <pre><code class="language-r">audit_r2 &lt;- read_csv(&quot;~/Documents/GitHub/miaozhang/static/papers_slides/audit_r2.csv&quot;) |&gt; create_scoreBin()
@@ -458,7 +472,7 @@ preds &lt;- ggpredict(mod, terms = &quot;score[all]&quot;, interval = &quot;conf
         axis.text.x = element_text(size = 16),
         axis.title.x = element_text(size = 16)) 
 </code></pre>
-<img src="https://miaozhang.org/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the threshold-1.png" width="576" style="display: block; margin: auto;" />
+<img src="http://localhost:1313/post/2025/08/20/supplementary-materials-for-quantifying-and-reducing-speaker-heterogeneity-within-the-common-voice-corpus-for-phonetic-analysis-interspeech-2025/index_files/figure-html/plot the threshold-1.png" width="576" style="display: block; margin: auto;" />
 
 </main>
 
@@ -471,9 +485,19 @@ preds &lt;- ggpredict(mod, terms = &quot;score[all]&quot;, interval = &quot;conf
 
 <script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
 
+<script>
+ 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('main a[href$=".html"]').forEach(function (a) {
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+});
+</script>
+
   
   <hr/>
-  © Miao Zhang 2022 &ndash; 2026 | <a href="https://github.com/ZenMule">Github</a> | <a href="https://x.com/Miao_Zhang_dr">X</a> | <a href="https://huggingface.co/zenmule">HuggingFace</a>
+  © Miao Zhang 2022 &ndash; 2026 | <a href="https://github.com/ZenMule">Github</a> | <a href="https://x.com/Miao_Zhang_dr">X</a> | <a href="https://huggingface.co/zenmule">HuggingFace</a> | <a href="https://orcid.org/0000-0002-9984-4486">ORCiD</a>
   
   </footer>
   </body>

@@ -1,0 +1,14 @@
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}" />
+
+{{ if .Params.private }}<meta name="robots" content="noindex, nofollow" />{{ end }}
+
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
