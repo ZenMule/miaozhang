@@ -17,12 +17,12 @@ I am a linguist specializing in phonetics and phonology. My research explores th
 I hold a Ph.D. in Linguistics from the University at Buffalo, SUNY and an M.A. in Japanese Language Education (日本語教育) from the University of Tsukuba. My expertise extends to computational linguistics, with skills in R, Python, and Praat scripting. I am dedicated to advancing our understanding of the complexities of human speech.
 
 <p>
-<span class="research-chip">phonetics–phonology interface</span>
-<span class="research-chip">prosody</span>
-<span class="research-chip">tone systems</span>
-<span class="research-chip">corpus phonetics</span>
+<span class="research-chip">Phonetics–phonology interface</span>
+<span class="research-chip">Prosody-phonetics interface</span>
+<span class="research-chip">Word prosody</span>
+<span class="research-chip">Corpus phonetics</span>
 <span class="research-chip">Ryukyuan languages</span>
-<span class="research-chip">cross-linguistic variation</span>
+<span class="research-chip">Phonetic universals</span>
 </p>
 
 I also enjoy cooking, playing video games, and going to classical music concerts.
@@ -40,3 +40,7 @@ Email me: miao dot zhang at uzh dot ch
 * 2022, Ph.D. in Linguistics, State University of New York at Buffalo
 * 2015, M.A in Japanese Language Education, University of Tsukuba
 * 2011, B.A in Japanese Language and Culture, Renmin University of China
+
+## News
+
+{{< news >}}

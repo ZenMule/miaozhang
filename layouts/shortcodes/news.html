@@ -1,0 +1,18 @@
+<div class="news-list">
+  {{ range $.Site.Data.news }}
+  <div class="news-row">
+    <div class="news-date">{{ .date }}</div>
+    <div class="news-item">
+      {{ if .type }}
+      {{ $label := "" }}
+      {{ if eq .type "paper" }}{{ $label = "Paper accepted" }}
+      {{ else if eq .type "talk" }}{{ $label = "Invited talk" }}
+      {{ else if eq .type "position" }}{{ $label = "New position" }}
+      {{ else }}{{ $label = .type }}{{ end }}
+      <span class="news-tag news-tag-{{ .type }}">{{ $label }}</span>
+      {{ end }}
+      {{ .text }}
+    </div>
+  </div>
+  {{ end }}
+</div>
