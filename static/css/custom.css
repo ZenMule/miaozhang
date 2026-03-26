@@ -206,3 +206,18 @@ h2 {
   background: #FEEBC8;
   color: #9C4221;
 }
+
+.news-tag-poster {
+  background: #E2E8F0;
+  color: #2D3748;
+}
+
+.news-tag-oral {
+  background: #BEE3F8;
+  color: #2B6CB0;
+}
+
+.news-tag-award {
+  background: #FEFCBF;
+  color: #744210;
+}

@@ -8,6 +8,9 @@
       {{ if eq .type "paper" }}{{ $label = "Paper accepted" }}
       {{ else if eq .type "talk" }}{{ $label = "Invited talk" }}
       {{ else if eq .type "position" }}{{ $label = "New position" }}
+      {{ else if eq .type "poster" }}{{ $label = "Poster" }}
+      {{ else if eq .type "oral" }}{{ $label = "Oral presentation" }}
+      {{ else if eq .type "award" }}{{ $label = "Award" }}
       {{ else }}{{ $label = .type }}{{ end }}
       <span class="news-tag news-tag-{{ .type }}">{{ $label }}</span>
       {{ end }}
