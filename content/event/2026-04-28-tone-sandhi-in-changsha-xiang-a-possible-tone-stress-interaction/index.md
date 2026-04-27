@@ -7,6 +7,6 @@ categories: []
 tags: []
 ---
 
-This is an invited talk at the Phonetics Lab at Lancaster University on Changsha Xiang tone sandhi. The slides can be found <a href="/2026-04-28-Lancaster/lancaster_280426.html" target="_blank">here</a>.  
+This is an invited talk at the Phonetics Lab at Lancaster University on Changsha Xiang tone sandhi. The slides can be found <a href="/2026-04-28-Lancaster/lancaster_280426.html" target="_blank">here</a>. 
 
 The talk is based on the paper "Tone sandhi and tonal coarticulation in disyllabic sequences in Changsha Xiang" by Miao Zhang, Shuxiao Gong, and Chengyu Guo, which is accepted for publication in the proceedings of the 30th International Conference on Phonetic Sciences (ICPhS 2025). The paper can be found <a href="https://doi.org/10.1016/j.wocn.2025.101472" target="_blank">here</a>.
