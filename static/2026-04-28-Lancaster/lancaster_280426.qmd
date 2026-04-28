@@ -291,7 +291,7 @@ See details of the models in my paper: @zhangToneSandhiTonal2026.
 
 - In s1,
     - In dominant syllables, T21 and T13 are entirely lower.
-    - The other rising tnoes (T24, T34, and T45) show a **steeper** rising contour in dominant syllables.
+    - The other rising tones (T24, T34, and T45) show a **steeper** rising contour in dominant syllables.
     - T42 is unaffected.
 - In s2, 
     - T21 reaches a **lower** F0 minumum in dominant syllables.
