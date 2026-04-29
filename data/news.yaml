@@ -4,15 +4,19 @@
 
 - date: "Mar 2026"
   type: position
-  text: "Starting a new position as an Assistant Professor in the University College International at the Macau University of Science and Technology in Fall, 2026."  
-
+  text: "Starting a new position as an Assistant Professor in the University College International at the Macau University of Science and Technology in Fall, 2026."
+  
 - date: "Jan 2026"
   type: paper
-  text: '"Tone sandhi and Tonal Coarticulation in Disyllabic Sequences in Changsha Xiang" accepted for publication at the Journal of Phonetics.'
+  text: '"Tone sandhi and Tonal Coarticulation in Disyllabic Sequences in Changsha Xiang" has been accepted for publication at the Journal of Phonetics.'
+
+- date: "May. 2025"
+  type: conference
+  text: '"A Crosslinguistic Analysis of Vowel Intrinsic F0" has been accepted for an oral presentation at PaPE 2025.'
 
 - date: "April 2025"
-  type: poster
-  text: '"Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis" accepted at Interspeech 2025.'
+  type: conference
+  text: '"Quantifying and Reducing Speaker Heterogeneity within the Common Voice Corpus for Phonetic Analysis" accepted at Interspeech 2025 as a poster.'
 
 - date: "Jun 2023"
   type: position
