@@ -31,7 +31,7 @@ journal_articles:
       **Zhang, M.** and Fujinaga-Gordon, K. An illustration of IPA: Ikema.
       *Journal of International Phonetic Association*.
 
-  - status: rev_under_review
+  - status: under_revision
     citation: >-
       Chodroff, E. and **Zhang, M**. A crosslinguistic corpus phonetic analysis of intrinsic
       vowel duration. *Journal of Phonetics*.
@@ -66,66 +66,72 @@ conferences:
 
   - year: "2026"
     citation: >-
-      with Chodroff, E. A crosslinguistic analysis of vowel inventory size influence on vowel
+      Chodroff, E. and **Zhang, M.** VoxCommunis 2.0: A Crosslinguistic Phonetic Corpus
+      dispersion. (Lightning talk, **peer-reviewed**) *CorpusPhon2 at Laboratory Phonology 20)*,
+      June 26–28, Montreal, Canada.
+
+  - year: "2026"
+    citation: >-
+      **Zhang, M.** and Chodroff, E. A crosslinguistic analysis of vowel inventory size influence on vowel
       dispersion. (Oral, **peer-reviewed**) *Laboratory Phonology 20*, June 26–28, Montreal,
       Canada.
 
   - year: "2026"
     citation: >-
-      with Pricop, B. and Chodroff, E. A corpus study of consonant intrinsic effects in true
+      Pricop, B., Chodroff, E., and **Zhang, M.** A corpus study of consonant intrinsic effects in true
       voicing languages. (Poster, **peer-reviewed**) *Laboratory Phonology 20*, June 26–28,
       Montreal, Canada.
 
   - year: "2025"
     citation: >-
-      with Chodroff, E. A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral,
+      **Zhang, M.** and Chodroff, E. A Crosslinguistic Analysis of Vowel Intrinsic F0. (Oral,
       **peer-reviewed**) *Phonetics and Phonology in Europe 6*, June 25–27, Palma, Spain.
 
   - year: "2024"
     citation: >-
-      with Chodroff, E. A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster,
+      Chodroff, E. and **Zhang, M.**  A Crosslinguistic Analysis of Intrinsic Vowel Duration. (Poster,
       **peer-reviewed**) *The 19th Conference on Laboratory Phonology (LabPhon 19)*,
       June 27–29, Seoul, South Korea.
 
   - year: "2023"
     citation: >-
-      A Cross-linguistic Study on Pre-boundary Vowel Lengthening (PBVL): Comparing
+      **Zhang, M.** A Cross-linguistic Study on Pre-boundary Vowel Lengthening (PBVL): Comparing
       monophthongs and diphthongs in Chinese, English, and Japanese. (Oral)
       *The 15th Phonetic Conference of China (PCC2023)*, July 7–10, Shenzhen, Guangdong.
 
   - year: "2022"
     citation: >-
-      Prosodic modulations on the formant excursions of diphthongs. (Poster)
+      **Zhang, M.** Prosodic modulations on the formant excursions of diphthongs. (Poster)
       *The 183rd Meeting of the Acoustical Society of America (ASA183)*,
       Dec 5–9, Nashville, TN.
 
   - year: "2021"
     citation: >-
-      Positional tone sandhi in Changsha Xiang: A production study. (Poster,
+      **Zhang, M.** Positional tone sandhi in Changsha Xiang: A production study. (Poster,
       **peer-reviewed**) *The 1st International Conference on Tone and Intonation (TAI2021)*,
       Dec 6–9, Sonderborg, Denmark and online.
 
   - year: "2020"
     citation: >-
-      Effect of consonants on onset F0: Evidence from Kansai Japanese. (Poster)
+      **Zhang, M.** Effect of consonants on onset F0: Evidence from Kansai Japanese. (Poster)
       *Acoustics Virtually Everywhere (The 179th Meeting of the Acoustical Society of America)*,
       online.
 
   - year: "2019"
     citation: >-
-      The role of information structure and foot structure on the kinematics of unstressed
+      **Zhang, M.** The role of information structure and foot structure on the kinematics of unstressed
       syllables. (Oral, **peer-reviewed**) *Hanyang International Symposium on Phonetics and
       Cognitive Sciences of Language (HISPhonCog) 2019*, May 24–25, Seoul, South Korea.
 
   - year: "2015"
     citation: >-
-      Japanese Lexical V-V Compounds Revisited. (Poster) *The Symposium of Challenging
+      **Zhang, M.** Japanese Lexical V-V Compounds Revisited. (Poster) *The Symposium of Challenging
       Japanese Language Teaching: Introducing the Efforts of University of Tsukuba*,
       March, Tsukuba, Japan.
 
   - year: "2013"
     citation: >-
-      On the Collocation of the Adverb 'Zenzen': An Investigation via Tsukuba Web Corpus.
+      **Zhang, M.** On the Collocation of the Adverb 'Zenzen': An Investigation via Tsukuba Web Corpus.
       (Poster) *The Annual Meeting of Association of Japanese Language and Japanese Language
       Pedagogy 2013*, Tokyo, Japan.
 
@@ -134,7 +140,7 @@ dissertation:
 
   - year: "2022"
     citation: >-
-      Prosodic Influences on the Acoustics of Vowel Sequences, Department of Linguistics,
-      State University of New York at Buffalo. Advisor:
-      [Christian DiCanio](https://www.acsu.buffalo.edu/~cdicanio/).
-      [pdf](/mz_dissertation.pdf)
+      Prosodic Influences on the Acoustics of Vowel Sequences [pdf](/mz_dissertation.pdf) 
+      Department of Linguistics, State University of New York at Buffalo. 
+      Advisor: [Christian DiCanio](https://www.acsu.buffalo.edu/~cdicanio/).
+      
