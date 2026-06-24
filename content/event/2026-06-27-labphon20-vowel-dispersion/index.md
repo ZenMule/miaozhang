@@ -7,4 +7,4 @@ categories: []
 tags: []
 ---
 
-The slides for the oral presentation, "A crosslinguistic analysis of vowel inventory size influence on vowel dispersion", at LabPhon 20 in Montreal (26-28 June, 2026) can be found <a href="2026-06-27-labphon20-vowel-dispersion/presentation.html" target="_blank">here</a>.
+The slides for the oral presentation, "A crosslinguistic analysis of vowel inventory size influence on vowel dispersion", at LabPhon 20 in Montreal (26-28 June, 2026) can be found <a href="/2026-06-27-labphon20-vowel-dispersion/presentation.html" target="_blank">here</a>.
