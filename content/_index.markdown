@@ -33,7 +33,8 @@ Email me: miaozhang at must dot edu dot mo
 
 ## Employment
 
-* 2023-, Postdoctoral Researcher, Department of Computational Linguistics, University of Zurich
+* 2026-， Assistant Professor, University International College, Macau University of Science and Technology
+* 2023-2026, Postdoctoral Researcher, Department of Computational Linguistics, University of Zurich
 
 ## Education
 
