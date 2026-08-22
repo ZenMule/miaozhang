@@ -12,7 +12,7 @@ Southwestern Mandarin: <span class="ipa">[t͡sɑŋ˧˥.mʲaʊ˦˨]</span> &nbsp;
 
 ## About me
 
-I am a linguist specializing in phonetics and phonology. My research explores the intricacies of speech, from the influence of prosody on speech production to the study of tone systems and cross-linguistic phonetic patterns. Most of my work centered around two topics: the phonetics-phonology and phonetics-prosody interface. I am currently a postdoctoral researcher at the University of Zürich, working on using multilingual phonetic corpus to probe into phonetic universals and variation in speech production.
+I am a linguist specializing in phonetics and phonology. My research explores the intricacies of speech, from the influence of prosody on speech production to the study of tone systems and cross-linguistic phonetic patterns. Most of my work centered around two topics: the phonetics-phonology and phonetics-prosody interface. I am currently an Assistant Professor at Macau University of Science and Technology.
 
 I hold a Ph.D. in Linguistics from the University at Buffalo, SUNY and an M.A. in Japanese Language Education (日本語教育) from the University of Tsukuba. My expertise extends to computational linguistics, with skills in R, Python, and Praat scripting. I am dedicated to advancing our understanding of the complexities of human speech.
 
@@ -29,7 +29,7 @@ I also enjoy cooking, playing video games, and going to classical music concerts
 
 Download my CV: [English](/Miao_CV.pdf) / [Chinese](/Miao_CV_chn.pdf).
 
-Email me: miao dot zhang at uzh dot ch
+Email me: miaozhang at must dot edu dot mo
 
 ## Employment
 
