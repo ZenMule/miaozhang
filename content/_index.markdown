@@ -6,7 +6,9 @@ title: Home
 <a href="https://www.researchgate.net/profile/Miao-Zhang-34"><img src="/profile.jpg" style="width:220px;height:220px;border-radius:50%;object-fit:cover;border:4px solid #ffffff;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);display:inline-block;" alt="profile photo" /></a>
 <h1>张淼 Miao ZHANG</h1>
 <p class="name-ipa">
-Southwestern Mandarin: <span class="ipa">[t͡sɑŋ˧˥.mʲaʊ˦˨]</span> &nbsp;·&nbsp; Standard Mandarin: <span class="ipa">[ʈ͡ʂɑŋ˥.mʲaʊ˨˩˦]</span> &nbsp;·&nbsp; Changsha Xiang: <span class="ipa">[t͡sã˩˧.mʲaʊ˦˨]</span>
+Southwestern Mandarin: <span class="ipa">[t͡sɑŋ˧˥.mʲaʊ˦˨]</span><br />
+Standard Mandarin: <span class="ipa">[ʈ͡ʂɑŋ˥.mʲaʊ˨˩˦]</span><br />
+Changsha Xiang: <span class="ipa">[t͡sã˩˧.mʲaʊ˦˨]</span>
 </p>
 </div>
 
