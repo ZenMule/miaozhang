@@ -742,7 +742,6 @@ Instructor: Miao Zhang 張淼
 </section>
 <section class="slide level2">
 <h2>Step 10: How a real study works (Wechsler 2018)</h2>
-<p>A real corpus study has a workflow:</p>
 <ol type="1">
 <li><strong>Research question</strong> — what do you want to know?</li>
 <li><strong>Prediction</strong> — what do you expect?</li>
@@ -766,7 +765,6 @@ Instructor: Miao Zhang 張淼
 </section>
 <section class="slide level2">
 <h2>Secret codes: COCA part-of-speech tags</h2>
-<p>COCA can search by <strong>grammar tags</strong>. Here are a few useful codes:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 33%">
@@ -808,60 +806,6 @@ Instructor: Miao Zhang 張淼
 </tr>
 </tbody>
 </table>
-</section>
-<section class="slide level2">
-<h2>Search strings from the whine study</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Pattern</th>
-<th>Search string</th>
-<th>Raw / Valid</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>whine + that-clause</td>
-<td><code>xxxWHINE_v that_cstxxx</code></td>
-<td>73 → 67</td>
-</tr>
-<tr class="even">
-<td>whine + to-PP</td>
-<td><code>xxxWHINE to_i xxx</code></td>
-<td>51 → 36</td>
-</tr>
-<tr class="odd">
-<td>whine + at-PP</td>
-<td><code>xxxWHINE at_i xxx</code></td>
-<td>42 → 31</td>
-</tr>
-<tr class="even">
-<td>whine + to-PP + that-clause</td>
-<td>Collocates: <code>WHINE_v to_i</code> + <code>that_cst</code></td>
-<td>5 → 4</td>
-</tr>
-<tr class="odd">
-<td>whine + at-PP + that-clause</td>
-<td>Collocates: <code>WHINE_v at_i</code> + <code>that_cst</code></td>
-<td><strong>0</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section class="slide level2">
-<h2>Why the numbers dropped</h2>
-<p>COCA is automatic. It sometimes miscounts. Wechsler removed:</p>
-<ul>
-<li><strong>Noun forms counted as verbs</strong>: “the puppy made little whines that turned into excited yips”</li>
-<li><strong>Wrong meaning of <em>to</em></strong>: “the drill whined to a halt” — <em>to</em> is not a person</li>
-<li><strong>Infinitival <em>to</em> mixed up with preposition</strong>: “whined to find themselves…” — not <em>whine to someone</em></li>
-</ul>
-<p>Good detectives read their evidence.</p>
 </section>
 <section class="slide level2">
 <h2>Results for <em>whine</em>: summary table</h2>
@@ -966,27 +910,40 @@ Instructor: Miao Zhang 張淼
 <td>all forms of a word</td>
 <td><code>[work]</code></td>
 </tr>
-<tr class="even">
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>COCA search cheat sheet</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>You want…</th>
+<th>Type…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td>a specific part of speech</td>
 <td>word + <code>[POS]</code> menu</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>words near your word</td>
 <td>COLLOCATES menu</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>two words’ collocates</td>
 <td>COMPARE menu</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>your word in context</td>
 <td>KWIC menu</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>a specific grammar tag (advanced)</td>
 <td><code>word_v</code>, <code>to_i</code>, <code>that_cst</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>a pattern in exact order (advanced)</td>
 <td><code>xxxWHINE_v that_cstxxx</code></td>
 </tr>
@@ -1064,6 +1021,11 @@ Instructor: Miao Zhang 張淼
 <li>Write down your <strong>exact search strings</strong> — your study should be repeatable</li>
 <li>Compare <strong>PER MIL</strong>, not just raw FREQ — sections have different sizes</li>
 <li>Read some actual concordance lines — numbers alone can mislead you</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Tips before you start</h2>
+<ul>
 <li>If you use POS tags, remember that COCA’s automatic tags are not perfect — read your examples</li>
 <li>A surprising result is a good result — report what you found, not what you expected</li>
 <li>A zero result can also be a finding: ask <strong>why</strong></li>
@@ -1103,19 +1065,6 @@ Instructor: Miao Zhang 張淼
 <li><a href="https://www.youtube.com/playlist?list=PL3FB2495C0B9D542B">COCA Tutorials — TheGrammarLab</a></li>
 <li><a href="https://www.youtube.com/playlist?list=PLAq6uhS_0brxTW99jeZjxdslQ5BRy1Eb5">Corpus tools tutorials — Ellen Le Foll</a> (videos 1–4)</li>
 </ul>
-</section>
-<section class="slide level2">
-<h2>Answers to the practice exercises</h2>
-<ol type="1">
-<li><code>delicious|tasty</code> — <strong>delicious</strong> is more frequent (15,519)</li>
-<li><strong>assist</strong>: most frequent in <strong>academic</strong> writing</li>
-<li><strong>amuse</strong>: verb collocates include <em>entertain, smile, pretend, cease, inform, inspire, amaze, invent</em></li>
-<li><strong>fun</strong> (1 left, 3 right): most common collocate is <strong>“much”</strong> (6,033)</li>
-<li><strong>eat vs.&nbsp;drink</strong>: <em>eat</em> → <strong>bugs</strong>; <em>drink</em> → <strong>liquor</strong></li>
-<li><strong>take</strong>: most frequent word right after it is <strong>“a”</strong></li>
-<li><strong>book</strong> in TV/Movies vs.&nbsp;Fiction: more frequent (per mil) in <strong>fiction</strong></li>
-<li><strong>Practice 8</strong>: real manner-of-speaking uses = 1 and 4; miscounts = 2 and 3</li>
-</ol>
 </section>
 <section class="slide level2">
 <h2>Credits</h2>
