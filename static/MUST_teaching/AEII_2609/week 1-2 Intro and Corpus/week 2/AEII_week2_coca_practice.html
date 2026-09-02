@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="AEII_week2_coca_practice_files/libs/clipboard/clipboard.min.js"></script>
+<script src="AEII_week2_coca_practice_files/libs/quarto-html/tabby.min.js"></script>
+<script src="AEII_week2_coca_practice_files/libs/quarto-html/popper.min.js"></script>
+<script src="AEII_week2_coca_practice_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="AEII_week2_coca_practice_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="AEII_week2_coca_practice_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="AEII_week2_coca_practice_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="AEII_week2_coca_practice_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.45">
+
+  <meta name="author" content="Instructor: Miao Zhang 張淼">
+  <title>Advanced English II (BFE19013)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="AEII_week2_coca_practice_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="AEII_week2_coca_practice_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="AEII_week2_coca_practice_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="AEII_week2_coca_practice_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="AEII_week2_coca_practice_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="AEII_week2_coca_practice_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="AEII_week2_coca_practice_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Advanced English II (BFE19013)</h1>
+  <p class="subtitle">COCA Hands-on Practice</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Instructor: Miao Zhang 張淼 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Today’s plan</h1>
+
+</section>
+<section class="slide level2">
+<h2>Three parts</h2>
+<ol type="1">
+<li><strong>Part 1 (~40 min):</strong> Review — what we learned in Weeks 1–2</li>
+<li>Short break</li>
+<li><strong>Part 2 (~70 min):</strong> Step-by-step tutorial — searching the COCA corpus</li>
+<li>Short break</li>
+<li><strong>Part 3 (~40 min):</strong> Your own mini research with COCA</li>
+</ol>
+<p>Bring your laptop. You will need internet access.</p>
+</section>
+<section class="slide level2">
+<h2>What you will be able to do today</h2>
+<p>By the end of this session, you can:</p>
+<ul>
+<li>explain what a corpus is and why linguists use it</li>
+<li>search a real corpus (COCA) by yourself</li>
+<li>use corpus evidence to answer a small research question</li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 1: Review</h1>
+
+</section>
+<section class="slide level2 question-slide">
+<h2>Quick warm-up</h2>
+<p>Without looking at your notes:</p>
+<p>What is a <strong>corpus</strong>? How is it different from just “a lot of texts”?</p>
+<p>Discuss with your neighbor for 2 minutes.</p>
+</section>
+<section class="slide level2">
+<h2>Applied linguistics, in one sentence</h2>
+<p>Linguistics studies language.</p>
+<p><strong>Applied linguistics</strong> studies how language is used, learned, taught, and analyzed in real life.</p>
+<p>Corpus linguistics is one of its methods.</p>
+</section>
+<section class="slide level2">
+<h2>A corpus is <strong>MORE</strong> than a collection</h2>
+<p>A corpus is:</p>
+<ul>
+<li>large enough to be useful</li>
+<li>systematic and organized</li>
+<li>machine-readable</li>
+<li>designed for analysis</li>
+<li>representative of a language variety or purpose</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>What makes a GOOD corpus?</h2>
+<ol type="1">
+<li><strong>Representativeness</strong> — it represents the language variety it studies</li>
+<li><strong>Finite size</strong> — it has a design and a collection goal</li>
+<li><strong>Machine-readable</strong> — searchable and analyzable by computer</li>
+<li><strong>Standard reference</strong> — other researchers can reuse it and repeat the study</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Concordancing: Key Word In Context (KWIC)</h2>
+
+<img data-src="img/kwic_ex.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Why use a corpus?</h2>
+<p>Even expert speakers:</p>
+<ul>
+<li>do not know everything</li>
+<li>may be biased by what they notice</li>
+<li>cannot remember every pattern</li>
+<li>cannot easily count language use</li>
+</ul>
+<p>A corpus helps us test patterns in <strong>real data</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>What a corpus cannot do</h2>
+<ul>
+<li>There is <strong>no negative evidence</strong> in a corpus.</li>
+<li>Absence of evidence is not evidence of absence.</li>
+<li>Corpora show patterns, but they do not explain everything.</li>
+<li>Findings depend on the corpus and the research question.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Types of corpora</h2>
+<ul>
+<li><strong>Sample vs.&nbsp;monitor</strong> — fixed in time vs.&nbsp;keeps growing</li>
+<li><strong>General vs.&nbsp;specialized</strong> — broad picture vs.&nbsp;one genre/group/domain</li>
+<li><strong>Written vs.&nbsp;spoken</strong></li>
+<li><strong>Raw vs.&nbsp;annotated</strong> — plain text vs.&nbsp;tagged/labeled text</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Quantitative vs.&nbsp;qualitative</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Qualitative</th>
+<th>Quantitative (corpus)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aim</td>
+<td>depth and context</td>
+<td>patterns and frequency</td>
+</tr>
+<tr class="even">
+<td>Sample</td>
+<td>small, purposeful</td>
+<td>large, systematic</td>
+</tr>
+<tr class="odd">
+<td>Strength</td>
+<td>rich detail</td>
+<td>objective, generalizable</td>
+</tr>
+<tr class="even">
+<td>Weakness</td>
+<td>limited generalization</td>
+<td>less context</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 question-slide">
+<h2>Quick check</h2>
+<p>You want to know: <em>“Do Americans say ‘delicious’ or ‘tasty’ more often?”</em></p>
+<ol type="1">
+<li>Is this a corpus question or an intuition question?</li>
+<li>What kind of corpus would you need?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 2: COCA step by step</h1>
+
+</section>
+<section class="slide level2">
+<h2>What is COCA?</h2>
+<p><strong>COCA</strong> = Corpus of Contemporary American English</p>
+<ul>
+<li>one of the largest corpora of American English</li>
+<li>over <strong>one billion words</strong> (1990–2020)</li>
+<li>texts from <strong>TV/movies, spoken, fiction, magazines, news, academic writing, blogs, web pages</strong></li>
+<li>free to use at <a href="https://www.english-corpora.org/coca/">english-corpora.org/coca</a></li>
+</ul>
+<p>Because it covers many registers, we can ask: <em>where</em> is a word used, <em>how often</em>, and <em>with what other words</em>.</p>
+</section>
+<section class="slide level2">
+<h2>Step 1: Register an account</h2>
+<ol type="1">
+<li>Go to <a href="https://www.english-corpora.org/coca/">english-corpora.org/coca</a></li>
+<li>Click the yellow <strong>ID icon</strong> (top right) → LOGIN page</li>
+<li>Click <strong>REGISTER</strong> under the “Log in” button</li>
+<li>Fill in name, email, password, country, category</li>
+<li>Accept the Terms and Conditions, type the colored letters</li>
+<li>Click <strong>SUBMIT</strong>, then confirm via the email from admin@english-corpora.org</li>
+<li>Close the browser, reopen it, and log in</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Registration page</h2>
+
+<img data-src="img/fig01.png" class="r-stretch"></section>
+<section class="slide level2 question-slide">
+<h2>Do it now</h2>
+<p>Register your COCA account.</p>
+<p>Check your spam folder if the confirmation email does not arrive within 2 minutes.</p>
+<p>Raise your hand when you are logged in.</p>
+</section>
+<section class="slide level2">
+<h2>Step 2: Know the interface</h2>
+
+<img data-src="img/fig03.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><strong>Profile</strong> — your account and usage</li>
+<li><strong>Saved Words</strong> — words you saved in earlier searches</li>
+<li><strong>Virtual Corpora</strong> — build your own sub-corpus from COCA</li>
+<li><strong>History</strong> — your recent searches</li>
+<li><strong>Help</strong> — what each icon does</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The four main tabs</h2>
+<p>Directly under the COCA name:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tab</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>SEARCH</strong></td>
+<td>where you type words and phrases</td>
+</tr>
+<tr class="even">
+<td><strong>FREQUENCY</strong></td>
+<td>how often your search appears</td>
+</tr>
+<tr class="odd">
+<td><strong>CONTEXT</strong></td>
+<td>concordance lines (examples in sentences)</td>
+</tr>
+<tr class="even">
+<td><strong>OVERVIEW</strong></td>
+<td>what the corpus can do</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>Step 3: List search (the default)</h2>
+<ol type="1">
+<li>Open the <strong>SEARCH</strong> tab</li>
+<li>Type a word or phrase in the text box</li>
+<li>Click <strong>Find matching strings</strong></li>
+</ol>
+
+<img data-src="img/fig04.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section class="slide level2">
+<h2>Reading the results</h2>
+<p>The <strong>FREQUENCY</strong> tab lists all matching forms and their frequency.</p>
+
+<img data-src="img/fig05.png" class="r-stretch"><ul>
+<li>Click the ★ to save a word to your Saved Words list</li>
+<li>Click a form to see its <strong>CONTEXT</strong> (concordance lines)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Concordance lines</h2>
+
+<img data-src="img/fig06.png" class="r-stretch"><p>Each line shows your word in a real sentence, with the <strong>date</strong>, <strong>text type</strong> (magazine, spoken, fiction…), and <strong>source name</strong>.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Try it now</h2>
+<p>Search for <strong>linguistics</strong> with the List function.</p>
+<ol type="1">
+<li>How many times does it appear in COCA?</li>
+<li>Look at 2–3 concordance lines. What does it mean?</li>
+</ol>
+<p>Click <strong>Reset</strong> under the search box before your next search.</p>
+</section>
+<section class="slide level2">
+<h2>Trick 1: Wildcard <code>*</code></h2>
+<p>Attach <strong><code>*</code></strong> to part of a word to find all words that start or end with it:</p>
+<ul>
+<li><strong><code>be*</code></strong> → words starting with “be”</li>
+</ul>
+
+<img data-src="img/fig07.png" class="r-stretch"><p>With a space, <strong><code>be *</code></strong> → phrases starting with “be”.</p>
+<p>A teacher looking for words with the prefix <strong>im-</strong> can search <strong><code>im*</code></strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Trick 2: Compare words with <code>|</code></h2>
+<p>Put <code>|</code> between words to compare them:</p>
+<ul>
+<li><strong><code>talk|speak</code></strong></li>
+</ul>
+
+<img data-src="img/fig12.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Trick 3: Lemmas with <code>[ ]</code></h2>
+<p>Words have many forms: <em>talk, talks, talking, talked</em>.</p>
+<p>Search <code>[talk]</code> to get <strong>all forms</strong> of the word, ranked by frequency.</p>
+
+<img data-src="img/fig14.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Trick 4: Part of speech</h2>
+<p>Click <strong>[POS]</strong> next to the search box to limit the search to one part of speech.</p>
+<p>Example: search <em>run</em> as a <strong>verb</strong> only → select <code>verb.ALL</code>.</p>
+
+<img data-src="img/fig16.png" class="r-stretch"></section>
+<section class="slide level2 question-slide">
+<h2>Practice 1</h2>
+<p>Using the <strong>List</strong> function, compare the frequency of <strong>delicious</strong> and <strong>tasty</strong>.</p>
+<ol type="1">
+<li>How would you type this into the search bar?</li>
+<li>Which word is used more often?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Step 4: Chart — frequency by section</h2>
+<p>The <strong>Chart</strong> tab shows <em>where</em> a word appears:</p>
+<p>Enter a word and click <strong>See frequency by section</strong>.</p>
+
+<img data-src="img/fig17.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Reading the chart</h2>
+<ul>
+<li>Click a section name (e.g.&nbsp;BLOG) to see its subcategories</li>
+<li>Click a bar in the bottom row to see concordance lines from that section</li>
+</ul>
+<p>Wildcards and <code>|</code> work here too.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 2</h2>
+<p>Using the <strong>Chart</strong> function, search for the word <strong>linguistics</strong>.</p>
+<p>Which <strong>section</strong> (register) uses this word most often?</p>
+<p>Why do you think that is?</p>
+</section>
+<section class="slide level2">
+<h2>Step 5: Word — a corpus dictionary</h2>
+<p>The <strong>Word</strong> tab gives dictionary-style information plus corpus data:</p>
+<ul>
+<li>definition and part of speech</li>
+<li>frequency across sections</li>
+<li><strong>COLLOCATES</strong> — words that most often appear with it</li>
+<li><strong>CLUSTERS</strong> — common 2–4 word phrases containing it</li>
+<li><strong>CONCORDANCE</strong> — example lines with nearby words highlighted</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Step 5: Word — a corpus dictionary</h2>
+
+<img data-src="img/fig20.png" class="r-stretch"></section>
+<section class="slide level2 question-slide">
+<h2>Practice 3</h2>
+<p>Using the <strong>Word</strong> function, search for <strong>amuse</strong>.</p>
+<p>List the <strong>verb collocates</strong> of this word.</p>
+<p>(Example format: <em>entertain, smile, …</em>)</p>
+</section>
+<section class="slide level2">
+<h2>Step 6: Collocates</h2>
+<p>Find the most common words <strong>next to</strong> your word.</p>
+<p>Click the <strong>+</strong> button on the SEARCH tab → <strong>COLLOCATES</strong>.</p>
+<p>Results are grouped by part of speech: NOUN, ADJ, VERB, ADV.</p>
+
+<img data-src="img/fig24.png" class="r-stretch"></section>
+<section class="slide level2 question-slide">
+<h2>Practice 4</h2>
+<p>Using <strong>Collocates</strong>, search for <strong>fantastic</strong>.</p>
+<p>Set the window to <strong>1 word on the left</strong> and <strong>3 words on the right</strong>.</p>
+<ol type="1">
+<li>What is the most common collocate?</li>
+<li>What is its frequency in the corpus?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Step 7: Compare two words</h2>
+<p><strong>COMPARE</strong> shows the collocates of two words side by side.</p>
+<p>Enter one word in each box and click <strong>Compare words</strong>.</p>
+
+<img data-src="img/fig28.png" class="r-stretch"><ul>
+<li>Default sorting: by <strong>ratio</strong> (most distinctive collocates first)</li>
+<li>Click <strong>FREQUENCY</strong> to sort by raw frequency instead</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 5</h2>
+<p>Using <strong>Compare</strong>, compare the words <strong>eat</strong> and <strong>drink</strong>.</p>
+<ol type="1">
+<li>What is the most common (distinctive) collocate for <em>eat</em>?</li>
+<li>What is the most common collocate for <em>drink</em>?</li>
+</ol>
+<p>Were you surprised?</p>
+</section>
+<section class="slide level2">
+<h2>Step 8: KWIC</h2>
+<p><strong>KWIC</strong> = Key Word In Context — the last option under the <strong>+</strong> menu.</p>
+<p>Your word lines up in one column, with its context on both sides. Parts of speech are color-coded.</p>
+
+<img data-src="img/fig30.png" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Sorting KWIC lines</h2>
+<p>Use the buttons at the top right:</p>
+<ul>
+<li><strong>L</strong> — sort by the words on the left</li>
+<li><strong>R</strong> — sort by the words on the right (default: 3 words right)</li>
+<li><strong>*</strong> — reset the sorting</li>
+</ul>
+<p>Sorting this way makes patterns easy to see.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 6</h2>
+<p>Using <strong>KWIC</strong>, search for <strong>take</strong>.</p>
+<p>Sort the results. What word most frequently appears <strong>immediately after</strong> “take”?</p>
+</section>
+<section class="slide level2">
+<h2>Step 9: Narrow your search</h2>
+<p>Under the search button of each menu:</p>
+<ul>
+<li><strong>Sections</strong> — search only certain registers or time periods
+<ul>
+<li>List 1 = your target section(s); List 2 = sections to compare with</li>
+<li>Hold ALT / Command to select more than one</li>
+</ul></li>
+<li><strong>Sort/Limit</strong> — sort results by frequency, relevance, or alphabetically; set a minimum frequency</li>
+</ul>
+
+<img data-src="img/fig32.png" class="r-stretch"></section>
+<section class="slide level2 question-slide">
+<h2>Practice 7</h2>
+<p>Using <strong>Sections</strong> + <strong>List</strong>, search for <strong>book</strong> only in <strong>TV/Movies</strong> and <strong>Fiction</strong>.</p>
+<p>Which section does it appear in more frequently (per million words)?</p>
+</section>
+<section class="slide level2">
+<h2>Step 10: How a real study works (Wechsler 2018)</h2>
+<p>A real corpus study has a workflow:</p>
+<ol type="1">
+<li><strong>Research question</strong> — what do you want to know?</li>
+<li><strong>Prediction</strong> — what do you expect?</li>
+<li><strong>Search string</strong> — how can COCA find the pattern?</li>
+<li><strong>Raw count</strong> — how many examples come up?</li>
+<li><strong>Error check</strong> — are any examples wrong?</li>
+<li><strong>Valid count</strong> — the clean total</li>
+<li><strong>Discussion</strong> — do the numbers support your prediction?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Case study: the verb <em>whine</em></h2>
+<p>Wechsler (2018) asked: <em>How does the verb <strong>whine</strong> combine with other words?</em></p>
+<p>Specifically:</p>
+<ul>
+<li>Does <strong>whine</strong> use <strong>to</strong> for a person? (<em>whined to me</em>)</li>
+<li>Does it use <strong>at</strong> for a non-person? (<em>whined at the noise</em>)</li>
+<li>Can it be followed by <strong>that</strong>? (<em>She whined that…</em>)</li>
+<li>Can it introduce a question? (<em>whined what…</em>)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Secret codes: COCA part-of-speech tags</h2>
+<p>COCA can search by <strong>grammar tags</strong>. Here are a few useful codes:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Code</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>_v</code></td>
+<td>any verb form</td>
+<td><code>WHINE_v</code> → whine, whines, whined, whining</td>
+</tr>
+<tr class="even">
+<td><code>_i</code></td>
+<td>preposition</td>
+<td><code>to_i</code> → only the preposition <em>to</em></td>
+</tr>
+<tr class="odd">
+<td><code>_cst</code></td>
+<td>complementizer <em>that</em></td>
+<td><code>that_cst</code> → only <em>that</em> as a clause starter</td>
+</tr>
+<tr class="even">
+<td><code>VVI</code></td>
+<td>infinitive verb</td>
+<td><code>TO VVI</code> → <em>to + base verb</em></td>
+</tr>
+<tr class="odd">
+<td><code>xxx ... xxx</code></td>
+<td>pattern in order</td>
+<td><code>xxxWHINE_v that_cstxxx</code> → “whine that”</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>Search strings from the whine study</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pattern</th>
+<th>Search string</th>
+<th>Raw / Valid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>whine + that-clause</td>
+<td><code>xxxWHINE_v that_cstxxx</code></td>
+<td>73 → 67</td>
+</tr>
+<tr class="even">
+<td>whine + to-PP</td>
+<td><code>xxxWHINE to_i xxx</code></td>
+<td>51 → 36</td>
+</tr>
+<tr class="odd">
+<td>whine + at-PP</td>
+<td><code>xxxWHINE at_i xxx</code></td>
+<td>42 → 31</td>
+</tr>
+<tr class="even">
+<td>whine + to-PP + that-clause</td>
+<td>Collocates: <code>WHINE_v to_i</code> + <code>that_cst</code></td>
+<td>5 → 4</td>
+</tr>
+<tr class="odd">
+<td>whine + at-PP + that-clause</td>
+<td>Collocates: <code>WHINE_v at_i</code> + <code>that_cst</code></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>Why the numbers dropped</h2>
+<p>COCA is automatic. It sometimes miscounts. Wechsler removed:</p>
+<ul>
+<li><strong>Noun forms counted as verbs</strong>: “the puppy made little whines that turned into excited yips”</li>
+<li><strong>Wrong meaning of <em>to</em></strong>: “the drill whined to a halt” — <em>to</em> is not a person</li>
+<li><strong>Infinitival <em>to</em> mixed up with preposition</strong>: “whined to find themselves…” — not <em>whine to someone</em></li>
+</ul>
+<p>Good detectives read their evidence.</p>
+</section>
+<section class="slide level2">
+<h2>Results for <em>whine</em>: summary table</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Pattern</th>
+<th>Valid tokens found</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>WHINE (all verb forms)</td>
+<td>2,915</td>
+</tr>
+<tr class="even">
+<td>WHINE + that-clause</td>
+<td>67</td>
+</tr>
+<tr class="odd">
+<td>WHINE + to-PP (to a person)</td>
+<td>36</td>
+</tr>
+<tr class="even">
+<td>WHINE + at-PP</td>
+<td>31</td>
+</tr>
+<tr class="odd">
+<td>WHINE + to-PP + that-clause</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>WHINE + at-PP + that-clause</td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td>WHINE + infinitival phrase</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>WHINE + indirect question</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>What the numbers mean</h2>
+<p>The prediction was supported:</p>
+<ul>
+<li><strong>whine + to-PP + that-clause</strong> = 4</li>
+<li><strong>whine + at-PP + that-clause</strong> = <strong>0</strong></li>
+</ul>
+<p>So <em>whine</em> can introduce a message with <strong>to</strong>, but not with <strong>at</strong>.</p>
+<p>Also, <em>whine</em> reports assertions (<em>whined that…</em>) and commands (<em>whined to be held</em>), but it does not report questions — every question search returned <strong>0</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Take-home message from Wechsler (2018)</h2>
+<ul>
+<li>Corpora can test very specific linguistic predictions.</li>
+<li>Raw numbers can be messy. Always <strong>check examples</strong>.</li>
+<li>A <strong>zero result</strong> is informative when your theory predicts rarity or impossibility.</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 8</h2>
+<p>Which of these are <strong>real</strong> manner-of-speaking uses of <em>whine</em>? Which are miscounts?</p>
+<ol type="1">
+<li>She whined that the test was too hard.</li>
+<li>The drill whined to a halt.</li>
+<li>The puppy made little whines that turned into yips.</li>
+<li>He whined to me about the noise.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>COCA search cheat sheet</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>You want…</th>
+<th>Type…</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>one word or phrase</td>
+<td><code>beautiful</code></td>
+</tr>
+<tr class="even">
+<td>words starting with “im-”</td>
+<td><code>im*</code></td>
+</tr>
+<tr class="odd">
+<td>phrases starting with “be”</td>
+<td><code>be *</code></td>
+</tr>
+<tr class="even">
+<td>compare two words</td>
+<td><code>delicious|tasty</code></td>
+</tr>
+<tr class="odd">
+<td>all forms of a word</td>
+<td><code>[work]</code></td>
+</tr>
+<tr class="even">
+<td>a specific part of speech</td>
+<td>word + <code>[POS]</code> menu</td>
+</tr>
+<tr class="odd">
+<td>words near your word</td>
+<td>COLLOCATES menu</td>
+</tr>
+<tr class="even">
+<td>two words’ collocates</td>
+<td>COMPARE menu</td>
+</tr>
+<tr class="odd">
+<td>your word in context</td>
+<td>KWIC menu</td>
+</tr>
+<tr class="even">
+<td>a specific grammar tag (advanced)</td>
+<td><code>word_v</code>, <code>to_i</code>, <code>that_cst</code></td>
+</tr>
+<tr class="odd">
+<td>a pattern in exact order (advanced)</td>
+<td><code>xxxWHINE_v that_cstxxx</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 question-slide">
+<h2>Break</h2>
+<p>10-minute break.</p>
+<p>When you come back: make sure you can log in to COCA and run a List search.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 3: Your own mini research</h1>
+
+</section>
+<section class="slide level2">
+<h2>The task</h2>
+<p>Work <strong>alone or in pairs</strong>.</p>
+<ol type="1">
+<li>Choose <strong>one topic</strong> from the list (or propose your own)</li>
+<li>Turn it into a question you can answer with COCA</li>
+<li>Run your searches — use at least <strong>two different COCA functions</strong></li>
+<li>Take notes and screenshots of your key results</li>
+<li>Prepare a <strong>2–3 minute</strong> report for the class</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>What to report</h2>
+<p>Your mini report should answer:</p>
+<ol type="1">
+<li><strong>Question</strong> — what did you want to find out?</li>
+<li><strong>Method</strong> — what did you search? Which functions did you use?</li>
+<li><strong>Findings</strong> — what did the corpus show? (numbers + 1–2 example lines)</li>
+<li><strong>Reflection</strong> — was the result surprising? What is the limitation of your search?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: word choice</h2>
+<ol type="1">
+<li><strong>delicious vs.&nbsp;tasty</strong> — which is more frequent? In which registers? What foods do they describe?</li>
+<li><strong>big vs.&nbsp;large</strong> — do they mean the same? Compare the nouns that follow each.</li>
+<li><strong>say / tell / speak / talk</strong> — how do their uses differ? Check collocates and KWIC lines.</li>
+<li><strong>make vs.&nbsp;do</strong> — which nouns go with <em>make</em>, which with <em>do</em>?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: grammar and form</h2>
+<ol start="5" type="1">
+<li><strong>gonna / wanna</strong> — where do they appear: spoken, TV/movies, or academic writing?</li>
+<li><strong>a lot of vs.&nbsp;lots of</strong> — which is more formal? Compare across registers.</li>
+<li><strong>totally / completely / absolutely</strong> — what adjectives or verbs follow each one?</li>
+<li><strong>-ful vs.&nbsp;-less words</strong> (use wildcards: <code>*ful</code>, <code>*less</code>) — which ending is more common?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: how people really speak</h2>
+<ol start="9" type="1">
+<li><strong>very vs.&nbsp;really</strong> — which one is used more in speech vs.&nbsp;academic writing? What adjectives follow each?</li>
+<li><strong>literally</strong> — read 10 concordance lines. Does it always mean “literally”?</li>
+<li><strong>thank / thanks / thank you</strong> — which form is most frequent? Where is each one used?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: advanced (optional)</h2>
+<ol start="12" type="1">
+<li><strong>manner-of-speaking verbs</strong> (whisper, shout, whine, mumble) — what kinds of sentences follow them? Try the <code>_v</code> tag.</li>
+<li><strong>whine or another emotion verb</strong> — does it take <em>that</em>, <em>to</em>, or <em>at</em>? Use the secret codes if you dare.</li>
+<li><strong>Your own question</strong> — any word or phrase you are curious about. Check with the instructor first.</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Tips before you start</h2>
+<ul>
+<li>Write down your <strong>exact search strings</strong> — your study should be repeatable</li>
+<li>Compare <strong>PER MIL</strong>, not just raw FREQ — sections have different sizes</li>
+<li>Read some actual concordance lines — numbers alone can mislead you</li>
+<li>If you use POS tags, remember that COCA’s automatic tags are not perfect — read your examples</li>
+<li>A surprising result is a good result — report what you found, not what you expected</li>
+<li>A zero result can also be a finding: ask <strong>why</strong></li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Research time</h2>
+<p>You have about <strong>30 minutes</strong> to search and prepare your report.</p>
+<p>Ask for help any time.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Share your findings</h2>
+<p>Each person/pair: <strong>2–3 minutes</strong>.</p>
+<ol type="1">
+<li>Your question</li>
+<li>Your searches</li>
+<li>Your findings (show a screenshot if you can)</li>
+<li>One thing that surprised you</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Wrap-up</h2>
+<p>Today you:</p>
+<ul>
+<li>reviewed what a corpus is and why we use it</li>
+<li>learned to search COCA: List, Chart, Word, Collocates, Compare, KWIC</li>
+<li>saw how a real study goes from question to results table</li>
+<li>answered a real question with real language data</li>
+</ul>
+<p>Corpus skills will be useful for your group presentation and final essay.</p>
+</section>
+<section class="slide level2">
+<h2>Learn more (optional)</h2>
+<p>Video tutorials:</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLycV8bsfkPyJ8GhyV-ii9KGf_fqjVb2Jh">COCA — English for International Students (EIS)</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL3FB2495C0B9D542B">COCA Tutorials — TheGrammarLab</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLAq6uhS_0brxTW99jeZjxdslQ5BRy1Eb5">Corpus tools tutorials — Ellen Le Foll</a> (videos 1–4)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Answers to the practice exercises</h2>
+<ol type="1">
+<li><code>delicious|tasty</code> — <strong>delicious</strong> is more frequent (15,519)</li>
+<li><strong>assist</strong>: most frequent in <strong>academic</strong> writing</li>
+<li><strong>amuse</strong>: verb collocates include <em>entertain, smile, pretend, cease, inform, inspire, amaze, invent</em></li>
+<li><strong>fun</strong> (1 left, 3 right): most common collocate is <strong>“much”</strong> (6,033)</li>
+<li><strong>eat vs.&nbsp;drink</strong>: <em>eat</em> → <strong>bugs</strong>; <em>drink</em> → <strong>liquor</strong></li>
+<li><strong>take</strong>: most frequent word right after it is <strong>“a”</strong></li>
+<li><strong>book</strong> in TV/Movies vs.&nbsp;Fiction: more frequent (per mil) in <strong>fiction</strong></li>
+<li><strong>Practice 8</strong>: real manner-of-speaking uses = 1 and 4; miscounts = 2 and 3</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Credits</h2>
+<p>Part 2 is adapted from:</p>
+<ul>
+<li>Veloso, I. (2023). <em>Corpus of Contemporary American English (COCA) Tutorial</em>. In L. Goulart &amp; I. Veloso (Eds.), <em>Corpora in English Language Teaching: Classroom Activities for Teachers New to Corpus Linguistics</em>. Montclair State University. Licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.</li>
+<li>Wechsler, S. (2018). <em>How to use COCA</em>. Unpublished tutorial, University of Texas at Austin. PDF in the practice folder.</li>
+</ul>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p>Advanced English II</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="AEII_week2_coca_practice_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
