@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="AEII_week2_corpus_practice_files/libs/clipboard/clipboard.min.js"></script>
+<script src="AEII_week2_corpus_practice_files/libs/quarto-html/tabby.min.js"></script>
+<script src="AEII_week2_corpus_practice_files/libs/quarto-html/popper.min.js"></script>
+<script src="AEII_week2_corpus_practice_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="AEII_week2_corpus_practice_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="AEII_week2_corpus_practice_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="AEII_week2_corpus_practice_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="AEII_week2_corpus_practice_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.45">
+
+  <meta name="author" content="Instructor: Miao Zhang 張淼">
+  <title>Advanced English II (BFE19013)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="AEII_week2_corpus_practice_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="AEII_week2_corpus_practice_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="AEII_week2_corpus_practice_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="AEII_week2_corpus_practice_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_practice_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_practice_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_practice_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Advanced English II (BFE19013)</h1>
+  <p class="subtitle">AntConc Hands-on Practice</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Instructor: Miao Zhang 張淼 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Today’s plan</h1>
+
+</section>
+<section class="slide level2">
+<h2>Three parts</h2>
+<ol type="1">
+<li><strong>Part 1 (~30 min):</strong> Have a review on what we learned previously and design your own mini research question</li>
+<li>Short break</li>
+<li><strong>Part 2 (~80 min):</strong> AntConc tutorial — the core workflow</li>
+<li>Short break</li>
+<li><strong>Part 3 (~40 min):</strong> Your own mini research with AntConc</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>What you will be able to do today</h2>
+<p>By the end of this session, you can:</p>
+<ul>
+<li>review what a corpus is and why linguists use it</li>
+<li>load a corpus in AntConc and run searches with different search strategies</li>
+<li>use the KWIC, Cluster, N-Gram, Collocate, Word List, and Keyword tools</li>
+<li>use corpus evidence from AntConc to answer a small research question</li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 1: Review</h1>
+
+</section>
+<section class="slide level2 question-slide">
+<h2>Quick warm-up</h2>
+<p>(Without looking at your notes)</p>
+<ul>
+<li>What is a corpus? What constitutes a <em>good</em> corpus?</li>
+<li>What are the limitations of corpus research?</li>
+<li>What types of corpora are there?</li>
+<li>What tools can you use to analyze a corpus? What does each tool do?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>A corpus is <strong>MORE</strong> than a collection</h2>
+<p>A corpus is:</p>
+<ul>
+<li>large enough to be useful</li>
+<li>systematic and organized</li>
+<li>machine-readable</li>
+<li>designed for analysis</li>
+<li>representative of a language variety or purpose</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>What makes a GOOD corpus?</h2>
+<ol type="1">
+<li><strong>Representativeness</strong> — it represents the language variety it studies</li>
+<li><strong>Finite size</strong> — it has a design and a collection goal</li>
+<li><strong>Machine-readable</strong> — searchable and analyzable by computer</li>
+<li><strong>Standard reference</strong> — other researchers can reuse it and repeat the study</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Why use a corpus?</h2>
+<p>Even expert speakers:</p>
+<ul>
+<li>do not know everything</li>
+<li>may be biased by what they notice</li>
+<li>cannot remember every pattern</li>
+<li>cannot easily quantify language use</li>
+</ul>
+<p>A corpus helps us test patterns in <strong>real data</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>The nature of corpus research</h2>
+<div>
+<ul>
+<li class="fragment">It is <strong>empirical</strong> and <strong>data-driven</strong>.</li>
+<li class="fragment">It involves <strong>systematic analysis</strong> of language use in real life.</li>
+<li class="fragment">It provides <strong>objective evidence</strong> for linguistic (theoretical) claims.</li>
+</ul>
+</div>
+</section>
+<section class="slide level2">
+<h2>The limitations</h2>
+<ul>
+<li>There is <strong>no negative evidence</strong> in a corpus.
+<ul>
+<li>Absence of evidence is not evidence of absence.</li>
+</ul></li>
+<li>Corpora do not automatically provide <strong>explanations</strong>.</li>
+<li>The <strong>corpus</strong> and the <strong>research question(s)</strong> determine the quality of the study.</li>
+<li>Corpus research needs to be complemented by <strong>experimental studies</strong> at times.
+<ul>
+<li>Observational studies only tests <strong>associations</strong>, not causation.</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Types of corpora</h2>
+<ul>
+<li><strong>Sample vs.&nbsp;monitor</strong> — fixed in time vs.&nbsp;keeps growing</li>
+<li><strong>General vs.&nbsp;specialized</strong> — broad picture vs.&nbsp;one genre/group/domain</li>
+<li><strong>Written vs.&nbsp;spoken</strong></li>
+<li><strong>Raw vs.&nbsp;annotated</strong> — plain text vs.&nbsp;tagged/labeled text</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Basic corpus tools</h2>
+<ol type="1">
+<li><strong>Concordancers</strong> — show all examples of a word with context</li>
+<li><strong>Aligners</strong> — compare parallel texts (translation studies)</li>
+<li><strong>POS taggers</strong> — assign grammatical categories</li>
+<li><strong>Parsers</strong> — analyze structure and function</li>
+</ol>
+<p>Today we focus on the first one — with a tool that does much more.</p>
+</section>
+<section class="slide level2">
+<h2>Where do corpora come from?</h2>
+<ul>
+<li><strong>Online corpora</strong> — ready-made, e.g.&nbsp;COCA, BNC, COHA, GloWbE, NOW (<a href="https://www.english-corpora.org/">english-corpora.org</a>)</li>
+<li><strong>Build your own</strong> — collect texts that fit your research question (commercial tools like Sketch Engine, or free tools like AntConc)</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Quick check</h2>
+<ol type="1">
+<li>You want to study how you and your classmates’ English proficiency improve over time. Do you need a <strong>sample</strong> or a <strong>monitor</strong> corpus?</li>
+<li>You want to know whether <em>record</em> is used more often as a noun or a verb. Can your <strong>intuition</strong> answer this reliably?</li>
+</ol>
+</section>
+<section class="slide level2 question-slide">
+<h2>Design your own research question</h2>
+<p>Think of <strong>one question about language</strong> you could answer with a corpus. Some examples:</p>
+<ul>
+<li>A word or phrase (<em>Do people say X or Y more?</em>)</li>
+<li>A pattern (<em>What words come after “the ___ of”?</em>)</li>
+<li>How pronouns are used in spoken vs.&nbsp;written English</li>
+<li>How modal verbs are used in academic writing vs.&nbsp;speaking corpora?</li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 2: AntConc tutorial — the core workflow</h1>
+
+</section>
+<section class="slide level2">
+<h2>What is AntConc?</h2>
+<p><strong>AntConc</strong> is a freeware, cross-platform software tool for:</p>
+<ul>
+<li><strong>corpus linguistics research</strong></li>
+<li><strong>corpus-based teaching</strong></li>
+<li><strong>data-driven language learning</strong></li>
+</ul>
+<p>Developed by <strong>Laurence Anthony</strong> (Waseda University, Japan).</p>
+<p>It runs on <strong>Microsoft Windows, macOS, and Linux</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Text and multimodal corpora</h2>
+<p>AntConc works with:</p>
+<ul>
+<li><strong>text-only corpora</strong> — plain text you load or build yourself</li>
+<li><strong>multimodal corpora</strong> — text documents linked to <strong>image, audio, video, or YouTube</strong> media, so concordance results can be checked against the original media context</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Getting started</h2>
+<ul>
+<li><strong>Windows (installer):</strong> double-click the installer, then launch from the Start menu</li>
+<li><strong>Windows (portable):</strong> unzip the package and double-click <code>AntConc.exe</code></li>
+<li><strong>macOS:</strong> open the disk image and drag the AntConc app to Applications</li>
+<li><strong>Linux:</strong> install the Flatpak bundle, then run <code>flatpak run org.antconc.AntConc</code></li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Do it now</h2>
+<p>Download and install AntConc on your laptop.</p>
+<p>Open the program and make sure it starts.</p>
+<p>Raise your hand when you see the main window.</p>
+</section>
+<section class="slide level2">
+<h2>The ten tools</h2>
+<p>AntConc contains <strong>ten tools</strong>, each with its own tab in the tool window:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><strong>KWIC</strong></td>
+<td>concordance lines — usage in context</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><strong>Plot</strong></td>
+<td>barcode-style distribution of hits across texts</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><strong>File View</strong></td>
+<td>full source texts with hits highlighted</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><strong>Cluster</strong></td>
+<td>frequent word sequences around a query</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>N-Gram</strong></td>
+<td>frequent n-word sequences in the corpus</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>The ten tools</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>6</td>
+<td><strong>Collocate</strong></td>
+<td>words that co-occur near a query</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td><strong>Word List</strong></td>
+<td>frequency lists of words</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td><strong>Keyword List</strong></td>
+<td>statistically distinctive words vs.&nbsp;a reference corpus</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td><strong>Wordcloud</strong></td>
+<td>visualizes results as a word cloud</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td><strong>ChatAI</strong></td>
+<td>interact with an AI model using tool output as context</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>The same starting step everywhere</h2>
+<p>Every tool follows the same pattern:</p>
+<ol type="1">
+<li><strong>Load a corpus</strong> — <code>File → Open Corpus Manager</code>, or <code>File → Open File(s)</code> as a <strong>Quick Corpus</strong></li>
+<li><strong>Enter a query</strong> in the tool’s search box</li>
+<li><strong>Set the search mode</strong> — “Words”, “Case”, “Regex”, or “Full Regex”</li>
+<li><strong>Read the summary counts</strong> and inspect the results table</li>
+</ol>
+<p>Remember this pattern — it repeats for all ten tools.</p>
+</section>
+<section class="slide level2">
+<h2>Corpora downloadable in AntConc</h2>
+<p>Open “<strong>File</strong>”, check the “<strong>Open Corpus Manager</strong>” option, and click the “<strong>Corpus Library</strong>” tab.</p>
+<p>Find the corpora you want to download, and click the “<strong>Download</strong>” icon. After downloading, click “<strong>Tar</strong>” to set it as the <strong>Target Corpus</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>A brief introduction to regular expression</h2>
+<p><strong>Regular expressions</strong> (“regex”) are a compact language for describing <em>patterns</em> of text, not just exact words.</p>
+<p>Instead of searching for one word, you search for a <strong>shape</strong> that many words or phrases can fit.</p>
+<p>E.g., we want <strong>all forms of a verb</strong> — <em>walk, walks, walked, walking, walker, to walk</em> — not just one form. One regex can catch them all in a single search.</p>
+</section>
+<section class="slide level2">
+<h2>Why learn a little regex?</h2>
+<ul>
+<li>One pattern can catch <strong>many forms at once</strong> — all forms of a verb (<em>walk, walks, walked, walking</em>), singular and plural nouns…</li>
+<li>You can find things a normal search <strong>cannot</strong>: “any word repeated twice in a row”, “a digit followed by a word”, etc.</li>
+<li>In AntConc you meet regex in the <strong>“Regex”</strong> and <strong>“Full Regex”</strong> search modes.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The basic building blocks</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Means</th>
+<th>Example pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.</code></td>
+<td>any one character</td>
+<td><code>b.g</code></td>
+<td><em>bag, big, bug</em> (not <em>boog</em>)</td>
+</tr>
+<tr class="even">
+<td><code>*</code></td>
+<td>previous item, 0+ times</td>
+<td><code>be*t</code></td>
+<td><em>bt, bet, beet, beeet</em></td>
+</tr>
+<tr class="odd">
+<td><code>+</code></td>
+<td>previous item, 1+ times</td>
+<td><code>be+t</code></td>
+<td><em>bet, beet</em> (not <em>bt</em>)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>The basic building blocks</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Means</th>
+<th>Example pattern</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>?</code></td>
+<td>previous item, 0 or 1 time</td>
+<td><code>colou?r</code></td>
+<td><em>color, colour</em></td>
+</tr>
+<tr class="even">
+<td><code>[ ]</code></td>
+<td>one of these characters</td>
+<td><code>analy[sz]e</code></td>
+<td><em>analyze, analyse</em></td>
+</tr>
+<tr class="odd">
+<td><code>[a-z]</code></td>
+<td>one character in the range</td>
+<td><code>[aeiou]</code></td>
+<td>any one vowel</td>
+</tr>
+<tr class="even">
+<td><code>\|</code></td>
+<td>or</td>
+<td><code>cat\|dog</code></td>
+<td><em>cat</em> or <em>dog</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>Anchors and word boundaries</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Means</th>
+<th>Example</th>
+<th>Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>^</code></td>
+<td>start of the token</td>
+<td><code>^un</code></td>
+<td><em>unhappy, unfair</em>…</td>
+</tr>
+<tr class="even">
+<td><code>$</code></td>
+<td>end of the token</td>
+<td><code>ing$</code></td>
+<td><em>going, reading</em>…</td>
+</tr>
+<tr class="odd">
+<td><code>\b</code></td>
+<td>word boundary</td>
+<td><code>\bcan\b</code></td>
+<td><em>can</em>, not <em>cannot</em> or <em>scan</em></td>
+</tr>
+</tbody>
+</table>
+<p>These are how you say “the whole word”, “starts with”, or “ends with” inside a regex.</p>
+</section>
+<section class="slide level2">
+<h2>Regex for corpus questions</h2>
+<ul>
+<li><code>walk(s|ed|ing|er)?</code> — catch <em>walk, walks, walked, walking, walker</em> in one search: parentheses <strong>group</strong> the endings, <code>|</code> means <strong>or</strong>, and <code>?</code> makes the whole ending <strong>optional</strong></li>
+<li><code>\d+</code> — any number (<em>3</em>, <em>2026</em>) — <code>\d</code> means a digit</li>
+<li><code>\b(\w+)\s+\1\b</code> — the <strong>same word twice in a row</strong> (“the the”, “is is”)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Practice Regex</h2>
+<p>Go to <a href="https://regex101.com">regex101.com</a></p>
+<p>Paste the text I uploaded to moodle into the <strong>Test String</strong> box.</p>
+</section>
+<section class="slide level2">
+<h2>In the <strong>Regular Expression</strong> box, try these patterns:</h2>
+<ul>
+<li><code>\d+</code></li>
+<li><code>\w+</code> and <code>\W+</code></li>
+<li><code>[\w.]+@[\w.]+</code></li>
+<li><code>[\w']+,\s[A-Z]{1}.[\s,]</code></li>
+</ul>
+<p>What did you catch with the above Regex?</p>
+</section>
+<section class="slide level2">
+<h2>Try figure out how to find these:</h2>
+<ul>
+<li>Find all years (4 digit numbers).</li>
+<li>Find all speaker labels/time stamps/URLs.</li>
+<li>Find all <strong>ISBN</strong>s in the format 978-0-521-80487-5.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Advanced search</h2>
+<ul>
+<li>Find all cases when the speaker 2 asked a question.</li>
+<li>Find all dates.</li>
+<li>Find all citations.</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Wildcards in action</h2>
+<ul>
+<li><code>teach*</code> — words starting with a sequence</li>
+<li><code>*ing</code> — words ending with a sequence</li>
+<li><code>student|pupil</code> or <code>[student,pupil]</code> — alternatives</li>
+<li><code>Can I help_[?]</code> — a word followed by a non-word marker (“Can I help?”)</li>
+</ul>
+<p>Wildcard searches are fast and flexible — the best first step beyond simple lookup.</p>
+</section>
+<section class="slide level2">
+<h2>Regex in action</h2>
+<p><strong>Token-level regex</strong> — each space-separated token is a pattern:</p>
+<ul>
+<li><code>colou?r</code> — matches <em>color</em> or <em>colour</em></li>
+<li><code>data.* driven</code> — two tokens, first starts with <em>data</em></li>
+</ul>
+<p><strong>Full-text regex</strong> — one regex against the whole document text (raw-files corpora only):</p>
+<ul>
+<li><code>\bcorpus\s+linguistics\b</code> — multi-word sequence, flexible spacing</li>
+<li><code>\b(\w+)\s+\1\b</code> — backreference: the same word repeated</li>
+</ul>
+<p>Full Regex has the largest performance cost — use it with care on very large corpora.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Try it in AntConc</h2>
+<p>Using the <strong>KWIC</strong> tool:</p>
+<ol type="1">
+<li>Search with a wildcard: how many words in the corpus start with <strong>un-</strong>?</li>
+<li>Search with a token-level regex: find all forms of <em>analy[sz]e</em> — which spelling is more common in this corpus?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 1: KWIC (Key Word In Context)</h1>
+
+</section>
+<section class="slide level2">
+<h2>What KWIC is for</h2>
+<p>The KWIC tool generates <strong>concordance lines</strong> for a search query — each hit is shown with its <strong>left and right context</strong>.</p>
+<p>Designed for:</p>
+<ul>
+<li>fast <strong>pattern discovery</strong></li>
+<li>close <strong>reading of usage</strong></li>
+<li>easy movement from summary results to full-text evidence in the <strong>File View</strong> tool</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>KWIC: core workflow</h2>
+<ol type="1">
+<li>Enter a query in the KWIC search box</li>
+<li>Set the search mode: “Words”, “Case”, “Regex”, or “Full Regex”</li>
+<li>(Optional) Adjust “Results Set” and “Context Size” — defaults are fine for a first run</li>
+<li>Click <strong>Start</strong> (or press Enter)</li>
+<li>Read <strong>“Total Hits”</strong> and inspect the concordance lines</li>
+</ol>
+<p><strong>Key move:</strong> double-click a KWIC row to open that hit in the <strong>File View</strong> tool.</p>
+</section>
+<section class="slide level2">
+<h2>KWIC: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> compare near-synonyms (<em>big</em> vs.&nbsp;<em>large</em>) with separate KWIC searches and inspect the differences in context</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Try it now</h2>
+<p>Load the practice corpus and open the <strong>KWIC</strong> tab.</p>
+<p>Search for a word you are curious about.</p>
+<ol type="1">
+<li>How many total hits do you get?</li>
+<li>Double-click a line to see it in File View.</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 2: Plot</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Plot is for</h2>
+<p>The Plot tool shows <strong>where</strong> search hits occur across files, as <strong>barcode-style distribution plots</strong> along each document’s timeline.</p>
+<p>Designed for <strong>distribution analysis</strong>: is a word evenly spread, or concentrated in specific documents or sections?</p>
+</section>
+<section class="slide level2">
+<h2>Plot: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> overlay plots for two near-synonyms and compare where each tends to appear</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Plot: core workflow</h2>
+<ol type="1">
+<li>Enter a query in the Plot search box</li>
+<li>Set the search mode (“Words”, “Case”, “Regex”, or “Full Regex”)</li>
+<li>(Optional) Adjust “Plot Zoom” — defaults are fine for a first run</li>
+<li>Click <strong>Start</strong></li>
+<li>Read <strong>“Total Hits”</strong> and <strong>“Total Files With Hits”</strong>, then inspect the plot rows</li>
+</ol>
+<p>Click a plotted hit line to jump to its location in File View.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 1</h2>
+<p>Using the <strong>Plot</strong> tool, search for a keyword from this week’s reading (e.g., <em>corpus</em>).</p>
+<ol type="1">
+<li>In which file is the word most concentrated?</li>
+<li>Does that match what you would expect from the text?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 3: File View</h1>
+
+</section>
+<section class="slide level2">
+<h2>What File View is for</h2>
+<p>The File View tool displays the <strong>full text</strong> of a selected file and <strong>highlights search hits</strong> directly in the text.</p>
+<p>Designed for <strong>close reading</strong>: inspect local context and move quickly between hits.</p>
+</section>
+<section class="slide level2">
+<h2>File View: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> check whether your target expression appears naturally in authentic texts</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>File View: core workflow</h2>
+<ol type="1">
+<li>Select a file in the “Target Corpus” list (double-clicking a file also opens it)</li>
+<li>(Optional) Enter a query to highlight hits; if blank, the file loads without highlights</li>
+<li>Set the search mode</li>
+<li>Click <strong>Start</strong></li>
+<li>Use <strong>“Hit Location”</strong> to step through hits — the selected hit is emphasized</li>
+</ol>
+<p>File View connects to KWIC: you can send a highlighted hit to KWIC to search the whole corpus for it.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 4: Cluster</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Cluster is for</h2>
+<p>The Cluster tool finds <strong>recurring multi-word sequences around a search term</strong> and summarizes them as ranked cluster types.</p>
+<p>Designed to reveal <strong>phrase-level patterning</strong>: which combinations are frequent, widespread, and worth inspecting in KWIC.</p>
+</section>
+<section class="slide level2">
+<h2>Cluster: practical examples</h2>
+<ul>
+<li><strong>Research:</strong> identify recurring phrase frames around a keyword (<em>in terms of</em>) and compare how often they recur across documents</li>
+<li><strong>Teaching:</strong> show learners typical phrase extensions before or after a target word — chunking and formulaic language</li>
+<li><strong>Learning:</strong> generate clusters for a key term to learn common phrase patterns for writing</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Cluster: core workflow</h2>
+<ol type="1">
+<li>Enter a search query in the Cluster search box</li>
+<li>Set the search mode (“Words”, “Case”, and/or “Regex”)</li>
+<li>Set the main parameters: <strong>“Cluster Size”</strong>, <strong>“Min. Freq”</strong>, and <strong>“Min. Range”</strong></li>
+<li>Choose <strong>“Search Term Position”</strong> — On Left, On Right, or On Left/Right</li>
+<li>Click <strong>Start</strong></li>
+</ol>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 2</h2>
+<p>Using the <strong>Cluster</strong> tool, search for <strong>the</strong>.</p>
+<p>Set cluster size to 3, search term position “On Right”.</p>
+<ol type="1">
+<li>What are the most frequent 3-word clusters starting with <em>the</em>?</li>
+<li>Double-click one cluster to see it in KWIC.</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 5: N-Gram</h1>
+
+</section>
+<section class="slide level2">
+<h2>What N-Gram is for</h2>
+<p>The N-Gram tool extracts <strong>recurring multi-word sequences of a specified length</strong> and ranks them by <strong>frequency and range</strong>.</p>
+<p>With <strong>“Open Slots”</strong> enabled, you can examine patterned variation inside sequences (e.g., <em>the ___ of</em>).</p>
+</section>
+<section class="slide level2">
+<h2>N-Gram: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> explore typical multi-word patterns in a genre and reuse them for more natural writing</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>N-Gram: core workflow</h2>
+<ol type="1">
+<li>Set the main parameters: <strong>“N-Gram Size”</strong>, <strong>“Open Slots”</strong>, <strong>“Min. Freq”</strong>, and <strong>“Min. Range”</strong></li>
+<li>(Optional) Enter a query to filter n-grams</li>
+<li>Set the search mode</li>
+<li>Click <strong>Start</strong></li>
+</ol>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 3</h2>
+<p>Using the <strong>N-Gram</strong> tool, set n-gram size to 3 (no query).</p>
+<ol type="1">
+<li>What are the most frequent 3-word sequences in the corpus?</li>
+<li>Set “Open Slots” to 1 and search for <code>the * of</code>. What words fill the slot?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 6: Collocate</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Collocate is for</h2>
+<p>The Collocate tool identifies words that <strong>co-occur with a search term within a defined left/right window span</strong>.</p>
+<p>Designed for <strong>co-occurrence analysis</strong>: compare directional frequencies, range, and association strength to find meaningful collocational patterns.</p>
+</section>
+<section class="slide level2">
+<h2>Collocate: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> build a collocation list for a topic word, then check each item in KWIC</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Collocate: core workflow</h2>
+<ol type="1">
+<li>Enter a search query in the Collocate search box</li>
+<li>Set the search mode</li>
+<li>Set <strong>“Window Span”</strong> (From/To), <strong>“Min. Freq”</strong>, and <strong>“Min. Range”</strong></li>
+<li>Click <strong>Start</strong></li>
+</ol>
+<p>Sort by <strong>Likelihood</strong> or <strong>Effect</strong> to find the <em>strongest</em> associations, not just the most frequent.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 4</h2>
+<p>Using the <strong>Collocate</strong> tool, search for <strong>important</strong>.</p>
+<ol type="1">
+<li>Set the window span to 3 left / 3 right. What are its top collocates?</li>
+<li>Which collocate has the highest <strong>Effect</strong> score? What does that mean?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 7: Word List</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Word List is for</h2>
+<p>The Word List tool generates a <strong>frequency list of word entries</strong> from the target corpus, ranked by <strong>frequency, range, or lexical form</strong>.</p>
+<p>Designed for <strong>lexical profiling</strong>: how often items occur, and how widely they are distributed across files.</p>
+</section>
+<section class="slide level2">
+<h2>Word List: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> check common words and forms in a genre, then open KWIC to see typical usage</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Word List: core workflow</h2>
+<ol type="1">
+<li>Enter a query <strong>only if</strong> you want to filter the list; leave it blank for a full word list</li>
+<li>Set the search mode</li>
+<li>Set <strong>“Min. Freq”</strong> and <strong>“Min. Range”</strong></li>
+<li>Click <strong>Start</strong></li>
+</ol>
+</section>
+<section class="slide level2 question-slide">
+<h2>Practice 5</h2>
+<p>Using the <strong>Word List</strong> tool, leave the query blank and run a full word list.</p>
+<ol type="1">
+<li>What are the top 10 words in the corpus?</li>
+<li>Are they mostly function words or content words? Why?</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 8: Keyword List</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Keyword List is for</h2>
+<p>The Keyword tool compares a <strong>target corpus</strong> against a <strong>reference corpus</strong> to find items that are <strong>unusually frequent</strong> (or, optionally, unusually infrequent) in the target.</p>
+<p>Depending on the selected <strong>Source</strong>, it can generate keywords for <strong>words, clusters, n-grams, or collocates</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Keyword List: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> build a keyword list for your assignment corpus, then verify key items in KWIC</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Keyword List: core workflow</h2>
+<ol type="1">
+<li>Load a <strong>target</strong> corpus and a <strong>reference</strong> corpus via <code>File → Corpus Manager</code></li>
+<li>Select a <strong>Source</strong> — Word, Cluster, N-Gram, or Collocate</li>
+<li>Enter a query only if you want to filter; otherwise leave it blank</li>
+<li>Set <strong>“Min. Freq”</strong> and <strong>“Min. Range”</strong>, then click <strong>Start</strong></li>
+<li>Read <strong>“Keyword Types”</strong> and <strong>“Keyword Tokens”</strong>, then inspect the ranked rows</li>
+</ol>
+<p><strong>Key idea:</strong> a keyword is not simply a frequent word — it is <em>distinctive compared to a reference</em>.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Tool 9: Wordcloud</h1>
+
+</section>
+<section class="slide level2">
+<h2>What Wordcloud is for</h2>
+<p>The Wordcloud tool turns text or table outputs into a <strong>weighted word cloud</strong> — each item’s size reflects its value (e.g., frequency).</p>
+<p>Sources: a <strong>Scratchpad</strong> text area, or exported results from <strong>KWIC, File View, Cluster, N-Gram, Collocate, Word, and Keyword</strong>.</p>
+</section>
+<section class="slide level2">
+<h2>Wordcloud: practical examples</h2>
+<ul>
+<li><strong>Learning:</strong> cloud from Word or N-Gram outputs to spot high-salience vocabulary when preparing reports</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Wordcloud: core workflow</h2>
+<ol type="1">
+<li>Select a <strong>Source</strong> — Scratchpad free text, or another tool’s results</li>
+<li>Set the <strong>Output label</strong> (the word column) and <strong>Output value</strong> (the size column)</li>
+<li>Set <strong>Max. Words</strong> to control how many items are drawn</li>
+<li>(Optional) Paste text into the Scratchpad panel</li>
+<li>Click <strong>Start</strong> and review the cloud</li>
+</ol>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Search strategies</h1>
+
+</section>
+<section class="slide level2">
+<h2>Four ways to search</h2>
+<p>AntConc offers four search strategies — choosing the right one moves you from quick exploration to detailed pattern analysis.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Strategy</th>
+<th>When to use it</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Simple</strong></td>
+<td>exact word or phrase lookup</td>
+<td><code>language</code>, <code>corpus analysis</code></td>
+</tr>
+<tr class="even">
+<td><strong>Wildcard</strong></td>
+<td>prefix/suffix families, alternatives</td>
+<td><code>teach*</code>, <code>*ing</code>, <code>student\|pupil</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Regex</strong> (token level)</td>
+<td>precise token-level patterns</td>
+<td><code>colou?r</code>, <code>data.* driven</code></td>
+</tr>
+<tr class="even">
+<td><strong>Full Regex</strong></td>
+<td>multi-word spans, cross-token patterns</td>
+<td><code>\bcorpus\s+linguistics\b</code></td>
+</tr>
+</tbody>
+</table>
+<p>The full wildcard list is in <code>Global Settings → Searches</code>.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Break</h2>
+<p>10-minute break.</p>
+<p>When you come back: make sure you have a corpus loaded and can run a KWIC search.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 3: Your own mini research</h1>
+
+</section>
+<section class="slide level2">
+<h2>The task</h2>
+<p>Work <strong>alone or in pairs</strong>.</p>
+<ol type="1">
+<li>Choose <strong>one topic</strong> from the list (or propose your own)</li>
+<li>Turn it into a question you can answer with AntConc</li>
+<li>Run your searches — use at least <strong>two different tools</strong></li>
+<li>Take notes and screenshots of your key results</li>
+<li>Prepare a <strong>2–3 minute</strong> report for the class</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>What to report</h2>
+<p>Your mini report should answer:</p>
+<ol type="1">
+<li><strong>Question</strong> — what did you want to find out?</li>
+<li><strong>Method</strong> — what did you search? Which tools did you use?</li>
+<li><strong>Findings</strong> — what did the corpus show? (numbers + 1–2 example lines)</li>
+<li><strong>Reflection</strong> — was the result surprising? What is the limitation of your search?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: words and phrases</h2>
+<ol type="1">
+<li><strong>big vs.&nbsp;large</strong> — run separate KWIC searches. What kinds of nouns does each appear with?</li>
+<li><strong>make vs.&nbsp;do</strong> — use Cluster to find common phrase patterns for each verb.</li>
+<li><strong>important vs.&nbsp;significant vs.&nbsp;vital</strong> — compare their top collocates. Do they mean the same?</li>
+<li><strong>-ful vs.&nbsp;-less words</strong> (wildcards: <code>*ful</code>, <code>*less</code>) — which ending is more common in this corpus?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: patterns</h2>
+<ol start="5" type="1">
+<li><strong>Frequent 4-grams</strong> — use the N-Gram tool. What formulaic sequences dominate this corpus?</li>
+<li><strong>Open-slot patterns</strong> — search <code>the * of</code> or <code>a * of</code>. What words fill the slot, and why?</li>
+<li><strong>Distribution</strong> — pick a key term from this week’s reading and plot it. Is it spread evenly or concentrated?</li>
+<li><strong>A word’s behavior</strong> — pick a verb and find its strongest collocates (sort by Effect).</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Tips before you start</h2>
+<ul>
+<li>Write down your <strong>exact search strings</strong> — your study should be repeatable</li>
+<li>Look at <strong>Type</strong> vs.&nbsp;<strong>Token</strong> counts, and check <strong>Range</strong> (how many files an item appears in)</li>
+<li>Sort collocates by <strong>Effect</strong> or <strong>Likelihood</strong>, not just raw frequency</li>
+<li>Read actual concordance lines — numbers alone can mislead you</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Tips before you start</h2>
+<ul>
+<li>Double-click almost anything to jump to <strong>KWIC</strong> and check it in context</li>
+<li>A surprising result is a good result — report what you found, not what you expected</li>
+<li>A zero result can also be a finding: ask <strong>why</strong></li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Research time</h2>
+<p>You have about <strong>30 minutes</strong> to search and prepare your report.</p>
+<p>Ask for help any time.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Share your findings</h2>
+<p>Each person/pair: <strong>2–3 minutes</strong>.</p>
+<ol type="1">
+<li>Your question</li>
+<li>Your searches</li>
+<li>Your findings (show a screenshot if you can)</li>
+<li>One thing that surprised you</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Wrap-up</h2>
+<p>Today you:</p>
+<ul>
+<li>learned what AntConc is and how to load a corpus</li>
+<li>walked through the core workflows</li>
+<li>saw how to build, manage, and compare corpora</li>
+<li>answered a real question with real language data</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Credits</h2>
+<p>Part 2 is based on:</p>
+<ul>
+<li>Anthony, L. (2026). <em>AntConc</em> (help documentation, July 20, 2026 version) [Computer software documentation]. Waseda University. https://www.laurenceanthony.net/software/antconc/ — PDF in the practice folder.</li>
+</ul>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p>Advanced English II</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="AEII_week2_corpus_practice_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
