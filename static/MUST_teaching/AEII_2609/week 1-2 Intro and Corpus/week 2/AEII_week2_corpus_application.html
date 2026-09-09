@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="AEII_week2_corpus_application_files/libs/clipboard/clipboard.min.js"></script>
+<script src="AEII_week2_corpus_application_files/libs/quarto-html/tabby.min.js"></script>
+<script src="AEII_week2_corpus_application_files/libs/quarto-html/popper.min.js"></script>
+<script src="AEII_week2_corpus_application_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="AEII_week2_corpus_application_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="AEII_week2_corpus_application_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="AEII_week2_corpus_application_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="AEII_week2_corpus_application_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.45">
+
+  <meta name="author" content="Instructor: Miao Zhang 張淼">
+  <title>Advanced English II (BFE19013)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="AEII_week2_corpus_application_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="AEII_week2_corpus_application_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="AEII_week2_corpus_application_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="AEII_week2_corpus_application_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_application_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_application_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="AEII_week2_corpus_application_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Advanced English II (BFE19013)</h1>
+  <p class="subtitle">Applications and Techniques of Corpus</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Instructor: Miao Zhang 張淼 
+</div>
+</div>
+</div>
+
+</section>
+<section class="title-slide slide level1 center">
+<h1>Today’s content</h1>
+<ol type="1">
+<li><strong>Part 1:</strong> Mini research — your own corpus question</li>
+<li><strong>Part 2:</strong> Mini lecture — spoken corpora</li>
+<li><strong>Part 3:</strong> What corpora have changed</li>
+</ol>
+</section>
+
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 1: Mini research</h1>
+
+</section>
+<section class="slide level2 focus-slide">
+<h2>The task</h2>
+<p>Work <strong>in pairs</strong>.</p>
+<ol type="1">
+<li>Choose <strong>one topic</strong> from the list (or propose your own)</li>
+<li>Run your searches in AntConc using different tools</li>
+<li>Take notes and screenshots of your key results</li>
+<li>Prepare a <strong>5-minute</strong> report for the class</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>What to report</h2>
+<p>Your mini report should answer:</p>
+<ol type="1">
+<li><strong>Question</strong> — what did you want to find out?</li>
+<li><strong>Method</strong> — what did you search? Which tools/settings did you use?</li>
+<li><strong>Findings</strong> — what did the corpus show? (numbers + 1–2 example lines)</li>
+<li><strong>Reflection</strong> — was the result surprising? What is the limitation of your search?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: words and phrases</h2>
+<ol type="1">
+<li><strong>big vs.&nbsp;large</strong> — what kinds of nouns does each appear with?</li>
+<li><strong>make vs.&nbsp;do</strong> — what phrase patterns does each verb form?</li>
+<li><strong>important vs.&nbsp;significant vs.&nbsp;vital</strong> — compare the company each word keeps. Do they mean the same?</li>
+<li><strong>-ful vs.&nbsp;-less words</strong> — which ending is more common in your corpus?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Topic list: patterns</h2>
+<ol type="1">
+<li><strong>Frequent 2- or 3-word sequences</strong> — what formulaic sequences dominate the corpus?</li>
+<li><strong>Distribution</strong> — pick a key term from this week’s reading. Is it spread evenly across texts, or concentrated?</li>
+<li><strong>A word’s behavior</strong> — pick a verb and find the words it most strongly associates with.</li>
+<li><strong>Regular vs.&nbsp;irregular verbs</strong> — which is more common in your corpus? Are there any patterns in the irregulars?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Tips before you start</h2>
+<ul>
+<li>Write down your <strong>exact search strings</strong> — your study should be repeatable</li>
+<li>Look at <strong>type</strong> vs.&nbsp;<strong>token</strong> counts, and check <strong>range</strong> (how many files an item appears in)</li>
+<li>Read actual concordance lines — numbers alone can mislead you</li>
+<li>A surprising result is a good result — report what you found, not what you expected. Just ask <strong>“Why”</strong>.</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Research time</h2>
+<p>You have about <strong>30 minutes</strong> to search and prepare your report.</p>
+<p>Ask for help any time.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Share your findings</h2>
+<p>Each pair: <strong>5 minutes</strong>.</p>
+<ol type="1">
+<li>Your question</li>
+<li>Your searches</li>
+<li>Your findings (show a screenshot if you can)</li>
+<li>One thing that surprised you</li>
+</ol>
+<p>Listen to the other reports: did anyone’s findings connect to yours?</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Debrief</h2>
+<p>As a class:</p>
+<ul>
+<li>Which question produced the most convincing evidence? Why?</li>
+<li>What made a search <strong>unrepeatable</strong> or hard to interpret?</li>
+<li>What would you do differently with <strong>more time or a bigger corpus</strong>?</li>
+</ul>
+</section>
+<section class="slide level2 center">
+<h2>☕ Break</h2>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Part 2: Spoken corpora</h1>
+
+</section>
+<section class="slide level2 focus-slide">
+<h2>Mini lecture: spoken corpora</h2>
+<p><em>Why are spoken corpora rare, expensive — and worth it?</em></p>
+</section>
+<section class="slide level2">
+<h2>What is a speech corpus?</h2>
+<p>A <strong>speech corpus</strong> is a <strong>structured collection of spoken language recordings</strong>, often accompanied by <strong>metadata and annotations</strong>.</p>
+<ul>
+<li>used in linguistics, sociolinguistics, <strong>speech technology</strong>, and <strong>clinical research</strong></li>
+<li>may contain <strong>read or spontaneous speech</strong>, typical and atypical speech patterns</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Why collect speech?</h2>
+<p>Speech production is influenced by a <strong>large number of factors</strong>:</p>
+<div>
+<ul>
+<li class="fragment">language variety, accent, culture, speaking style</li>
+<li class="fragment">phonological, lexical, syntactic, discourse and conversational structures</li>
+<li class="fragment">individual characteristics and attitudes</li>
+</ul>
+</div>
+<p>→ <strong>Big data is needed</strong> to model all these sources of variation.</p>
+</section>
+<section class="slide level2">
+<h2>What are speech corpora for?</h2>
+<p><strong>Theory-oriented</strong></p>
+<ul>
+<li>linguistic and sociolinguistic analysis, language diversity</li>
+<li>speaker identity, spoken language acquisition, conversation analysis</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>What are speech corpora for?</h2>
+<p><strong>Applied science-oriented</strong></p>
+<ul>
+<li>speech therapy / rehabilitation / clinical applications</li>
+<li>automatic speech recognition (ASR), text-to-speech synthesis</li>
+<li>speaker and emotion recognition, speech-to-speech translation</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Types of speech corpora (1): speech and setting</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Options</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Speech type</strong></td>
+<td>read vs.&nbsp;spontaneous</td>
+<td>TIMIT, LibriSpeech vs.&nbsp;Switchboard, CALLHOME</td>
+</tr>
+<tr class="even">
+<td><strong>Environment</strong></td>
+<td>lab-recorded vs.&nbsp;in-the-wild</td>
+<td>TIMIT vs.&nbsp;CHiME, VoxCeleb</td>
+</tr>
+<tr class="odd">
+<td><strong>Modality</strong></td>
+<td>audio-only vs.&nbsp;multimodal</td>
+<td>WSJ vs.&nbsp;AVICAR, IEMOCAP</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>Types of speech corpora (2): coverage</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Options</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Language scope</strong></td>
+<td>monolingual vs.&nbsp;multilingual/dialectal</td>
+<td>BNC vs.&nbsp;BABEL, Common Voice</td>
+</tr>
+<tr class="even">
+<td><strong>Demographics</strong></td>
+<td>age-specific; pathological speech</td>
+<td>CHILDES, ElderSpeech; UA-Speech, Torgo</td>
+</tr>
+<tr class="odd">
+<td><strong>Domain</strong></td>
+<td>task dialogues; archives</td>
+<td>ATIS (flight booking), AMI (meetings); BBC archives</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+<h2>The corpus follows the question</h2>
+<p>The type of speech corpus you use depends on the <strong>research question or application</strong>.</p>
+<p>Two more design variables:</p>
+<ul>
+<li><strong>annotation depth</strong> — transcription only (LibriSpeech) vs.&nbsp;detailed phone/intonation labels (TIMIT, Switchboard)</li>
+<li><strong>size / collection method</strong> — large crowdsourced (Common Voice) vs.&nbsp;small and niche (Buckeye)</li>
+</ul>
+</section>
+<section class="slide level2 question-slide">
+<h2>Quick check</h2>
+<p>Which corpus would you pick for each question — and why?</p>
+<ol type="1">
+<li>How do toddlers acquire English verbs? → <strong>CHILDES</strong></li>
+<li>Training a voice assistant to understand Cantonese in noisy streets? → <strong>in-the-wild, crowdsourced</strong></li>
+<li>Why do non-native speakers hesitate in business meetings? → <strong>AMI / spontaneous meetings</strong></li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>Good documentation</h2>
+<ul>
+<li><strong>purpose</strong> of the corpus</li>
+<li><strong>speaker info</strong> — number, age, language, demographics</li>
+<li><strong>speech type</strong> and <strong>spoken text</strong></li>
+<li><strong>size and duration</strong>, <strong>file format</strong></li>
+<li><strong>metadata</strong>, <strong>recording set-up</strong></li>
+</ul>
+<blockquote>
+<p>Sound familiar?</p>
+</blockquote>
+</section>
+<section class="slide level2">
+<h2>Record your own, or use an available corpus?</h2>
+<div style="font-size: 0.8em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Available corpus</th>
+<th>Self-recorded corpus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pros</strong></td>
+<td>time-saving; large amounts of real data; searchable</td>
+<td>high-quality recordings; user-specific; controlled data and documentation</td>
+</tr>
+<tr class="even">
+<td><strong>Cons</strong></td>
+<td>variable recording quality; need to work on a subset; mainly mainstream languages; limited documentation; <strong>biased</strong> (gender, age, ethnicity)</td>
+<td>large time and work effort; fieldwork conditions; small amount of data</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Remember: 1 hour of conversation ≈ 12,000–15,000 words ≈ 2 working days to transcribe.</p>
+</section>
+<section class="slide level2 question-slide">
+<h2>Discuss</h2>
+<p>You want to build a <strong>small corpus of Macau students’ casual English conversations</strong>.</p>
+<ul>
+<li>Record your own, or look for an available corpus?</li>
+<li>Which <strong>two cons</strong> worry you most on either side?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Open-access speech corpora</h2>
+<ul>
+<li><strong>LibriSpeech</strong> — 1,000 hours of American English, read speech (audiobooks)</li>
+<li><strong>Buckeye</strong> — 40 hours of American English, spontaneous interviews</li>
+<li><strong>CHILDES / PhonBank</strong> — collections of child speech</li>
+<li><strong>Mozilla Common Voice</strong> — 100+ languages, crowdsourced, read speech</li>
+<li><strong>DoReCo</strong> — ~50 languages, spontaneous fieldwork interviews</li>
+<li><strong>FLEURS</strong> — 102 languages, parallel read speech</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>From recording to usable data: annotation</h2>
+<p><strong>Annotation</strong> = assigning labels to recorded speech:</p>
+<ul>
+<li><strong>utterance</strong>: <em>Wie heisst du?</em></li>
+<li><strong>word</strong>: <em>Wie, heisst, du</em></li>
+<li><strong>phones/segments</strong>: <em>v, iː, h, aɪ, s, t, d, uː</em></li>
+<li><strong>speaker demographics</strong>, <strong>speech act</strong>, <strong>intonation</strong> (e.g.&nbsp;L+H*)</li>
+</ul>
+<p>The hard part: where does each unit <strong>start and end</strong>?</p>
+</section>
+<section class="slide level2">
+<h2>Manual vs.&nbsp;automatic annotation</h2>
+<ul>
+<li><strong>Manual</strong> — slow, time-consuming; needs inter-annotator consistency checks</li>
+<li><strong>Automatic</strong> — fast, efficient, consistent; but can produce errors</li>
+<li><strong>Semi-automatic</strong> — automatic first, then human correction where necessary</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Forced alignment: transcript → time stamps</h2>
+<blockquote>
+<p>Forced alignment: take an <strong>orthographic transcription</strong> of an audio file and generate a <strong>time-aligned version</strong>, using a <strong>pronunciation dictionary</strong> to look up the phones of words. — Montreal Forced Aligner</p>
+</blockquote>
+<p>Needs three inputs: transcript + pronunciation dictionary + audio signal.</p>
+<p>Popular tools: <strong>Montreal Forced Aligner (MFA)</strong>, DARLA, WebMAUS.</p>
+</section>
+<section class="slide level2">
+<h2>Research showcase: vowel intrinsic pitch</h2>
+<p>A classic phonetic finding: <strong>high vowels (/i, u/) tend to have shorter duration than low vowels (/a/)</strong> — <em>tea</em> sits higher than <em>tar</em>.</p>
+<p>Testable on <strong>VoxCommunis</strong>: a phonetic corpus of Mozilla Common Voice with word- and phone-level alignments (via MFA) — <strong>75 languages, 16,000+ hours</strong>.</p>
+<p><a href="10.1016/j.wocn.2026.101530">The results</a></p>
+</section>
+<section class="slide level2">
+<h2>Why spoken corpora matter for us</h2>
+<p>Spoken corpora let us study <strong>real conversation</strong>:</p>
+<ul>
+<li>hesitations, false starts, overlap, vague language</li>
+<li>discourse markers and response tokens</li>
+<li>the grammar of talk — not just the grammar of writing</li>
+</ul>
+</section>
+<section class="slide level2 center">
+<h2>☕ Break</h2>
+</section></section>
+<section class="title-slide slide level1 center">
+<h1>Part 3: What corpora have changed</h1>
+
+</section>
+
+<section>
+<section class="title-slide slide level1 center">
+<h1>Lexicography</h1>
+
+</section>
+<section class="slide level2">
+<h2>From Johnson to COBUILD</h2>
+<ul>
+<li><strong>1750s</strong>: Samuel Johnson manually collated samples of usage (1560–1660) for the first comprehensive English dictionary.</li>
+<li><strong>1980</strong>: the <strong>COBUILD</strong> project (Birmingham, John Sinclair) — the first large corpus-based dictionary (<em>Collins COBUILD English Dictionary</em>, 1987)</li>
+<li>Today’s publisher corpora: <strong>billions</strong> of words, constantly updated (e.g.&nbsp;CIC &gt; 1 billion)</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Grammar</h2>
+<ul>
+<li><strong>Sinclair / COBUILD</strong>: “pattern grammar” — the interface of lexis and grammar (Hunston &amp; Francis 2000)</li>
+<li><strong>Biber et al.&nbsp;(1999)</strong>: grammar of conversation, fiction, news, academic prose (40M words, 7 years)</li>
+<li><strong>Carter &amp; McCarthy (2006)</strong>: separates spoken from written grammar; 7,000+ examples with <strong>sound clips</strong></li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Stylistics and translation</h1>
+
+</section>
+<section class="slide level2">
+<h2>Stylistics</h2>
+<ul>
+<li>Corpus methods + close reading: Louw’s (1993) collocational analysis of literary texts</li>
+<li><strong>Semantic prosody</strong> as a tool for studying creativity and irony in fiction</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Translation: three corpus types (Aston 1999)</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 54%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Composition</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Monolingual</strong></td>
+<td>texts in one language (source or target)</td>
+<td>translator training, terminology</td>
+</tr>
+<tr class="even">
+<td><strong>Comparable</strong></td>
+<td>similarly designed corpora of two+ languages</td>
+<td>what is specific to translated text</td>
+</tr>
+<tr class="odd">
+<td><strong>Parallel</strong></td>
+<td>originals + their translations (uni- or bidirectional)</td>
+<td>bilingual lexicography, machine translation, training</td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Forensic linguistics and sociolinguistics</h1>
+
+</section>
+<section class="slide level2">
+<h2>Forensic linguistics</h2>
+<p>Corpus methods applied to:</p>
+<ul>
+<li>authorship identification and <strong>plagiarism</strong></li>
+<li>genuineness of confessions, suicide notes, threat letters</li>
+<li>courtroom discourse (Cotterill’s corpus of the entire <strong>O. J. Simpson trial</strong>)</li>
+<li>Boucher (2005): truthful vs.&nbsp;deceptive recounts differed significantly in <strong>hesitation, lexical repetition, utterance length</strong></li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>Sociolinguistics</h2>
+<p>Corpora are built around social variables — age, gender, class, region:</p>
+<ul>
+<li><strong>COLT</strong> (Bergen Corpus of London Teenage Language): <em>like</em> as discourse marker, tags, taboo language</li>
+<li><strong>SCOTS</strong>: Scottish English, Scots, Gaelic and community languages</li>
+<li>gender studies: apologies (Aijmer 1995), linguistic sexism (Holmes 2001)</li>
+</ul>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Corpora and language teaching</h1>
+
+</section>
+<section class="slide level2">
+<h2>Textbooks vs.&nbsp;real data</h2>
+<p>Corpora have shown that <strong>intuitions about language are often faulty</strong> — including intuitions behind textbooks:</p>
+<ul>
+<li><strong>Holmes (1988)</strong>: ESL textbooks over-teach modal verbs, under-teach alternative epistemic strategies</li>
+<li><strong>Carter (1998)</strong>: textbook dialogues lack <strong>discourse markers, vague language, ellipsis, hedges</strong></li>
+<li><strong>Gilmore (2004)</strong>: scripted dialogues differ from real interaction in turn length, false starts, pausing, overlap, hesitation</li>
+</ul>
+<p>The <strong>Touchstone</strong> series (McCarthy et al.&nbsp;2005–) shows the fix: a graded syllabus of <strong>conversational strategies</strong> from corpus data (e.g.&nbsp;<em>I mean</em>).</p>
+</section>
+<section class="slide level2">
+<h2>Learner corpora and DDL</h2>
+<ul>
+<li><strong>ICLE</strong> (International Corpus of Learner English): 2M+ words, 19 L1 backgrounds, <strong>error-coded</strong></li>
+<li>Even advanced learners struggle with <strong>high-frequency verbs</strong> (<em>make</em>) — over-/under-use relative to native norms (Altenberg &amp; Granger 2001)</li>
+<li><strong>Data-driven learning (DDL)</strong> (Johns 1986, 1991): learners confront the data directly</li>
+</ul>
+<blockquote>
+<p>“Every student is Sherlock Holmes.” — Johns (2002: 108)</p>
+</blockquote>
+</section></section>
+<section>
+<section class="title-slide slide level1 center">
+<h1>Issues and debates</h1>
+
+</section>
+<section class="slide level2">
+<h2>Authenticity: a real debate</h2>
+<p><strong>For authentic corpus data:</strong></p>
+<ul>
+<li>real language, real motivation, cultural discussion</li>
+</ul>
+<p><strong>Against / cautions:</strong></p>
+<ul>
+<li>corpus examples are <strong>decontextualised</strong> — wrenched from their original audience and setting</li>
+<li>may be <strong>culturally opaque</strong> to learners</li>
+<li>contrived examples are easier to <strong>grade</strong> by level</li>
+</ul>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Discuss</h2>
+<blockquote>
+<p>What is your biggest fear/concern in using English more often?</p>
+</blockquote>
+<ul>
+<li>Lack of fluency? Lack of accuracy? Lack of vocabulary? Lack of confidence? Lack of cultural knowledge?</li>
+<li>Lack of people to talk to? Lack of opportunities to practice?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>The native speaker in the classroom</h2>
+<ul>
+<li>Learners often target native-speaker English (Timmis 2002) — but <em>which</em> native variety? (AmE? BrE? Irish? Singaporean?)</li>
+<li>Non-native users now <strong>outnumber</strong> native speakers (Graddol 1998)</li>
+<li>ELF features that teachers usually correct — dropped 3rd-person <em>-s</em>, missing articles, <em>discuss about</em> — are typically <strong>unproblematic</strong> for ELF communication</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>SUEs: Successful Users of English</h2>
+<p>Prodromou’s proposal: judge learners as <strong>expert users</strong>, not failed native speakers.</p>
+<ul>
+<li>Idiomatic chunks come free to native speakers but block even proficient L2 users
+<ul>
+<li>“Got up the wrong side o’ the bed”</li>
+</ul></li>
+<li>Successful L2 communicators <strong>strategically use resources differently</strong> from native speakers</li>
+</ul>
+<blockquote>
+<p>The goal of learning is to be a good human communicator — with native speakers <em>or with anyone</em>.</p>
+</blockquote>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Final discussion</h2>
+<p>Macau context: students will mostly use English with <strong>other non-native speakers</strong> (mainland Chinese, Korean, Japanese, European partners).</p>
+<ol type="1">
+<li>Should our classrooms target <strong>native-speaker models</strong>, <strong>ELF</strong>, or <strong>SUE-style expert use</strong>?</li>
+<li>What would each choice change about <em>materials</em>, <em>assessment</em>, and <em>pronunciation teaching</em>?</li>
+</ol>
+</section>
+<section class="slide level2">
+<h2>For practice</h2>
+<ul>
+<li>Activities 1–2 at the end of Adolphs Ch. 3 (frequency lists + <em>know/think/just</em> in spoken vs.&nbsp;written corpora)</li>
+<li>Try a keyword analysis of any short text you like against a reference corpus</li>
+</ul>
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+<p>Advanced English II</p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="AEII_week2_corpus_application_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
