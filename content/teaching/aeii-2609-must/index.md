@@ -5,7 +5,7 @@ date: 2026-09-01
 slug: 'aeii-2609-must'
 ---
 
-This course page collects the teaching materials for AEII 2609 at MUST.
+This course page collects the teaching materials for Advanced English II 2609 at MUST.
 
 ### Course slides
 
