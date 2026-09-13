@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>池間方言 音声実験用刺激提示システム</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="theme-light">
+  <div class="app-container">
+    
+    <!-- Setup / Intro Screen -->
+    <section id="setup-screen" class="screen active">
+      <div class="card intro-card">
+        <h1 class="main-title">池間方言 音声収録・実験</h1>
+        <p class="subtitle">Stimuli Presentation System</p>
+        
+        <div class="divider"></div>
+        
+        <div class="instructions">
+          <h3>【実験の進め方】</h3>
+          <ul>
+            <li>画面中央に文が表示されます。準備ができたら<strong>声に出して読んでください</strong>。</li>
+            <li>表示される各スライドには、<strong>上の行に池間方言のターゲット語を含む文</strong>（大きな文字）、<strong>下の行に日本語の対訳文</strong>（小さな文字）が表示されます。</li>
+            <li>読み終えたら、<strong>スペースキー</strong>または<strong>[次へ]ボタン</strong>を押して、次のスライドに進んでください。</li>
+            <li>前のスライドに戻りたい場合は、<strong>左矢印キー (←)</strong>または<strong>[戻る]ボタン</strong>を押してください。</li>
+            <li>全44刺激が2回ずつ、合計88スライド提示されます。</li>
+          </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="setup-controls" style="grid-template-columns: 1fr; max-width: 300px; margin: 0 auto 32px auto;">
+          <!-- Hidden inputs to keep JS compatibility -->
+          <input type="hidden" id="participant-id" value="P01">
+          <input type="hidden" id="presentation-order" value="block-random">
+          
+          <div class="control-group">
+            <label for="theme-select" style="text-align: center;">カラーテーマ (Theme)</label>
+            <div class="theme-toggle-group">
+              <button type="button" class="theme-btn active" data-theme="light">Light</button>
+              <button type="button" class="theme-btn" data-theme="dark">Dark</button>
+              <button type="button" class="theme-btn" data-theme="sepia">Sepia</button>
+            </div>
+          </div>
+        </div>
+        
+        <button id="start-btn" class="btn btn-primary btn-lg">
+          実験を開始する
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Experiment Presentation Screen -->
+    <section id="experiment-screen" class="screen">
+      <!-- Top Sleek Header -->
+      <div class="experiment-header">
+        <!-- Hidden display span for compatibility -->
+        <span id="display-participant-id" style="display: none;">P01</span>
+        
+        <div class="progress-container">
+          <div class="progress-bar-wrapper">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+          <div class="slide-counter">
+            <span id="current-slide-num" class="current">0</span>
+            <span class="separator">/</span>
+            <span id="total-slide-num" class="total">88</span>
+          </div>
+        </div>
+        <div class="badge-item block-badge">
+          <span class="label">周回:</span>
+          <span id="display-block-num" class="value">1/2</span>
+        </div>
+      </div>
+
+      <!-- Main Elicitation Canvas -->
+      <div class="presentation-canvas">
+        <div class="stimulus-card" id="stimulus-card">
+          <div class="stimulus-content">
+            <h2 id="carrier-text" class="carrier-text">まさいがどぅ ばう てぃー はーらー</h2>
+            <p id="translation-text" class="translation-text">まさいが「棒」と言ったらしい。</p>
+          </div>
+          
+          <!-- Hidden researcher metadata for compatibility -->
+          <div class="stimulus-metadata" style="display: none;">
+            <span class="meta-tag" id="meta-word">Target: ばう</span>
+            <span class="meta-tag" id="meta-cons">Cons: b</span>
+            <span class="meta-tag" id="meta-quant">Quant: short</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Control / Navigation Bar -->
+      <div class="experiment-footer">
+        <button id="prev-btn" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          戻る
+        </button>
+        
+        <div class="shortcuts-guide">
+          <span class="kbd">←</span> / <span class="kbd">[戻る]</span> 前のスライド &nbsp;&bull;&nbsp; <span class="kbd">Space</span> / <span class="kbd">→</span> / <span class="kbd">[次へ]</span> 次のスライド
+        </div>
+        
+        <button id="next-btn" class="btn btn-primary">
+          次へ
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Completion / Summary Screen -->
+    <section id="completion-screen" class="screen">
+      <div class="card completion-card">
+        <div class="success-icon-wrapper">
+          <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+        </div>
+        
+        <h1 class="completion-title">ご協力ありがとうございました！</h1>
+        <p class="completion-subtitle">すべての録音・調査セッションが完了しました。</p>
+        
+        <div class="divider"></div>
+        
+        <!-- Hidden values for JS compatibility -->
+        <span id="result-participant-id" style="display: none;">P01</span>
+        <span id="result-order-type" style="display: none;">ブロック・ランダム化</span>
+
+        <div class="completion-stats">
+          <div class="stat-item">
+            <span class="stat-label">総提示数</span>
+            <span id="result-total-slides" class="stat-value">88 / 88</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">所要時間</span>
+            <span id="result-duration" class="stat-value">02:45</span>
+          </div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="completion-actions">
+          <button id="download-log-btn" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            調査記録をCSVで保存
+          </button>
+          
+          <button id="restart-btn" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+            トップに戻る
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  
+  <!-- App JavaScript logic -->
+  <script src="app.js?v=3"></script>
+</body>
+</html>
