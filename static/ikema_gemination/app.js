@@ -857,7 +857,6 @@ function switchScreen(screenId) {
   // Small delay to trigger CSS transition smoothly
   setTimeout(() => {
     targetScreen.classList.add('active');
-    if (screenId === 'experiment-screen') scheduleFitForStimulus();
   }, 50);
 }
 

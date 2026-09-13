@@ -128,7 +128,6 @@ function switchScreen(screenId) {
   screen.style.display = 'flex';
   requestAnimationFrame(() => {
     screen.classList.add('active');
-    scheduleFitForActiveScreen();
   });
 }
 
