@@ -12,7 +12,7 @@ body { min-height: 100vh; overflow-x: hidden; display: flex; justify-content: ce
 .screen { display: none; width: 100%; opacity: 0; transform: translateY(15px); transition: opacity .4s ease, transform .4s ease; }
 .screen.active { display: flex; flex-direction: column; opacity: 1; transform: translateY(0); }
 .screen#practice-screen.active, .screen#experiment-screen.active { min-height: calc(100vh - 48px); }
-.screen#completion-screen.active { min-height: calc(100vh - 48px); justify-content: center; align-items: center; }
+.screen#completion-screen.active { min-height: calc(100vh - 48px); justify-content: center; }
 .card, .stimulus-card { border: 1px solid var(--border); border-radius: 24px; background: var(--bg-card); backdrop-filter: blur(12px); box-shadow: 0 10px 40px var(--shadow); }
 .card { width: 100%; padding: 48px; }
 .divider { height: 1px; margin: 32px 0; background: var(--border); }
@@ -56,8 +56,8 @@ body { min-height: 100vh; overflow-x: hidden; display: flex; justify-content: ce
 .stimulus-content { display: flex; min-height: 298px; flex-direction: column; align-items: center; justify-content: center; }
 .stimulus-progress { width: 100%; height: 5px; overflow: hidden; border-radius: 3px; background: var(--border); }
 .stimulus-progress .progress-bar { width: 0; height: 100%; border-radius: inherit; background: var(--primary); transition: width .3s ease; }
-.carrier-text { max-width: 100%; overflow: hidden; color: var(--text); font-size: 4rem; font-weight: 700; line-height: 1.4; white-space: nowrap; }
-.translation-text { max-width: 100%; overflow: hidden; margin-top: 2.5rem; color: var(--muted); font-size: 2.1rem; font-weight: 500; line-height: 1.5; white-space: nowrap; }
+.carrier-text { max-width: 100%; color: var(--text); font-size: 4rem; font-weight: 700; line-height: 1.4; white-space: nowrap; }
+.translation-text { margin-top: 2.5rem; color: var(--muted); font-size: 2.1rem; font-weight: 500; line-height: 1.5; word-break: break-word; }
 .experiment-footer { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .shortcuts-guide { color: var(--muted); font-size: .8rem; text-align: center; }.kbd { padding: 2px 6px; border: 1px solid var(--border); border-radius: 4px; background: var(--bg-card); font-family: var(--font-english); font-weight: 700; }
 .slide-fade-out { opacity: 0; transform: scale(.98); transition: opacity .15s ease, transform .15s ease; }.slide-fade-in { animation: slide-in .3s ease forwards; } @keyframes slide-in { from { opacity: 0; transform: scale(.97) translateY(8px); } to { opacity: 1; transform: scale(1) translateY(0); } }
