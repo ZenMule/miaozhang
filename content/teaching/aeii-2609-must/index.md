@@ -14,5 +14,6 @@ This course page collects the teaching materials for Advanced English II 2609 at
 - [Week 2: Corpus Hands-on Training]( /MUST_teaching/AEII_2609/week%201-2%20Intro%20and%20Corpus/week%202/AEII_week2_corpus_practice.html )
 - [Week 2: Corpus Applications]( /MUST_teaching/AEII_2609/week%201-2%20Intro%20and%20Corpus/week%202/AEII_week2_corpus_application.html )
 - [week 3: Critical Discourse Analysis]( /MUST_teaching/AEII_2609/week%203-4%20Media%20Discourse%20Analysis/week%203/AEII_week3_media_discourse_analysis.html )
+- [week 4: Corpus and CDA]( /MUST_teaching/AEII_2609/week%203-4%20Media%20Discourse%20Analysis/week%203/AEII_week3_corpus_CDA_SOTU.html)
 
 More lecture materials will be added here as the course progresses.
