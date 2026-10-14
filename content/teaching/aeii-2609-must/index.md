@@ -16,5 +16,9 @@ This course page collects the teaching materials for Advanced English II 2609 at
 - [Week 3: Critical Discourse Analysis]( /MUST_teaching/AEII_2609/week%203-4%20Media%20Discourse%20Analysis/week%203/AEII_week3_media_discourse_analysis.html )
 - [Week 4: Corpus and CDA]( /MUST_teaching/AEII_2609/week%203-4%20Media%20Discourse%20Analysis/week%203/AEII_week3_corpus_CDA_SOTU.html)
 - [Week 4: CDA - semantic field and metaphor]( /MUST_teaching/AEII_2609/week%203-4%20Media%20Discourse%20Analysis/week%203/AEII_week3_CDA_sem_meta.html)
+- [Week 5: Pragmatics - Context and inference]( /MUST_teaching/AEII_2609/week%206-7%20Pragmatics/week%206/AEII_week6_pragmatics_context_inference.html)
+- [Week 6: Pragmatics - Speech act and politeness]( /MUST_teaching/AEII_2609/week%206-7%20Pragmatics/week%206/AEII_week6_pragmatics_speech_acts_politeness.html)
+- [Week 6: Pragmatics - Pragmatic markers]( /MUST_teaching/AEII_2609/week%206-7%20Pragmatics/week%206/AEII_week6_pragmatic_markers.html)
+
 
 More lecture materials will be added here as the course progresses.
