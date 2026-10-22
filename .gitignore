@@ -11,3 +11,6 @@ public/
 
 # Blogdown temporary lock files
 *.lock~
+
+# The guide file
+HOWTO.md
