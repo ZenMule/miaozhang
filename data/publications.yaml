@@ -15,9 +15,16 @@
 #   rev_under_review → yellow badge "Rev. under review"
 #   under_revision   → red badge   "Under revision"
 #   in_prep          → gray badge  "In prep."
+#   accepted         → green badge "Accepted"
 # =============================================================================
 
 journal_articles:
+  - status: accepted
+    citation: >-
+      Han, J-Y., Wang, T., and **Zhang, M.** L3 acquisition of Mandarin Chinese stop consonants
+      by learners with L1 Spanish/Thai and L2 English.
+      *Journal of the Acoustical Society of America*.
+      [preprint](https://doi.org/10.31234/osf.io/dbx8s_v1)
 
   - year: "2026"
     status: published
@@ -43,13 +50,6 @@ journal_articles:
       **Zhang, M.** and Chodroff, E. The universality of vowel intrinsic F0: A corpus study of
       cross-linguistic and inter-speaker variability in 75 languages.
       [preprint](https://doi.org/10.31234/osf.io/5ykqs_v1)
-
-  - status: rev_under_review
-    citation: >-
-      Han, J-Y., Wang, T., and **Zhang, M.** L3 acquisition of Mandarin Chinese stop consonants
-      by learners with L1 Spanish/Thai and L2 English.
-      *Journal of the Acoustical Society of America*.
-      [preprint](https://doi.org/10.31234/osf.io/dbx8s_v1)
 
 
 conference_proceedings:

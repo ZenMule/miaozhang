@@ -103,6 +103,11 @@ a:hover {
   color: #4B5563;
 }
 
+.pub-status-accepted {
+  background: #DCFCE7;
+  color: #166534;
+}
+
 /* Private content gate */
 .private-gate {
   border: 1px solid #BEE3F8;
