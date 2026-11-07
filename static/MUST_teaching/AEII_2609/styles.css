@@ -92,6 +92,48 @@
   color: #fef3c7;
 }
 
+.reveal .slides section .focus-slide {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.28), rgba(14, 116, 144, 0.24));
+}
+
+.reveal .backgrounds .slide-background.focus-slide {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.28), rgba(14, 116, 144, 0.24));
+}
+
+.reveal .slides section.focus-slide:not(.stack) {
+  background: transparent;
+}
+
+.reveal .focus-slide em,
+.reveal .focus-slide strong,
+.reveal .focus-slide em strong,
+.reveal .focus-slide strong em {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.reveal .focus-slide blockquote {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+.reveal .section-slide h1,
+.reveal .section-slide h2 {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.3em 0.55em;
+  color: #fef3c7;
+  background-color: rgba(14, 116, 144, 0.2);
+  border: 1px solid rgba(125, 211, 252, 0.55);
+  border-left: 5px solid var(--accent);
+  border-radius: 4px;
+}
+
 .reveal .question-slide {
   background: linear-gradient(135deg, rgba(91, 33, 182, 0.28), rgba(14, 116, 144, 0.24));
   border: 2px solid rgba(250, 204, 21, 0.9);
