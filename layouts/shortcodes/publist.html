@@ -12,6 +12,7 @@
       {{- else if eq .status "under_revision" }}<span class="pub-status pub-status-revision">Under revision</span>
       {{- else if eq .status "in_prep" }}<span class="pub-status pub-status-prep">In prep.</span>
       {{- else if eq .status "accepted" }}<span class="pub-status pub-status-accepted">Accepted</span>
+      {{- else if eq .status "submitted" }}<span class="pub-status pub-status-submitted">Submitted</span>
       {{- end }}
     </div>
     <div class="pub-citation">{{ .citation | markdownify }}</div>

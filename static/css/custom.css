@@ -108,6 +108,11 @@ a:hover {
   color: #166534;
 }
 
+.pub-status-submitted {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
 /* Private content gate */
 .private-gate {
   border: 1px solid #BEE3F8;

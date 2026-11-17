@@ -16,29 +16,26 @@
 #   under_revision   → red badge   "Under revision"
 #   in_prep          → gray badge  "In prep."
 #   accepted         → green badge "Accepted"
+#   submitted        → blue badge  "Submitted"
 # =============================================================================
 
 journal_articles:
   - year: "2026"
     status: published
     citation: >-
-      Han, J-Y., Wang, T., and **Zhang, M.** L3 acquisition of Mandarin Chinese stop consonants
-      by learners with L1 Spanish/Thai and L2 English.
-      *Journal of the Acoustical Society of America*.
+      Han, J-Y., Wang, T., and **Zhang, M.** L3 acquisition of Mandarin Chinese stop consonants by learners with L1 Spanish/Thai and L2 English. *Journal of the Acoustical Society of America*. 160 (5): 4231–4250.
       [doi](https://doi.org/10.1121/10.0047480)
 
   - year: "2026"
     status: published
     citation: >-
-      Chodroff, E. and **Zhang, M.** A crosslinguistic corpus phonetic analysis of 
-      intrinsic vowel duration. *Journal of Phonetics*, 118, 101530.
+      Chodroff, E. and **Zhang, Miao** A crosslinguistic corpus phonetic analysis of intrinsic vowel duration. *Journal of Phonetics*, 118, 101530.
       [doi](https://doi.org/10.1016/j.wocn.2026.101530)
 
   - year: "2026"
     status: published
     citation: >-
-      **Zhang, M.**, Gong, S-X. and Guo, C-Y. Tone sandhi and tonal coarticulation in
-      disyllabic sequences in Changsha Xiang. *Journal of Phonetics*, 114, 101472.
+      **Zhang, M.**, Gong, S-X. and Guo, C-Y. Tone sandhi and tonal coarticulation in disyllabic sequences in Changsha Xiang. *Journal of Phonetics*, 114, 101472.
       [doi](https://doi.org/10.1016/j.wocn.2025.101472)
 
   - status: under_revision
@@ -46,7 +43,7 @@ journal_articles:
       **Zhang, M.** and Fujinaga-Gordon, K. An illustration of IPA: Ikema.
       *Journal of International Phonetic Association*.
 
-  - status: in_prep
+  - status: submitted
     citation: >-
       **Zhang, M.** and Chodroff, E. The universality of vowel intrinsic F0: A corpus study of
       cross-linguistic and inter-speaker variability in 75 languages.
