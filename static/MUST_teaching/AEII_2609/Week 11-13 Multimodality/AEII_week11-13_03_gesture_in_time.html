@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="AEII_week11-13_03_gesture_in_time_files/libs/clipboard/clipboard.min.js"></script>
+<script src="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/tabby.min.js"></script>
+<script src="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/popper.min.js"></script>
+<script src="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="AEII_week11-13_03_gesture_in_time_files/libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.19">
+
+  <meta name="author" content="Instructor: Miao Zhang 張淼">
+  <title>Advanced English II (BFE19013)</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/dist/theme/quarto-4df01d85d5cf19cc6202400f4f043f84.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-dark">
+  <div class="reveal">
+    <div class="slides">
+
+<section class="quarto-title-block center">
+  <h1 class="title">Advanced English II (BFE19013)</h1>
+  <p class="subtitle">Multimodality: First Steps in ELAN and Gesture in Time</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Instructor: Miao Zhang 張淼
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>Can we replay your claim?</h1>
+
+</section>
+<section class="slide level2 focus-slide">
+<h2>Find the moment again</h2>
+<p>Return to the <a href="https://www.youtube.com/watch?v=vXjb8OQFWYY&amp;t=40s">shared video from 0:40</a>.</p>
+<p>You have a description and an interpretation. Can another analyst find <strong>exactly the same action</strong>?</p>
+<p>Now we turn our observations into <strong>time-aligned annotations</strong>.</p>
+<aside class="notes">
+<p>This is the third three-hour multimodality meeting and the first ELAN lesson. Use the previewed continuous excerpt; do not assume any particular gesture at 0:40. Preserve the first two meetings’ paper notes as hypotheses to test.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two sources, two purposes</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>What we use it for</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nicolas Nuvan’s <strong>Zohran Mamdani video</strong></td>
+<td>shared observation and guided ELAN practice</td>
+</tr>
+<tr class="even">
+<td>our <strong>group-debate recordings</strong></td>
+<td>transferring the method to our own interaction</td>
+</tr>
+</tbody>
+</table>
+<p>Neither source guarantees a particular gesture. Analyse what is actually visible.</p>
+</section>
+<section class="slide level2">
+<h2>A video link is not a media file</h2>
+<ul>
+<li>The YouTube link opens a <strong>web page</strong></li>
+<li>For this workshop, ELAN needs a <strong>playable local media file</strong></li>
+<li>Use only an <strong>authorized copy</strong> supplied through the approved course route</li>
+<li>An <strong><code>.eaf</code></strong> stores annotations and media links — not the video</li>
+</ul>
+<aside class="notes">
+<p>Do not direct students to rip the YouTube upload. Obtain a rights-cleared local copy from the creator/rightsholder or an authorized source before the workshop. If unavailable, retain the link for viewing and use a consented group-debate video for the same guided ELAN operations. Preview playback on classroom machines. Use a local MP4 as the initial media source; a waveform may require a separate audio file, so teach interval selection on the timeline without requiring one.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Keep track of which clock you are using</h2>
+<p><strong>Full video:</strong> the linked starting point is <strong>00:40</strong>.</p>
+<p><strong>An excerpt beginning there:</strong> its local clock may start at <strong>00:00</strong>.</p>
+<p>Record the source URL, file name, and any excerpt start offset.</p>
+<blockquote>
+<p>Source time = excerpt time + excerpt start offset</p>
+</blockquote>
+<aside class="notes">
+<p>Example only: if an authorized excerpt starts at source 00:40, local 00:05 is source 00:45. Verify the actual offset; do not assume every file begins at 00:40. Use ELAN’s local media times for annotations and exports. Keep source times separate in the evidence sheet. Do not calculate across edits or missing footage.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>Your first ELAN file</h1>
+
+</section>
+<section class="slide level2">
+<h2>Open, annotate, save, reopen</h2>
+<ol type="1">
+<li><strong>File → New</strong>: select the local video and create the document</li>
+<li>Play and pause; check the picture and sound</li>
+<li>Activate the default tier; select a short interval on the timeline</li>
+<li><strong>Double-click the selection on that tier</strong>; type the words and commit</li>
+<li><strong>Save As</strong> an <code>.eaf</code> beside the video</li>
+</ol>
+<aside class="notes">
+<p>Demonstrate in Annotation Mode, one operation at a time; let each student repeat it. Check menu wording in the installed release and show the equivalent command if different. The default independent tier is enough for the first annotation. If absent, create a time-alignable tier type with constraint None and one tier. Right-click inside the text box and choose Commit Changes before saving. This mouse-based route is documented in the ELAN manual’s “An Inline Edit box from a selection” section; no untested keyboard shortcuts are required.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Did it really save?</h2>
+<p>Close the document. Reopen the <strong><code>.eaf</code></strong>, not just the video.</p>
+<ul>
+<li>Is the annotation still there?</li>
+<li>Does the linked video play?</li>
+<li>Can you replay just the selected interval?</li>
+</ul>
+<p>If the video is missing, check its location and repair the media link.</p>
+<aside class="notes">
+<p>Use Edit &gt; Linked Files (verify wording locally) to relink a moved file. Keep filenames stable and test the project after any move. Log installation or playback failures; use a working machine temporarily, but check each student’s own opening/saving operation before treating software competence as achieved.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>Independent evidence streams</h1>
+
+</section>
+<section class="slide level2">
+<h2>A tier and its type</h2>
+<p>A <strong>tier</strong> holds one stream of annotations.</p>
+<p>A <strong>tier type</strong> defines its alignment and structural constraints.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>What goes here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>A_speech</code></td>
+<td>A’s speech</td>
+</tr>
+<tr class="even">
+<td><code>B_speech</code></td>
+<td>B’s speech, including overlap with A</td>
+</tr>
+<tr class="odd">
+<td><code>A_RH_form</code></td>
+<td>A’s right-hand shape, orientation, location, movement</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Why not put gestures inside speech?</h2>
+<p>A time-aligned child tier is constrained by its parent’s interval.</p>
+<p>What would happen to a gesture that starts <strong>before</strong> the words or ends <strong>after</strong> them?</p>
+<p>Our speech and hand tiers are <strong>independent</strong>.</p>
+<p>Annotations can overlap <strong>across tiers</strong>, not within one tier.</p>
+</section>
+<section class="slide level2">
+<h2>Build the three streams</h2>
+<ol type="1">
+<li><strong>Type → Add New Tier Type</strong>: time-alignable, constraint <strong>None</strong></li>
+<li><strong>Tier → Add New Tier</strong>: choose that type and <strong>no parent</strong></li>
+<li>Add <code>A_speech</code>, <code>B_speech</code>, and <code>A_RH_form</code></li>
+<li>Select an interval on the active tier; create its annotation</li>
+<li>Save the tier setup with <strong>File → Save as Template</strong> (<code>.etf</code>)</li>
+</ol>
+<aside class="notes">
+<p>Check menu labels locally; some releases call tier types linguistic types. Rename the first/default speech tier or move its annotation into A_speech rather than leaving an unexplained duplicate. Use participant labels consistently: for the shared video, A = Zohran and B = Nicolas; for debate videos, label the debaters A and B (and any additional speakers consistently). For a selected interval with more than two speakers, add a separate speech tier for each speaker included in the analysis. RH always means the participant’s right hand, not screen-right. A template is a reusable setup, not a substitute for saving annotated .eaf data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Describe one action you can replay</h2>
+<p>Can your form description be checked against the selected interval?</p>
+<ul>
+<li>Keep <strong>observable form</strong> on the hand tier</li>
+<li>Keep proposed <strong>meaning</strong> in the evidence sheet</li>
+<li>Connect them with a <strong>gesture ID</strong> and local-media timestamps</li>
+<li>Leave hidden action <strong>unavailable</strong>, not “no gesture”</li>
+</ul>
+<aside class="notes">
+<p>Use the same short shared excerpt as the first two meetings, if an authorized local copy is available; otherwise use the announced consented debate-video fallback. Give students time to create speech and form annotations, replay them, and compare with their earlier paper notes. Introduce a phase tier only after this works.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>Where does a gesture begin?</h1>
+
+</section>
+<section class="slide level2 focus-slide">
+<h2>Count the gestures</h2>
+<p>In Kendon’s example, a speaker recalls his father scattering ground rice over cheeses to dry their surfaces.</p>
+<p>The right hand leaves the table, makes <strong>two rapid outward wrist actions</strong>, then returns to the table.</p>
+<p>Two movements: must that mean <strong>two gestures</strong>?</p>
+<p>Kendon (2004, pp.&nbsp;113–116)</p>
+<aside class="notes">
+<p>Kendon, Chapter 7, Example 1. Paraphrase the scenario and demonstrate the movement rather than reproducing Fig. 7.1. The source describes one stroke with two action phases, not two strokes. The scattering character narrows the general verb throw. Do not claim this occurs in the shared video.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Why did we disagree?</h2>
+<ul>
+<li class="fragment">We could count the <strong>whole trip</strong> from rest and back</li>
+<li class="fragment">We could count the <strong>two wrist actions</strong></li>
+<li class="fragment">We could count the <strong>lift</strong>, scattering, and return separately</li>
+</ul>
+<p>Everyone was describing something real. We need <strong>names for different levels</strong> — and rules for where the boundaries go.</p>
+</section>
+<section class="slide level2">
+<h2>What casual observers notice</h2>
+<p>Kendon (2004) points out that what people casually call “a gesture” is usually just the <strong>stroke</strong> — the most expressive part.</p>
+<p>For a proper account of how speech and gesture are organized together, that is not enough.</p>
+<p>We need the <strong>whole anatomy</strong>.</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>The anatomy of a gesture</h1>
+
+</section>
+<section class="slide level2">
+<h2>Kendon: units and phrases</h2>
+<div style="font-size: 0.85em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Kendon’s definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>gesture unit</strong></td>
+<td>the <strong>entire excursion</strong> from rest back to rest; contains <strong>one or more</strong> gesture phrases</td>
+</tr>
+<tr class="even">
+<td><strong>gesture phrase</strong></td>
+<td><strong>exactly one stroke</strong>, plus any preparation and any post-stroke hold</td>
+</tr>
+<tr class="odd">
+<td><strong>preparation</strong></td>
+<td>movement leading up to the stroke</td>
+</tr>
+<tr class="even">
+<td><strong>stroke</strong></td>
+<td>where the gesture’s <strong>expression</strong> is clearest</td>
+</tr>
+<tr class="odd">
+<td><strong>post-stroke hold</strong></td>
+<td>articulator sustained where the stroke ended</td>
+</tr>
+<tr class="even">
+<td><strong>recovery</strong></td>
+<td>the hand relaxes and returns to rest</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+<h2>Two terms that are easy to miss</h2>
+<p><strong>Nucleus</strong> = <strong>stroke + any post-stroke hold</strong></p>
+<ul>
+<li>usually interpreted as the part that carries the gesture’s <strong>meaning</strong></li>
+<li>Kendon notes that stroke and post-stroke hold often bracket a semantically complete stretch of speech</li>
+</ul>
+<p><strong>Recovery</strong> is part of the <strong>gesture unit</strong> — but <strong>not</strong> part of the gesture phrase.</p>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Back to the movement</h2>
+<p>Use Kendon’s terms:</p>
+<ul>
+<li>How many <strong>gesture units</strong>?</li>
+<li>How many <strong>gesture phrases</strong>?</li>
+<li>Where is each <strong>stroke</strong>? Is there a <strong>post-stroke hold</strong>?</li>
+<li>Where does the <strong>recovery</strong> start?</li>
+</ul>
+<aside class="notes">
+<p>Return to Kendon’s rice-scattering case: one unit, one phrase, one stroke containing two action phases. Preparation lifts and shapes the hand; recovery returns it to the table. Do not turn each wrist movement into a separate stroke or invent a hold. Kendon (2004), pp.&nbsp;114–115.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Two wrist actions, one stroke</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Part of the rice-scattering action</th>
+<th>Kendon’s analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>hand leaves the table and gets ready</td>
+<td><strong>preparation</strong></td>
+</tr>
+<tr class="even">
+<td>repeated scattering movement</td>
+<td><strong>one stroke</strong>, with two action phases</td>
+</tr>
+<tr class="odd">
+<td>hand returns to the table</td>
+<td><strong>recovery</strong>, outside the phrase</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One unit; one phrase.</strong> A movement count is not automatically a gesture count.</p>
+<p>Kendon (2004, pp.&nbsp;114–115)</p>
+</section>
+<section class="slide level2">
+<h2>McNeill adds finer holds</h2>
+<p>McNeill (2005, pp.&nbsp;31–34):</p>
+<div style="font-size: 0.8em">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Phase</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>preparation</strong></td>
+<td>hand moves to where the stroke will happen</td>
+</tr>
+<tr class="even">
+<td><strong>prestroke hold</strong></td>
+<td>a brief stop <em>before</em> the stroke (optional)</td>
+</tr>
+<tr class="odd">
+<td><strong>stroke</strong></td>
+<td>the meaningful phase — the only obligatory one</td>
+</tr>
+<tr class="even">
+<td><strong>stroke hold</strong></td>
+<td>a <strong>static</strong> stroke: holding still <em>is</em> the meaning</td>
+</tr>
+<tr class="odd">
+<td><strong>poststroke hold</strong></td>
+<td>hand freezes after the stroke (optional)</td>
+</tr>
+<tr class="even">
+<td><strong>retraction</strong></td>
+<td>return to rest (optional) — Kendon’s <strong>recovery</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+<h2>The tree gesture unfolds in time</h2>
+<p>McNeill follows the same tree-bending gesture across speech:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Speech landmark</th>
+<th>What the hand does</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>the tree is introduced</td>
+<td>rises into position: <strong>preparation</strong></td>
+</tr>
+<tr class="even">
+<td>the pronoun before the bending description</td>
+<td>briefly waits: <strong>prestroke hold</strong></td>
+</tr>
+<tr class="odd">
+<td>bending is described</td>
+<td>grips and pulls: <strong>stroke</strong></td>
+</tr>
+<tr class="even">
+<td>the final word finishes</td>
+<td>remains in place: <strong>poststroke hold</strong></td>
+</tr>
+</tbody>
+</table>
+<p>McNeill (2005, pp.&nbsp;30–33)</p>
+<aside class="notes">
+<p>Paraphrase of Fig. 2.2 and the accompanying description. The actual landmarks are preparation with oak tree and, prestroke hold with he, stroke with bends it way back, and poststroke hold during the final part of back. There is no retraction here: another gesture follows immediately, so the unit continues beyond the depicted phrase. Do not add invented millisecond values. The case is described again within the assigned pp.&nbsp;31–34.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Still hands: pause or meaning?</h2>
+<p>McNeill asks us to imagine a hand raised and held high to indicate the <strong>upper floor of a building</strong>.</p>
+<p>Is the stillness just waiting — or is it the meaningful action?</p>
+<p>Compare it with the tree gesture’s brief wait <strong>before</strong> bending.</p>
+<p>McNeill (2005, pp.&nbsp;32–33)</p>
+<aside class="notes">
+<p>The upper-floor illustration is McNeill’s hypothetical example of a static stroke, not part of the observed tree gesture. Demonstrate the contrast. Expected: a stroke hold carries the meaning in the posture itself; a prestroke hold depends on an upcoming stroke. Reveal the terminology on the next slide.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>A hold is not always a hold</h2>
+<ul>
+<li class="fragment">A <strong>stroke hold</strong> is a stroke — the meaning is in the static posture</li>
+<li class="fragment"><strong>Prestroke</strong> and <strong>poststroke holds</strong> are pauses around a stroke</li>
+<li class="fragment">McNeill argues these holds keep the stroke <strong>synchronized with its co-expressive speech</strong></li>
+</ul>
+<p>That is McNeill’s <strong>explanation</strong>. We can <strong>observe</strong> the timing — not the speaker’s thinking.</p>
+</section>
+<section class="slide level2">
+<h2>Our class codebook</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>We annotate</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>gesture <strong>unit</strong> and gesture <strong>phrase</strong> boundaries</td>
+<td>Kendon (2004), Ch. 7</td>
+</tr>
+<tr class="even">
+<td><code>prep</code>, <code>pre-hold</code>, <code>stroke</code>, <code>stroke-hold</code>, <code>post-hold</code>, <code>recovery</code></td>
+<td>Kendon + McNeill’s hold types</td>
+</tr>
+<tr class="odd">
+<td><code>?</code> after any value you are unsure of</td>
+<td>class convention</td>
+</tr>
+</tbody>
+</table>
+<p>We use <strong>recovery</strong> consistently in our annotations — and remember that McNeill’s <strong>retraction</strong> means the same phase.</p>
+<aside class="notes">
+<p>Adjust the abbreviations with the class if needed, but agree them once and keep them consistent. Explicitly adopt Kendon’s definition for gesture-phrase boundaries rather than mixing the two texts silently.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Mark it on paper first</h2>
+<p>On a paper timeline under the transcript line, mark:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="" aria-label="1"></a>A:  we went (.) down the hill and round the corner</span>
+<span id="cb1-2"><a href="" aria-label="2"></a>    |prep|--stroke--|post-hold|prep|--stroke--|recovery|</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Now replay the clip.</p>
+<p>Which <strong>one boundary</strong> are you least sure about? What would change your mind?</p>
+<aside class="notes">
+<p>The line above is an instructor-created layout example, not a transcription of the clip. Use the actual practice clip for marking. Students justify one contested boundary by replay. Expect disagreements about where preparation ends.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+<h2>Common traps</h2>
+<div style="font-size: 0.9em">
+<ul>
+<li class="fragment">Counting one <strong>unit</strong> as one <strong>phrase</strong></li>
+<li class="fragment">Putting the <strong>recovery</strong> inside the gesture phrase</li>
+<li class="fragment"><strong>Inventing a hold</strong> because one “should” be there</li>
+<li class="fragment">Splitting a gesture just because <strong>speech pauses</strong></li>
+<li class="fragment">Equating a gesture phrase with a <strong>speech segment</strong>, <strong>intonation unit</strong>, or <strong>TCU</strong></li>
+<li class="fragment">Calling the stroke “the fastest bit” — it is the most <strong>expressive</strong> bit</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide center">
+<h1>Phases in ELAN</h1>
+
+</section>
+<section class="slide level2">
+<h2>Add a phase tier</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>What goes here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>A_speech</code></td>
+<td>what A says</td>
+</tr>
+<tr class="even">
+<td><code>A_RH_form</code></td>
+<td>what the right hand looks like</td>
+</tr>
+<tr class="odd">
+<td><code>A_RH_phase</code></td>
+<td><strong>prep / pre-hold / stroke / stroke-hold / post-hold / recovery</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The phase tier is <strong>independent</strong> and time-aligned — just like the form tier.</p>
+<p>Unit and phrase spans go in your <strong>evidence sheet</strong> for now: <em>G3 = unit 12.10–14.85; phrase 1 = 12.10–13.20…</em></p>
+</section>
+<section class="slide level2">
+<h2>Getting boundaries right</h2>
+<ul>
+<li><strong>Zoom</strong> the timeline</li>
+<li><strong>Slow</strong> or <strong>step</strong> through the media around the boundary</li>
+<li><strong>Replay</strong> the selection — does it start where the movement starts?</li>
+<li><strong>Drag</strong> the annotation edge to revise it</li>
+<li>If the hand leaves the frame or the image blurs: mark <code>?</code> — do not invent precision</li>
+</ul>
+<aside class="notes">
+<p>Demonstrate fine-grained playback and boundary editing in the installed version. Model one genuinely unclear boundary and annotate the uncertainty honestly.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Follow one phrase</h2>
+<p>In the shared excerpt:</p>
+<ul>
+<li>Which <strong>phases</strong> can you actually see?</li>
+<li>Record the containing <strong>gesture unit</strong> and each <strong>gesture phrase</strong> in your evidence sheet</li>
+<li>Replay each stroke: is the most expressive moment inside it?</li>
+</ul>
+<aside class="notes">
+<p>Model one candidate phrase and let students attempt it. Do not require all phase values. If the clip cuts off the excursion, mark the unit boundary unavailable. Protect the beginner save/reopen checkpoint; fuller phase practice and transfer to the new group-debate recording belong to the next workshop.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2 focus-slide">
+<h2>Check each other’s boundaries</h2>
+<ul>
+<li>Is the <strong>recovery</strong> outside the phrase?</li>
+<li>Was one <strong>unit</strong> mistaken for one <strong>phrase</strong>?</li>
+<li>Is any <strong>hold</strong> really there — can you see the hand stop?</li>
+<li>Did anyone split a gesture at a <strong>speech pause</strong>?</li>
+</ul>
+</section>
+<section class="slide level2">
+<h2>A timestamp is a decision</h2>
+<ul>
+<li class="fragment">ELAN gives every boundary a number to the millisecond</li>
+<li class="fragment">That number records <strong>your judgement</strong>, not an objectively exact event</li>
+<li class="fragment">So: replay, justify, and mark doubt where it exists</li>
+</ul>
+<blockquote>
+<p>Which boundary in your file are you <strong>least certain</strong> about — and why?</p>
+</blockquote>
+</section>
+<section class="slide level2">
+<h2>Before next time</h2>
+<p>Revisit <strong>McNeill (2005), pp.&nbsp;31–34</strong>, and <strong>Kendon (2004), Chapter 7</strong>, with your first annotation attempt in mind.</p>
+<p>Bring one question that your annotation raised.</p>
+<p>Keep your <strong>group-debate recording</strong> ready for the next workshop.</p>
+<aside class="notes">
+<p>Instructor references: Kendon (2004), Ch. 7, pp.&nbsp;111–112 (unit, phrase, preparation, stroke, post-stroke hold, nucleus, recovery; casual observers identify strokes) and pp.&nbsp;113–116 (rice-scattering example, one stroke with two action phases); McNeill (2005), pp.&nbsp;30–34 (tree-bending phases, holds and co-expressive speech; upper-floor illustration is hypothetical). The hill/corner timeline is an instructor-created layout. Check ELAN media controls and menu labels on classroom machines first.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>Advanced English II</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="AEII_week11-13_03_gesture_in_time_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'slide',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

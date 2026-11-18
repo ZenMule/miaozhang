@@ -22,7 +22,11 @@ This course page collects the teaching materials for Advanced English II 2609 at
 - [Week 8: Conversation Analysis - Inspect conversations]( /MUST_teaching/AEII_2609/Week%208-9%20Conversation%20Analysis/Week%208-9/AEII_week8-9_01_making_talk_inspectable.html)
 - [Week 8: Conversation Analysis - Turns in conversations]( /MUST_teaching/AEII_2609/Week%208-9%20Conversation%20Analysis/Week%208-9/AEII_week8-9_02_comparing_and_presenting.html)
 - [Week 9: Conversation Analysis - Comparing Chinese and English]( /MUST_teaching/AEII_2609/Week%208-9%20Conversation%20Analysis/Week%208-9/AEII_week8-9_03_chinese_english_turn_taking.html)
-
-
+- [Week 11: Multimodality - What Speech Alone Cannot Tell Us]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_01_what_speech_cannot_tell.html )
+- [Week 11: Multimodality - Describe First, Interpret Second]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_02_describe_then_interpret.html )
+- [Week 12: Multimodality - First Steps in ELAN and Gesture in Time]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_03_gesture_in_time.html )
+- [Week 12: Multimodality - Timing, Exports, and Checking]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_04_timing_and_checking.html )
+- [Week 13: Multimodality - From Annotations to Claims]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_05_annotations_to_claims.html )
+- [Week 13: ELAN - Creating Projects, Tiers, and Annotations]( /MUST_teaching/AEII_2609/Week%2011-13%20Multimodality/AEII_week11-13_06_elan_quick_start.html )
 
 More lecture materials will be added here as the course progresses.
