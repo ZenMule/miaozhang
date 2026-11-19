@@ -153,9 +153,10 @@ Instructor: Miao Zhang 張淼
 </blockquote>
 <p>How could another analyst check that observation?</p>
 <p><strong>ELAN</strong> lets us attach text to precise time intervals in audio and video: what was said, what moved, and when.</p>
+<p>The tool does not decide which resources matter. <strong>Tier choice, boundaries, and transcription are analytical decisions.</strong></p>
 <aside class="notes">
 <p>Companion to the first ELAN workshop, after the two introductory multimodality meetings; not an additional three-hour meeting. Demonstrate one operation, then allow students to reproduce it on authorized local media. Protect the save/reopen check. Outcomes: create a reopenable project, add independent tiers, select intervals, create/edit annotations, and navigate between them. Evidence is successful operation on a short recording, not watching the demo.</p>
-<p>Primary source: Tacchetti (2018), local ELAN User Guide, version 5.0.0, Introduction and Chapters 1-4. Cross-checked against the official online manual on 18 November 2026 for editing and navigation. The old guide and online manual disagree about Escape in the inline editor: teach the named Commit Changes command, not Escape. Verify menu wording on classroom machines.</p>
+<p>Primary source: Tacchetti (2018), local ELAN User Guide, version 5.0.0, Introduction and Chapters 1-4. Cross-checked against the official online manual on 18 November 2026 for editing and navigation. The old guide and online manual disagree about Escape in the inline editor: teach the named Commit Changes command, not Escape. Verify menu wording on classroom machines. Mondada (2018) supplies the methodological distinction: ELAN’s chronometric timeline supports analysis but does not remove the need to select participant- relevant resources or represent how their actions unfold.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -243,12 +244,12 @@ Instructor: Miao Zhang 張淼
 <h2>New project: choose the media</h2>
 <ol type="1">
 <li>Select <strong>File → New</strong></li>
-<li>Browse to your project folder in the <strong>New Transcription</strong> dialog</li>
-<li>Double-click the video filename, or select it and click <strong><code>&gt;&gt;</code></strong></li>
-<li>Check that the file appears in the <strong>selected-files panel on the right</strong></li>
+<li>In <strong>New Transcription</strong>, browse to the video</li>
+<li>Double-click it, or select it and click <strong><code>&gt;&gt;</code></strong></li>
+<li>Check the <strong>selected-files panel</strong></li>
 <li>Click <strong>OK</strong></li>
 </ol>
-<p>If the file is hidden, check the dialog’s <strong>file-format filter</strong>.</p>
+<p>Hidden file? Check the dialog’s <strong>file-format filter</strong>.</p>
 <aside class="notes">
 <p>Tacchetti (2018), pp.&nbsp;7-8; online manual, “Creating a new document”: https://www.mpi.nl/tools/elan/docs/manual/Sec_Creating_a_new_document.html Leave the optional Template choice unused for this first walkthrough. Do not instruct students to open the video before choosing File &gt; New.</p>
 <style type="text/css">
@@ -504,6 +505,50 @@ Instructor: Miao Zhang 張淼
           display:block!important;
       }</style></aside>
 </section>
+<section class="slide level2">
+<h2>Add only the resources the claim needs</h2>
+<p>After speech and one hand stream work, a case may justify:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Extra tier</th>
+<th>What belongs here</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>A_gaze</code></td>
+<td>gaze direction or target, described only when visible</td>
+</tr>
+<tr class="even">
+<td><code>A_body</code></td>
+<td>posture, orientation, stepping, or whole-body movement</td>
+</tr>
+<tr class="odd">
+<td><code>A_object</code></td>
+<td>manipulation, placement, or use of a material object</td>
+</tr>
+<tr class="even">
+<td><code>B_body</code></td>
+<td>B’s embodied response</td>
+</tr>
+</tbody>
+</table>
+<p>Use separate independent tiers when resources have different trajectories. Do not add a tier merely because something is visible.</p>
+<aside class="notes">
+<p>Mondada (2018) emphasizes that relevant resources are participant-oriented and empirically established. For a beginner project, choose one extra resource for one bounded question. Distinguish the form or target from an interpretive claim, which remains in the evidence sheet.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section class="slide level2 focus-slide">
 <h2>Why must these streams be independent?</h2>
 <p>The hand starts moving before speech and remains raised after speech stops.</p>
@@ -511,7 +556,7 @@ Instructor: Miao Zhang 張淼
 <p><strong>Across tiers:</strong> annotations can overlap.</p>
 <p><strong>Within one tier:</strong> annotations cannot overlap. Put overlapping speakers on separate speech tiers.</p>
 <aside class="notes">
-<p>A time-alignable child tier is constrained by its parent; independence avoids forcing hand movement into speech boundaries. This is a minimal course design, not a claim that dependent tiers are never useful.</p>
+<p>A time-alignable child tier is constrained by its parent; independence avoids forcing hand movement into speech boundaries. This is a minimal course design, not a claim that dependent tiers are never useful. This also keeps the different temporal trajectories of talk, gaze, hand movement, body movement, and object manipulation available for comparison.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -896,16 +941,16 @@ Instructor: Miao Zhang 張淼
       }</style></aside>
 </section>
 <section class="slide level2 focus-slide">
-<h2>Can you inspect the same action twice?</h2>
-<p>Find an annotation, move to the next one, then return.</p>
+<h2>Inspect an action’s trajectory, not just its label</h2>
+<p>Find an annotation, move to the next one, and return.</p>
 <ul>
-<li>Is the original box active again?</li>
-<li>Can you replay <strong>only its interval</strong>?</li>
-<li>Can you switch to the hand tier and inspect the overlapping action?</li>
-<li>Do the speech and hand boundaries really match?</li>
+<li>Can you replay its interval?</li>
+<li>Can you inspect the overlapping hand tier?</li>
+<li>Do the boundaries match?</li>
+<li>Can you identify <strong>onset, hold/shape, and retraction</strong>?</li>
 </ul>
 <aside class="notes">
-<p>Use the actual practice recording, without assuming the hand overlaps every speech segment. This checks navigation and selection rather than terminology recall. If necessary, redraw the desired playback interval before Play Selection.</p>
+<p>Use the actual practice recording, without assuming the hand overlaps every speech segment. This checks navigation and selection rather than terminology recall. If necessary, redraw the desired playback interval before Play Selection. Ask whether a later transcript would preserve the action’s temporal trajectory as well as its shape, following Mondada (2018).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -989,11 +1034,11 @@ Instructor: Miao Zhang 張淼
 <ol type="1">
 <li>In the configured project, choose <strong>File → Save as Template</strong></li>
 <li>Save <code>multimodal_basic.etf</code></li>
-<li>For another recording, choose <strong>File → New</strong></li>
-<li>Add the <strong>new media</strong> and choose the <code>.etf</code> under <strong>Template</strong></li>
-<li>Save a <strong>new <code>.eaf</code></strong> for that recording</li>
+<li>For new media, choose <strong>File → New</strong></li>
+<li>Add the media and select the <code>.etf</code> as <strong>Template</strong></li>
+<li>Save a <strong>new <code>.eaf</code></strong></li>
 </ol>
-<p>An <code>.etf</code> reuses the tier design, not the previous recording’s annotations.</p>
+<p>An <code>.etf</code> reuses the tiers, not the old annotations.</p>
 <aside class="notes">
 <p>Tacchetti (2018), p.&nbsp;23. https://www.mpi.nl/tools/elan/docs/manual/Sec_Saving_a_template.html This is optional after the basic project and navigation workflow succeeds.</p>
 <style type="text/css">
@@ -1014,10 +1059,12 @@ Instructor: Miao Zhang 張淼
 <ul>
 <li><strong>Selection</strong> is an interval; <strong>annotation</strong> is a recorded observation</li>
 <li>Keep speech and visible action on <strong>independent tiers</strong></li>
+<li>Select tiers because the conduct is relevant, not because it is visible</li>
+<li>Preserve a movement’s <strong>trajectory</strong> as well as its <strong>shape</strong></li>
 <li>Reopen the <strong><code>.eaf</code></strong> to check that the project works</li>
 </ul>
 <aside class="notes">
-<p>Source: Tacchetti, M. (2018). User Guide for ELAN Linguistic Annotator (version 5.0.0), Introduction and Chapters 1-4, local Readings/week 11-13 Multimodality/manual-elan_ug.pdf. Navigation and editing cross-checked against the official online ELAN manual, consulted 18 November 2026; links are given with the relevant demonstration notes above. The sample filenames, times, and annotation text are instructor-created. These operations support the course’s method knowledge, data analysis, and autonomous evidence checking.</p>
+<p>Source: Tacchetti, M. (2018). User Guide for ELAN Linguistic Annotator (version 5.0.0), Introduction and Chapters 1-4, local Readings/week 11-13 Multimodality/manual-elan_ug.pdf. Navigation and editing cross-checked against the official online ELAN manual, consulted 18 November 2026; links are given with the relevant demonstration notes above. The sample filenames, times, and annotation text are instructor-created. These operations support the course’s method knowledge, data analysis, and autonomous evidence checking. Methodological framing: Mondada, L. (2018). Multiple Temporalities of Language and Body in Interaction: Challenges for Transcribing Multimodality. Research on Language and Social Interaction, 51(1), 85-106.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
